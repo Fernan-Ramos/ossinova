@@ -8,5 +8,6 @@ import { defineConfig } from 'astro/config';
 // aqui se agregan las integraciones react() y keystatic(), el output
 // "hybrid" y el adapter de Vercel. Ver README.
 export default defineConfig({
-  site: 'https://ossinova.example.com',
+  // Cambia a tu dominio final cuando lo tengas (p. ej. https://ossinova.com).
+  site: 'https://ossinova.vercel.app',
 });
