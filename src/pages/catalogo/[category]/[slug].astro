@@ -1,0 +1,299 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import Nav from '../../../components/Nav.astro';
+import Footer from '../../../components/Footer.astro';
+import { site, MODE_LABEL, CATEGORY_LABEL, CATEGORY_SLUG } from '../../../data/site.ts';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('products');
+  return entries.map((entry) => ({
+    params: { category: CATEGORY_SLUG[entry.data.category], slug: entry.id },
+    props: { product: entry.data },
+  }));
+}
+
+interface Props {
+  product: CollectionEntry<'products'>['data'];
+}
+
+const { product } = Astro.props;
+const categorySlug = CATEGORY_SLUG[product.category];
+
+function imageSrc(image?: string): string | null {
+  if (!image) return null;
+  if (image.startsWith('http') || image.startsWith('/')) return image;
+  return `/images/products/${image}`;
+}
+
+const src = imageSrc(product.image);
+
+// Prefilled quote request via email.
+const subject = encodeURIComponent(`Solicitud de presupuesto — ${product.name}`);
+const body = encodeURIComponent(
+  `Hola, me interesa el producto "${product.name}"` +
+    (product.reference ? ` (ref. ${product.reference})` : '') +
+    `.\n\nModalidad de interés: \nCantidad: \n\nGracias.`,
+);
+const quoteHref = `mailto:${site.contact.email}?subject=${subject}&body=${body}`;
+---
+
+<Layout title={`${product.name} — ${site.brand}`} description={product.description}>
+  <Nav />
+  <main class="detail">
+    <div class="container">
+      <nav class="detail__breadcrumb" aria-label="Miga de pan">
+        <a href="/catalogo">Catálogo</a>
+        <span aria-hidden="true">/</span>
+        <a href={`/catalogo/${categorySlug}`}>{CATEGORY_LABEL[product.category]}</a>
+        <span aria-hidden="true">/</span>
+        <span>{product.name}</span>
+      </nav>
+
+      <div class="detail__grid">
+        <div class="detail__media">
+          {
+            src ? (
+              <img src={src} alt={product.name} />
+            ) : (
+              <img src="/images/logo-icon.png" alt="" class="detail__placeholder" aria-hidden="true" />
+            )
+          }
+        </div>
+
+        <div class="detail__info">
+          <a class="detail__category" href={`/catalogo/${categorySlug}`}>
+            {CATEGORY_LABEL[product.category]}
+          </a>
+          <h1>{product.name}</h1>
+          {product.reference && <span class="detail__ref">Ref. {product.reference}</span>}
+
+          <p class="detail__lead">{product.longDescription ?? product.description}</p>
+
+          {
+            product.highlights.length > 0 && (
+              <ul class="detail__highlights">
+                {product.highlights.map((h) => (
+                  <li>{h}</li>
+                ))}
+              </ul>
+            )
+          }
+
+          <dl class="detail__specs">
+            <div>
+              <dt>Material</dt>
+              <dd>{product.material}</dd>
+            </div>
+            {
+              product.dimensions && (
+                <div>
+                  <dt>Medidas / opciones</dt>
+                  <dd>{product.dimensions}</dd>
+                </div>
+              )
+            }
+            <div>
+              <dt>Disponible como</dt>
+              <dd class="detail__modes">
+                {product.modes.map((m) => <span class={`badge badge--${m}`}>{MODE_LABEL[m]}</span>)}
+              </dd>
+            </div>
+          </dl>
+
+          <div class="detail__actions">
+            <a href={quoteHref} class="btn btn--gold">Solicitar presupuesto</a>
+            <a href="/#contact" class="btn btn--secondary">Contactar</a>
+          </div>
+
+          {
+            product.datasheet && (
+              <a class="detail__datasheet" href={product.datasheet} target="_blank" rel="noopener">
+                Descargar ficha técnica (PDF)
+              </a>
+            )
+          }
+        </div>
+      </div>
+
+      <a href={`/catalogo/${categorySlug}`} class="detail__back">← Volver a {CATEGORY_LABEL[product.category]}</a>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .detail {
+    padding: clamp(1.5rem, 4vw, 2.5rem) 0 clamp(3rem, 7vw, 5rem);
+  }
+
+  .detail__breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--gray-mid);
+    margin-bottom: 2rem;
+  }
+
+  .detail__breadcrumb a {
+    color: var(--gray-mid);
+  }
+
+  .detail__breadcrumb a:hover {
+    color: var(--green);
+  }
+
+  .detail__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+
+  .detail__media {
+    aspect-ratio: 1 / 1;
+    background: var(--gray-soft);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .detail__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .detail__placeholder {
+    width: 45%;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.35;
+  }
+
+  .detail__category {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 0.5rem;
+  }
+
+  .detail__info h1 {
+    font-size: clamp(1.6rem, 3.5vw, 2.3rem);
+    margin: 0 0 0.4rem;
+  }
+
+  .detail__ref {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--green);
+    margin-bottom: 1rem;
+  }
+
+  .detail__lead {
+    font-size: 1.05rem;
+    margin: 1rem 0;
+  }
+
+  .detail__highlights {
+    list-style: none;
+    padding: 0;
+    margin: 1.2rem 0;
+    display: grid;
+    gap: 0.55rem;
+  }
+
+  .detail__highlights li {
+    position: relative;
+    padding-left: 1.7rem;
+    color: var(--text);
+  }
+
+  .detail__highlights li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+
+  .detail__specs {
+    display: grid;
+    gap: 0.9rem;
+    margin: 1.6rem 0;
+    padding: 1.3rem 1.4rem;
+    background: var(--gray-soft);
+    border-radius: var(--radius);
+  }
+
+  .detail__specs div {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 1rem;
+    align-items: baseline;
+  }
+
+  .detail__specs dt {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    color: var(--gray-mid);
+  }
+
+  .detail__specs dd {
+    margin: 0;
+    color: var(--text);
+  }
+
+  .detail__modes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .detail__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+  }
+
+  .detail__datasheet {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  .detail__back {
+    display: inline-block;
+    margin-top: 2.5rem;
+    font-weight: 600;
+    color: var(--gray-mid);
+  }
+
+  .detail__back:hover {
+    color: var(--green);
+  }
+
+  @media (max-width: 760px) {
+    .detail__grid {
+      grid-template-columns: 1fr;
+    }
+    .detail__specs div {
+      grid-template-columns: 1fr;
+      gap: 0.15rem;
+    }
+  }
+</style>

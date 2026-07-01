@@ -1,0 +1,47 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import ProductCard from './ProductCard.astro';
+
+interface Props {
+  products: CollectionEntry<'products'>[];
+  emptyText?: string;
+}
+
+const { products, emptyText = 'Aún no hay productos publicados en esta sección.' } = Astro.props;
+---
+
+{
+  products.length > 0 ? (
+    <div class="grid">
+      {products.map((entry) => (
+        <div
+          class="grid__item"
+          data-category={entry.data.category}
+          data-modes={entry.data.modes.join(' ')}
+          data-tags={entry.data.tags.join('|')}
+        >
+          <ProductCard product={entry.data} slug={entry.id} />
+        </div>
+      ))}
+    </div>
+  ) : (
+    <p class="grid__empty">{emptyText}</p>
+  )
+}
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .grid__item.is-hidden {
+    display: none;
+  }
+
+  .grid__empty {
+    text-align: center;
+    color: var(--gray-mid);
+  }
+</style>

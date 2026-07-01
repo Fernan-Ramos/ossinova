@@ -1,0 +1,76 @@
+---
+import '../styles/global.css';
+import { ViewTransitions } from 'astro:transitions';
+import { site } from '../data/site.ts';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = `${site.company} — Soluciones quirúrgicas veterinarias`,
+  description = site.hero.subtitle,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/images/logo-icon.png" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/logo-full.png" />
+
+    <!-- Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Smooth cross-page transitions (respects prefers-reduced-motion). -->
+    <ViewTransitions />
+  </head>
+  <body>
+    <slot />
+
+    <script>
+      // Reveal elements with the `reveal` class as they enter the viewport.
+      // Runs on every navigation via astro:page-load (View Transitions).
+      function initReveal() {
+        const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const els = document.querySelectorAll<HTMLElement>('.reveal:not(.is-visible)');
+
+        if (reduce || !('IntersectionObserver' in window)) {
+          els.forEach((el) => el.classList.add('is-visible'));
+          return;
+        }
+
+        document.documentElement.classList.add('anim-ready');
+        const io = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                obs.unobserve(entry.target);
+              }
+            });
+          },
+          { rootMargin: '0px 0px -10% 0px', threshold: 0.1 },
+        );
+        els.forEach((el) => io.observe(el));
+      }
+
+      document.addEventListener('astro:page-load', initReveal);
+    </script>
+  </body>
+</html>

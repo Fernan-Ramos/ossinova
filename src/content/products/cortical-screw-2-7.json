@@ -1,0 +1,13 @@
+{
+  "name": "Tornillo cortical 2.7 mm",
+  "category": "screws",
+  "material": "Titanio Ti-6Al-4V ELI (grado 23)",
+  "reference": "TOR-COR-27",
+  "dimensions": "Longitudes de 6 a 40 mm",
+  "description": "Tornillo cortical autorroscante de rosca completa, compatible con placas de 2.7 mm. Cabeza hexagonal para un atornillado seguro y estable.",
+  "image": "",
+  "modes": ["sale"],
+  "tags": ["Corticales"],
+  "featured": true,
+  "order": 2
+}

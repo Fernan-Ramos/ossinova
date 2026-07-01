@@ -1,0 +1,13 @@
+{
+  "name": "Set de instrumental de neurocirugía",
+  "category": "neurosurgery",
+  "material": "Acero inoxidable quirúrgico",
+  "reference": "NEU-SET-01",
+  "dimensions": "Bandeja completa esterilizable",
+  "description": "Conjunto de instrumental específico para procedimientos de neurocirugía en pequeños animales. Incluye separadores, curetas y pinzas de precisión en bandeja organizada y autoclavable.",
+  "image": "",
+  "modes": ["rental-long", "rental-short"],
+  "tags": ["Instrumental"],
+  "featured": false,
+  "order": 5
+}

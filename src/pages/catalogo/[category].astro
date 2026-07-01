@@ -1,0 +1,360 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import ProductGrid from '../../components/ProductGrid.astro';
+import {
+  site,
+  MODE_LABEL,
+  CATEGORY_LABEL,
+  CATEGORY_SLUG,
+  CATEGORY_DESC,
+  CATEGORY_ORDER,
+} from '../../data/site.ts';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('products');
+  // One page per category that actually has products.
+  return CATEGORY_ORDER.filter((key) =>
+    entries.some((e) => e.data.category === key),
+  ).map((key) => ({
+    params: { category: CATEGORY_SLUG[key] },
+    props: { categoryKey: key },
+  }));
+}
+
+interface Props {
+  categoryKey: string;
+}
+
+const { categoryKey } = Astro.props;
+
+const entries = await getCollection('products');
+const products = entries
+  .filter((e) => e.data.category === categoryKey)
+  .sort((a, b) => a.data.order - b.data.order || a.data.name.localeCompare(b.data.name, 'es'));
+
+const label = CATEGORY_LABEL[categoryKey];
+
+// Sibling categories for quick navigation between sections.
+const siblings = CATEGORY_ORDER.filter((key) =>
+  entries.some((e) => e.data.category === key),
+);
+
+// Build filter options from the products in THIS category, keeping order.
+const modeOptions = Object.keys(MODE_LABEL).filter((m) =>
+  products.some((p) => (p.data.modes as string[]).includes(m)),
+);
+const tagOptions = [...new Set(products.flatMap((p) => p.data.tags))].sort((a, b) =>
+  a.localeCompare(b, 'es'),
+);
+
+// Only worth showing filters when there is something to filter.
+const showFilters =
+  products.length > 1 && (modeOptions.length > 1 || tagOptions.length > 1);
+---
+
+<Layout title={`${label} — Catálogo ${site.brand}`} description={CATEGORY_DESC[categoryKey]}>
+  <Nav />
+  <main class="cat-page">
+    <div class="container">
+      <nav class="cat-page__breadcrumb" aria-label="Miga de pan">
+        <a href="/catalogo">Catálogo</a>
+        <span aria-hidden="true">/</span>
+        <span>{label}</span>
+      </nav>
+
+      <div class="cat-page__head">
+        <span class="section__eyebrow">Catálogo</span>
+        <h1>{label}</h1>
+        <p>{CATEGORY_DESC[categoryKey]}</p>
+      </div>
+
+      <nav class="cat-page__sections" aria-label="Secciones del catálogo">
+        {
+          siblings.map((key) => (
+            <a
+              href={`/catalogo/${CATEGORY_SLUG[key]}`}
+              class:list={['chip', { 'is-active': key === categoryKey }]}
+            >
+              {CATEGORY_LABEL[key]}
+            </a>
+          ))
+        }
+      </nav>
+
+      {
+        showFilters && (
+          <div class="filters" data-filters>
+            {modeOptions.length > 1 && (
+              <div class="filters__group">
+                <span class="filters__label">Modalidad</span>
+                <div class="filters__chips">
+                  {modeOptions.map((m) => (
+                    <button class="fchip" type="button" data-group="mode" data-value={m}>
+                      {MODE_LABEL[m]}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {tagOptions.length > 1 && (
+              <div class="filters__group">
+                <span class="filters__label">Tipo</span>
+                <div class="filters__chips">
+                  {tagOptions.map((t) => (
+                    <button class="fchip" type="button" data-group="tag" data-value={t}>
+                      {t}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <div class="filters__meta">
+              <span data-count>{products.length} productos</span>
+              <button class="filters__clear" type="button" data-clear hidden>
+                Limpiar filtros
+              </button>
+            </div>
+          </div>
+        )
+      }
+
+      <div data-grid-root>
+        <ProductGrid products={products} />
+        <p class="cat-page__noresults" data-noresults hidden>
+          Ningún producto coincide con los filtros seleccionados.
+        </p>
+      </div>
+
+      <a href="/catalogo" class="cat-page__back">← Volver al catálogo</a>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .cat-page {
+    padding: clamp(1.5rem, 4vw, 2.5rem) 0 clamp(3rem, 7vw, 5rem);
+  }
+
+  .cat-page__breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--gray-mid);
+    margin-bottom: 2rem;
+  }
+
+  .cat-page__breadcrumb a {
+    color: var(--gray-mid);
+  }
+
+  .cat-page__breadcrumb a:hover {
+    color: var(--green);
+  }
+
+  .cat-page__head {
+    max-width: 700px;
+    margin-bottom: 2rem;
+  }
+
+  .cat-page__head h1 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin: 0.3rem 0 0.6rem;
+  }
+
+  .cat-page__sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .chip {
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--gray);
+    transition: all 0.15s ease;
+  }
+
+  .chip:hover {
+    border-color: var(--green);
+    color: var(--green);
+  }
+
+  .chip.is-active {
+    background: var(--green);
+    border-color: var(--green);
+    color: #fff;
+  }
+
+  /* Filters */
+  .filters {
+    display: grid;
+    gap: 1rem;
+    padding: 1.3rem 1.4rem;
+    margin-bottom: 2rem;
+    background: var(--gray-soft);
+    border-radius: var(--radius);
+  }
+
+  .filters__group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .filters__label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    color: var(--gray-mid);
+    min-width: 78px;
+  }
+
+  .filters__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .fchip {
+    font-family: inherit;
+    font-size: 0.84rem;
+    font-weight: 600;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--gray);
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .fchip:hover {
+    border-color: var(--green);
+    color: var(--green);
+  }
+
+  .fchip.is-active {
+    background: var(--green);
+    border-color: var(--green);
+    color: #fff;
+  }
+
+  .filters__meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: var(--gray-mid);
+    border-top: 1px solid var(--border);
+    padding-top: 0.9rem;
+  }
+
+  .filters__clear {
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--green);
+    background: none;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .filters__clear:hover {
+    color: var(--green-dark);
+  }
+
+  .cat-page__noresults {
+    text-align: center;
+    color: var(--gray-mid);
+    padding: 1rem 0;
+  }
+
+  .cat-page__back {
+    display: inline-block;
+    margin-top: 2.5rem;
+    font-weight: 600;
+    color: var(--gray-mid);
+  }
+
+  .cat-page__back:hover {
+    color: var(--green);
+  }
+</style>
+
+<script>
+  function initCategoryFilters() {
+    const panel = document.querySelector<HTMLElement>('[data-filters]');
+    const root = document.querySelector<HTMLElement>('[data-grid-root]');
+    if (!panel || !root) return;
+
+    const chips = panel.querySelectorAll<HTMLButtonElement>('.fchip');
+    const items = root.querySelectorAll<HTMLElement>('.grid__item');
+    const countEl = panel.querySelector<HTMLElement>('[data-count]');
+    const clearEl = panel.querySelector<HTMLButtonElement>('[data-clear]');
+    const noResults = root.querySelector<HTMLElement>('[data-noresults]');
+
+    // Active selections per group (OR within a group, AND across groups).
+    const active: Record<string, Set<string>> = { mode: new Set(), tag: new Set() };
+
+    const apply = () => {
+      let visible = 0;
+      items.forEach((item) => {
+        const modes = (item.dataset.modes ?? '').split(' ').filter(Boolean);
+        const tags = (item.dataset.tags ?? '').split('|').filter(Boolean);
+        const matchMode =
+          active.mode.size === 0 || modes.some((m) => active.mode.has(m));
+        const matchTag = active.tag.size === 0 || tags.some((t) => active.tag.has(t));
+        const show = matchMode && matchTag;
+        item.classList.toggle('is-hidden', !show);
+        if (show) visible += 1;
+      });
+
+      if (countEl) {
+        countEl.textContent = `${visible} ${visible === 1 ? 'producto' : 'productos'}`;
+      }
+      const anyActive = active.mode.size > 0 || active.tag.size > 0;
+      if (clearEl) clearEl.hidden = !anyActive;
+      if (noResults) noResults.hidden = visible !== 0;
+    };
+
+    chips.forEach((chip) => {
+      chip.addEventListener('click', () => {
+        const group = chip.dataset.group ?? '';
+        const value = chip.dataset.value ?? '';
+        if (!active[group]) return;
+        if (active[group].has(value)) {
+          active[group].delete(value);
+          chip.classList.remove('is-active');
+        } else {
+          active[group].add(value);
+          chip.classList.add('is-active');
+        }
+        apply();
+      });
+    });
+
+    clearEl?.addEventListener('click', () => {
+      active.mode.clear();
+      active.tag.clear();
+      chips.forEach((c) => c.classList.remove('is-active'));
+      apply();
+    });
+  }
+
+  document.addEventListener('astro:page-load', initCategoryFilters);
+</script>

@@ -1,0 +1,20 @@
+{
+  "name": "Placa LC-DCP 2.7 mm",
+  "category": "implants",
+  "material": "Titanio Ti-6Al-4V ELI (grado 23)",
+  "reference": "IMP-LCDCP-27",
+  "dimensions": "4 a 12 orificios",
+  "description": "Placa de compresión dinámica de contacto limitado para osteosíntesis en huesos largos de pequeños animales. Perfil bajo y geometría que preserva la vascularización perióstica.",
+  "longDescription": "La placa LC-DCP 2.7 mm está diseñada para la fijación interna de fracturas en huesos largos de perros y gatos de pequeño tamaño. Su diseño de contacto limitado reduce la compresión sobre el periostio, favoreciendo la vascularización y la consolidación ósea. Los orificios permiten compresión dinámica y colocación de tornillos en distintos ángulos, adaptándose a la anatomía de cada caso.",
+  "highlights": [
+    "Contacto limitado: menor daño a la vascularización perióstica",
+    "Orificios para compresión dinámica y angulación de tornillos",
+    "Titanio Ti-6Al-4V ELI (grado 23): resistente, ligero y biocompatible",
+    "Disponible de 4 a 12 orificios"
+  ],
+  "image": "",
+  "modes": ["sale", "rental-long"],
+  "tags": ["Placas"],
+  "featured": true,
+  "order": 1
+}

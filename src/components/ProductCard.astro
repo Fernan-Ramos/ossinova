@@ -1,0 +1,136 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { MODE_LABEL, CATEGORY_SLUG } from '../data/site.ts';
+
+interface Props {
+  product: CollectionEntry<'products'>['data'];
+  slug: string;
+}
+
+const { product, slug } = Astro.props;
+const href = `/catalogo/${CATEGORY_SLUG[product.category]}/${slug}`;
+
+// Resolve the image path: absolute/URL as-is, otherwise from the products folder.
+function imageSrc(image?: string): string | null {
+  if (!image) return null;
+  if (image.startsWith('http') || image.startsWith('/')) return image;
+  return `/images/products/${image}`;
+}
+
+const src = imageSrc(product.image);
+---
+
+<article class="card">
+  <a class="card__media" href={href} aria-label={product.name}>
+    {
+      src ? (
+        <img src={src} alt={product.name} loading="lazy" />
+      ) : (
+        <img src="/images/logo-icon.png" alt="" class="card__placeholder" aria-hidden="true" />
+      )
+    }
+  </a>
+
+  <div class="card__body">
+    <h3 class="card__title"><a href={href}>{product.name}</a></h3>
+    {product.reference && <span class="card__ref">Ref. {product.reference}</span>}
+    <p class="card__desc">{product.description}</p>
+
+    <div class="card__modes">
+      {product.modes.map((m) => <span class={`badge badge--${m}`}>{MODE_LABEL[m]}</span>)}
+    </div>
+
+    <a href={href} class="card__link">Ver ficha <span aria-hidden="true">→</span></a>
+  </div>
+</article>
+
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .card__media {
+    aspect-ratio: 4 / 3;
+    background: var(--gray-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card__placeholder {
+    width: 45%;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.35;
+  }
+
+  .card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 1.4rem;
+    flex: 1;
+  }
+
+  .card__title {
+    margin: 0;
+    font-size: 1.15rem;
+  }
+
+  .card__title a {
+    color: var(--gray);
+  }
+
+  .card__title a:hover {
+    color: var(--green);
+  }
+
+  .card__ref {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--green);
+    letter-spacing: 0.04em;
+  }
+
+  .card__desc {
+    margin: 0;
+    font-size: 0.92rem;
+  }
+
+  .card__modes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: auto;
+    padding-top: 0.4rem;
+  }
+
+  .card__link {
+    margin-top: 0.9rem;
+    font-weight: 600;
+    font-size: 0.92rem;
+  }
+
+  .card__link:hover {
+    color: var(--green-dark);
+  }
+</style>

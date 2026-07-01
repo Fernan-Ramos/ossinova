@@ -1,0 +1,30 @@
+---
+import CategoryCards from './CategoryCards.astro';
+---
+
+<section id="catalog" class="section section--gray reveal">
+  <div class="container">
+    <div class="section__header">
+      <span class="section__eyebrow">Catálogo</span>
+      <h2>Nuestro catálogo</h2>
+      <p>
+        Implantes, tornillos, instrumental y motores en titanio Ti-6Al-4V ELI. Explora las
+        secciones o consulta el catálogo completo.
+      </p>
+    </div>
+
+    <CategoryCards />
+
+    <div class="catalog-preview__cta">
+      <a href="/catalogo" class="btn btn--primary">Ver catálogo completo</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .catalog-preview__cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.4rem;
+  }
+</style>

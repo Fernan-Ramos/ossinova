@@ -1,0 +1,95 @@
+---
+import { site } from '../data/site.ts';
+const { modes } = site;
+---
+
+<section id="modes" class="section reveal">
+  <div class="container">
+    <div class="section__header">
+      <span class="section__eyebrow">Modalidades</span>
+      <h2>{modes.title}</h2>
+      <p>{modes.subtitle}</p>
+    </div>
+
+    <div class="modes__grid">
+      {
+        modes.items.map((item) => (
+          <article class={`mode mode--${item.key}`}>
+            <span class="mode__tag">{item.title}</span>
+            <p class="mode__text">{item.text}</p>
+            <a href="#contact" class="mode__link">
+              Solicitar información <span aria-hidden="true">→</span>
+            </a>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .modes__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .mode {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    padding: 2rem 1.8rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: #fff;
+    border-top: 4px solid var(--green);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+
+  .mode:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+  }
+
+  /* Accent per mode, matching the catalog badge colors. */
+  .mode--rental-short {
+    border-top-color: var(--gold);
+  }
+  .mode--sale {
+    border-top-color: #4d7c2f;
+  }
+
+  .mode__tag {
+    align-self: flex-start;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--green-dark);
+  }
+
+  .mode--rental-short .mode__tag {
+    color: #a97d1f;
+  }
+  .mode--sale .mode__tag {
+    color: #4d7c2f;
+  }
+
+  .mode__text {
+    margin: 0;
+    flex: 1;
+  }
+
+  .mode__link {
+    font-weight: 600;
+    font-size: 0.92rem;
+  }
+
+  .mode__link:hover {
+    color: var(--green-dark);
+  }
+
+  @media (max-width: 820px) {
+    .modes__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

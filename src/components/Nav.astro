@@ -1,0 +1,152 @@
+---
+import { site } from '../data/site.ts';
+---
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a href="/#home" class="nav__brand" aria-label={site.company}>
+      <img src="/images/logo-full.png" alt={site.brand} class="nav__logo" />
+    </a>
+
+    <nav class="nav__links" aria-label="Navegación principal">
+      <a href="/#about">Quiénes somos</a>
+      <a href="/#modes">Modalidades</a>
+      <a href="/catalogo">Catálogo</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#contact" class="btn btn--primary nav__cta">Contacto</a>
+    </nav>
+
+    <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="nav__mobile" aria-label="Navegación móvil" hidden>
+    <a href="/#about">Quiénes somos</a>
+    <a href="/#modes">Modalidades</a>
+    <a href="/#catalog">Catálogo</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/#contact">Contacto</a>
+  </nav>
+</header>
+
+<style>
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+  }
+
+  .nav__logo {
+    height: 44px;
+    width: auto;
+  }
+
+  .nav__links {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+  }
+
+  .nav__links a {
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  .nav__links a:not(.nav__cta) {
+    color: var(--gray);
+  }
+
+  .nav__links a:not(.nav__cta):hover {
+    color: var(--green);
+  }
+
+  .nav__cta {
+    color: #fff;
+    padding: 0.55rem 1.2rem;
+  }
+
+  .nav__cta:hover {
+    color: #fff;
+  }
+
+  .nav__toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .nav__toggle span {
+    width: 24px;
+    height: 2px;
+    background: var(--gray);
+    border-radius: 2px;
+    transition: 0.2s;
+  }
+
+  .nav__mobile {
+    display: none;
+    flex-direction: column;
+    padding: 0.5rem 1.5rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    background: #fff;
+  }
+
+  .nav__mobile a {
+    padding: 0.7rem 0;
+    color: var(--gray);
+    font-weight: 600;
+    border-bottom: 1px solid var(--gray-soft);
+  }
+
+  @media (max-width: 760px) {
+    .nav__links {
+      display: none;
+    }
+    .nav__toggle {
+      display: flex;
+    }
+    .nav__mobile[data-open='true'] {
+      display: flex;
+    }
+  }
+</style>
+
+<script>
+  function initNav() {
+    const toggle = document.querySelector('.nav__toggle');
+    const menu = document.querySelector('.nav__mobile') as HTMLElement | null;
+    if (!toggle || !menu) return;
+
+    toggle.addEventListener('click', () => {
+      const open = menu.getAttribute('data-open') === 'true';
+      menu.setAttribute('data-open', String(!open));
+      menu.hidden = open;
+      toggle.setAttribute('aria-expanded', String(!open));
+    });
+
+    menu.querySelectorAll('a').forEach((a) =>
+      a.addEventListener('click', () => {
+        menu.setAttribute('data-open', 'false');
+        menu.hidden = true;
+        toggle.setAttribute('aria-expanded', 'false');
+      }),
+    );
+  }
+
+  document.addEventListener('astro:page-load', initNav);
+</script>

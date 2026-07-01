@@ -1,0 +1,13 @@
+{
+  "name": "Tornillo bloqueado 3.5 mm",
+  "category": "screws",
+  "material": "Titanio Ti-6Al-4V ELI (grado 23)",
+  "reference": "TOR-BLQ-35",
+  "dimensions": "Longitudes de 10 a 60 mm",
+  "description": "Tornillo de bloqueo con doble rosca (hueso y cabeza) para sistemas de placa bloqueada. Proporciona estabilidad angular y un montaje de fijación interna estable.",
+  "image": "",
+  "modes": ["sale"],
+  "tags": ["Bloqueados"],
+  "featured": false,
+  "order": 3
+}

@@ -1,0 +1,141 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import CategoryCards from '../../components/CategoryCards.astro';
+import ProductGrid from '../../components/ProductGrid.astro';
+import { site, CATEGORY_LABEL, CATEGORY_SLUG, CATEGORY_ORDER } from '../../data/site.ts';
+
+const entries = await getCollection('products');
+const products = entries.sort(
+  (a, b) => a.data.order - b.data.order || a.data.name.localeCompare(b.data.name, 'es'),
+);
+
+const usedCategories = CATEGORY_ORDER.filter((c) =>
+  products.some((p) => p.data.category === c),
+);
+---
+
+<Layout title={`Catálogo — ${site.brand}`} description="Catálogo de implantes, tornillos, instrumental y motores quirúrgicos veterinarios de Ossinova.">
+  <Nav />
+  <main class="catalog-page">
+    <div class="container">
+      <div class="catalog-page__head">
+        <span class="section__eyebrow">Catálogo</span>
+        <h1>Catálogo de productos</h1>
+        <p>
+          Implantes, tornillos, instrumental y motores en titanio Ti-6Al-4V ELI, disponibles en
+          renting de larga o corta duración y en venta.
+        </p>
+      </div>
+
+      <section class="catalog-page__block">
+        <h2 class="catalog-page__subtitle">Secciones</h2>
+        <CategoryCards />
+      </section>
+
+      <section class="catalog-page__block">
+        <h2 class="catalog-page__subtitle">Todos los productos</h2>
+
+        <div class="catalog-page__filters" role="group" aria-label="Filtrar por categoría">
+          <button class="chip is-active" data-filter="all">Todos</button>
+          {
+            usedCategories.map((c) => (
+              <a class="chip" href={`/catalogo/${CATEGORY_SLUG[c]}`} data-filter={c}>
+                {CATEGORY_LABEL[c]}
+              </a>
+            ))
+          }
+        </div>
+
+        <div data-grid-root>
+          <ProductGrid products={products} />
+        </div>
+      </section>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .catalog-page {
+    padding: clamp(2rem, 5vw, 3.5rem) 0 clamp(3rem, 7vw, 5rem);
+  }
+
+  .catalog-page__head {
+    max-width: 700px;
+    margin-bottom: 3rem;
+  }
+
+  .catalog-page__head h1 {
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    margin: 0.3rem 0 0.6rem;
+  }
+
+  .catalog-page__block {
+    margin-bottom: 3.5rem;
+  }
+
+  .catalog-page__subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .catalog-page__filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .chip {
+    font-family: inherit;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--gray);
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .chip:hover {
+    border-color: var(--green);
+    color: var(--green);
+  }
+
+  .chip.is-active {
+    background: var(--green);
+    border-color: var(--green);
+    color: #fff;
+  }
+</style>
+
+<script>
+  // Client-side quick filter over the full grid. The category chips are also
+  // real links to each section page, so this only intercepts left-clicks.
+  function initCatalogFilter() {
+    const chips = document.querySelectorAll<HTMLElement>('.catalog-page__filters .chip');
+    const items = document.querySelectorAll<HTMLElement>('[data-grid-root] .grid__item');
+    if (chips.length === 0) return;
+
+    chips.forEach((chip) => {
+      chip.addEventListener('click', (event) => {
+        // Let modified clicks (new tab) and the plain-link fallback still work.
+        if ((event as MouseEvent).metaKey || (event as MouseEvent).ctrlKey) return;
+        event.preventDefault();
+        const filter = chip.dataset.filter;
+        chips.forEach((c) => c.classList.toggle('is-active', c === chip));
+        items.forEach((item) => {
+          const show = filter === 'all' || item.dataset.category === filter;
+          item.classList.toggle('is-hidden', !show);
+        });
+      });
+    });
+  }
+
+  document.addEventListener('astro:page-load', initCatalogFilter);
+</script>

@@ -1,0 +1,114 @@
+---
+import { site } from '../data/site.ts';
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <img src="/images/logo-full.png" alt={site.brand} class="footer__logo" />
+      <p class="footer__tagline">Soluciones quirúrgicas para el cirujano veterinario.</p>
+    </div>
+
+    <div class="footer__col">
+      <h4>Navegación</h4>
+      <a href="/#about">Quiénes somos</a>
+      <a href="/#modes">Modalidades</a>
+      <a href="/catalogo">Catálogo</a>
+      <a href="/#faq">FAQ</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Contacto</h4>
+      <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
+      <a href={`https://wa.me/${site.contact.whatsapp}`} target="_blank" rel="noopener">
+        WhatsApp {site.contact.phone}
+      </a>
+      <a href={site.contact.instagram} target="_blank" rel="noopener">
+        Instagram {site.contact.instagramHandle}
+      </a>
+      <span class="footer__muted">{site.contact.city}</span>
+    </div>
+  </div>
+
+  <div class="footer__bar">
+    <div class="container">
+      <span>© {year} {site.company}. Todos los derechos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--gray);
+    color: #fff;
+  }
+
+  .footer__inner {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    gap: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .footer__logo {
+    height: 40px;
+    width: auto;
+    filter: brightness(0) invert(1);
+  }
+
+  .footer__tagline {
+    margin: 0.8rem 0 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    max-width: 34ch;
+  }
+
+  .footer__col h4 {
+    color: #fff;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 0 1rem;
+  }
+
+  .footer__col a,
+  .footer__muted {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.92rem;
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+  }
+
+  .footer__col a:hover {
+    color: #fff;
+  }
+
+  .footer__muted {
+    color: rgba(255, 255, 255, 0.55);
+  }
+
+  .footer__bar {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 1.1rem 0;
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  @media (max-width: 760px) {
+    .footer__inner {
+      grid-template-columns: 1fr 1fr;
+    }
+    .footer__brand {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 460px) {
+    .footer__inner {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
