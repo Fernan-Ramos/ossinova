@@ -126,6 +126,18 @@ const { hero } = site;
     height: auto;
   }
 
+  @media (prefers-reduced-motion: no-preference) {
+    .hero__logo {
+      animation: hero-spin 16s linear infinite;
+    }
+  }
+
+  @keyframes hero-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
   /* Primary CTA with circular arrow */
   .hero-cta {
     display: inline-flex;
@@ -176,41 +188,3 @@ const { hero } = site;
     }
   }
 </style>
-
-<script>
-  // The mark is a wheel: spin it while hovering the shape, and freeze it at
-  // whatever angle it reached when the pointer leaves (no snap back).
-  function initHeroWheel() {
-    const shape = document.querySelector<HTMLElement>('[data-wheel]');
-    const logo = shape?.querySelector<HTMLElement>('.hero__logo');
-    if (!shape || !logo) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-    let angle = 0;
-    let last: number | null = null;
-    let raf: number | null = null;
-    let hovering = false;
-    const SPEED = 0.12; // degrees per millisecond (~1 turn / 3s)
-
-    function tick(t: number) {
-      if (last === null) last = t;
-      angle = (angle + (t - last) * SPEED) % 360;
-      last = t;
-      logo!.style.transform = `rotate(${angle}deg)`;
-      if (hovering) raf = requestAnimationFrame(tick);
-    }
-
-    shape.addEventListener('mouseenter', () => {
-      hovering = true;
-      last = null;
-      raf = requestAnimationFrame(tick);
-    });
-
-    shape.addEventListener('mouseleave', () => {
-      hovering = false;
-      if (raf) cancelAnimationFrame(raf);
-    });
-  }
-
-  document.addEventListener('astro:page-load', initHeroWheel);
-</script>
