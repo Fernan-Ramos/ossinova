@@ -11,9 +11,9 @@
   --blue: #8dd4ea;
 
   /* Neutrals */
-  --ink: #14181a; /* headings */
-  --text: #3a4145; /* body */
-  --muted: #7b8388; /* secondary */
+  --ink: #505050; /* Gris Ossinova — headings / strong text */
+  --text: #505050; /* body */
+  --muted: #8a9092; /* secondary */
   --bg: #ffffff;
   --bg-alt: #fafbfb; /* barely-there alternate */
   --line: #e7eaec; /* hairlines */
@@ -168,12 +168,12 @@ img {
 }
 
 .btn--primary {
-  background: var(--ink);
+  background: var(--green);
   color: #fff;
 }
 
 .btn--primary:hover {
-  background: var(--green);
+  background: var(--green-dark);
 }
 
 .btn--secondary {
