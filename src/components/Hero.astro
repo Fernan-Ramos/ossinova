@@ -23,6 +23,7 @@ const { hero } = site;
 
   <div class="container">
     <div class="hero__copy">
+      <img src="/images/logo-icon.png" alt="" class="hero__copy-logo" aria-hidden="true" />
       <span class="hero__eyebrow">Ossinova Surgical Group</span>
       <h1 class="hero__title">{hero.title}</h1>
       <p class="hero__subtitle">{hero.subtitle}</p>
@@ -126,9 +127,18 @@ const { hero } = site;
     height: auto;
   }
 
+  /* mobile-only logo shown with the text (no geometric shape) */
+  .hero__copy-logo {
+    display: none;
+    width: 92px;
+    height: auto;
+    margin-bottom: 1.4rem;
+  }
+
   @media (prefers-reduced-motion: no-preference) {
-    .hero__logo {
-      animation: hero-spin 16s linear infinite;
+    .hero__logo,
+    .hero__copy-logo {
+      animation: hero-spin 9s linear infinite;
     }
   }
 
@@ -176,15 +186,28 @@ const { hero } = site;
   }
 
   @media (max-width: 980px) {
+    /* drop the geometric shape; combine logo + text in one centered column */
     .hero__shape {
-      position: relative;
-      inset: auto;
-      width: 100%;
-      height: clamp(240px, 40vh, 340px);
-      padding-right: 12%;
+      display: none;
     }
     .hero__copy {
-      padding: 2.5rem 0 3rem;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 3rem 0 3.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .hero__copy-logo {
+      display: block;
+    }
+    .hero__title,
+    .hero__subtitle {
+      max-width: none;
+    }
+    .hero__actions {
+      justify-content: center;
     }
   }
 </style>
