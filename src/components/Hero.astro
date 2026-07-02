@@ -99,6 +99,23 @@ const { hero } = site;
   .hero__logo {
     width: min(320px, 78%);
     height: auto;
+    will-change: transform;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .hero__logo {
+      animation: hero-float 6s ease-in-out infinite;
+    }
+  }
+
+  @keyframes hero-float {
+    0%,
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-16px) rotate(-2.5deg);
+    }
   }
 
   @media (max-width: 860px) {
