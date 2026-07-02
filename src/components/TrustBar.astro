@@ -1,15 +1,5 @@
 ---
 import { site } from '../data/site.ts';
-
-// Inline icons keyed by index, so the copy stays data-driven in site.ts.
-const icons = [
-  // shield / titanium
-  '<path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/>',
-  // scalpel / clinical
-  '<path d="M4 20l7-7M14 10l6-6M14 10l-3-3 6-6 3 3-6 6z"/>',
-  // arrows / flexible
-  '<path d="M4 8h13M13 4l4 4-4 4M20 16H7M11 12l-4 4 4 4"/>',
-];
 ---
 
 <section class="trust reveal" aria-label="Por qué Ossinova">
@@ -17,17 +7,7 @@ const icons = [
     {
       site.trust.map((item, i) => (
         <div class="trust__item">
-          <span class="trust__icon" aria-hidden="true">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.6"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              set:html={icons[i]}
-            />
-          </span>
+          <span class="trust__num">{String(i + 1).padStart(2, '0')}</span>
           <div>
             <h3 class="trust__title">{item.title}</h3>
             <p class="trust__text">{item.text}</p>
@@ -40,60 +20,59 @@ const icons = [
 
 <style>
   .trust {
-    background: var(--green);
-    color: #fff;
+    border-bottom: 1px solid var(--line);
+    background: var(--bg-alt);
   }
 
   .trust__inner {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    padding-top: 2.4rem;
-    padding-bottom: 2.4rem;
+    padding-top: clamp(2rem, 4vw, 3rem);
+    padding-bottom: clamp(2rem, 4vw, 3rem);
   }
 
   .trust__item {
     display: flex;
     gap: 1rem;
-    align-items: flex-start;
+    padding: 0.4rem clamp(1rem, 3vw, 2.2rem);
   }
 
-  .trust__icon {
-    flex-shrink: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.14);
-    color: #fff;
+  .trust__item + .trust__item {
+    border-left: 1px solid var(--line);
   }
 
-  .trust__icon svg {
-    width: 22px;
-    height: 22px;
+  .trust__num {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--green);
+    letter-spacing: 0.02em;
   }
 
   .trust__title {
-    color: #fff;
     font-size: 1rem;
-    margin: 0 0 0.2rem;
+    margin: 0 0 0.35rem;
   }
 
   .trust__text {
     margin: 0;
-    color: rgba(255, 255, 255, 0.82);
+    color: var(--muted);
     font-size: 0.9rem;
-    line-height: 1.5;
+    line-height: 1.55;
   }
 
-  @media (max-width: 820px) {
+  @media (max-width: 760px) {
     .trust__inner {
       grid-template-columns: 1fr;
-      gap: 1.4rem;
-      padding-top: 2rem;
-      padding-bottom: 2rem;
+      gap: 1.6rem;
+    }
+    .trust__item {
+      padding: 0;
+    }
+    .trust__item + .trust__item {
+      border-left: 0;
+      border-top: 1px solid var(--line);
+      padding-top: 1.6rem;
     }
   }
 </style>

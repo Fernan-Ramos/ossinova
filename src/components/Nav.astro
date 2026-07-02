@@ -35,45 +35,62 @@ import { site } from '../data/site.ts';
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
   }
 
   .nav__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 72px;
+    height: 78px;
   }
 
   .nav__logo {
-    height: 44px;
+    height: 38px;
     width: auto;
   }
 
   .nav__links {
     display: flex;
     align-items: center;
-    gap: 1.8rem;
-  }
-
-  .nav__links a {
-    font-weight: 600;
-    font-size: 0.95rem;
+    gap: 2.4rem;
   }
 
   .nav__links a:not(.nav__cta) {
-    color: var(--gray);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    position: relative;
+  }
+
+  .nav__links a:not(.nav__cta)::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 1.5px;
+    background: var(--green);
+    transition: width 0.2s ease;
   }
 
   .nav__links a:not(.nav__cta):hover {
     color: var(--green);
   }
 
+  .nav__links a:not(.nav__cta):hover::after {
+    width: 100%;
+  }
+
   .nav__cta {
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
     color: #fff;
-    padding: 0.55rem 1.2rem;
+    padding: 0.6rem 1.3rem;
   }
 
   .nav__cta:hover {
@@ -93,7 +110,7 @@ import { site } from '../data/site.ts';
   .nav__toggle span {
     width: 24px;
     height: 2px;
-    background: var(--gray);
+    background: var(--ink);
     border-radius: 2px;
     transition: 0.2s;
   }
@@ -101,16 +118,16 @@ import { site } from '../data/site.ts';
   .nav__mobile {
     display: none;
     flex-direction: column;
-    padding: 0.5rem 1.5rem 1.2rem;
-    border-bottom: 1px solid var(--border);
+    padding: 0.5rem var(--gutter) 1.4rem;
+    border-bottom: 1px solid var(--line);
     background: #fff;
   }
 
   .nav__mobile a {
-    padding: 0.7rem 0;
-    color: var(--gray);
+    padding: 0.85rem 0;
+    color: var(--ink);
     font-weight: 600;
-    border-bottom: 1px solid var(--gray-soft);
+    border-bottom: 1px solid var(--line);
   }
 
   @media (max-width: 760px) {

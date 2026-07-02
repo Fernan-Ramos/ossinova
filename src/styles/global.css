@@ -1,32 +1,31 @@
 /* ─────────────────────────────────────────────────────────────
-   BRAND PALETTE & BASE STYLES — Ossinova
-   Change the colors here to restyle the whole site at once.
+   OSSINOVA — sistema visual (editorial / clínico premium)
+   Menos cajas, más aire, jerarquía tipográfica y líneas finas.
    ───────────────────────────────────────────────────────────── */
 :root {
-  /* Brand colors */
-  --green: #01737d; /* Verde Ossinova */
+  /* Brand */
+  --green: #01737d;
   --green-dark: #015a63;
-  --green-soft: #e6f1f2;
-  --gray: #505050; /* Gris Ossinova */
-  --gray-mid: #6f6f6f;
-  --gray-soft: #f4f5f5;
-  --gold: #e8bd61; /* Dorado catalogo */
-  --gold-dark: #cca23f;
-  --blue: #8dd4ea; /* Azul Instagram */
+  --green-soft: #eef5f5;
+  --gold: #e8bd61;
+  --blue: #8dd4ea;
 
-  --text: #2b2b2b;
-  --text-soft: #5f6368;
+  /* Neutrals */
+  --ink: #14181a; /* headings */
+  --text: #3a4145; /* body */
+  --muted: #7b8388; /* secondary */
   --bg: #ffffff;
-  --border: #e6e8e9;
+  --bg-alt: #fafbfb; /* barely-there alternate */
+  --line: #e7eaec; /* hairlines */
+  --line-strong: #d3d8db;
 
-  /* Typography */
-  --font: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  /* Type */
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-heading: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
   /* Metrics */
-  --container: 1120px;
-  --radius: 14px;
-  --shadow: 0 6px 24px rgba(1, 115, 125, 0.08);
-  --shadow-hover: 0 12px 32px rgba(1, 115, 125, 0.16);
+  --container: 1160px;
+  --gutter: clamp(1.25rem, 5vw, 3rem);
 }
 
 *,
@@ -37,39 +36,48 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 84px;
+  scroll-padding-top: 90px;
 }
 
 body {
   margin: 0;
-  font-family: var(--font);
+  font-family: var(--font-body);
   color: var(--text);
   background: var(--bg);
-  line-height: 1.65;
+  line-height: 1.7;
+  font-size: 1.03rem;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 h1,
 h2,
 h3,
 h4 {
+  font-family: var(--font-heading);
+  color: var(--ink);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
   font-weight: 700;
-  line-height: 1.2;
-  color: var(--gray);
-  margin: 0 0 0.5em;
+  margin: 0 0 0.4em;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-weight: 800;
 }
 
 h2 {
-  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-size: clamp(1.9rem, 4vw, 3rem);
 }
 
 h3 {
   font-size: 1.15rem;
+  letter-spacing: -0.01em;
 }
 
 p {
   margin: 0 0 1rem;
-  color: var(--text-soft);
 }
 
 a {
@@ -86,36 +94,60 @@ img {
   width: 100%;
   max-width: var(--container);
   margin: 0 auto;
-  padding: 0 clamp(1.2rem, 4vw, 2rem);
+  padding: 0 var(--gutter);
 }
 
 /* Sections */
 .section {
-  padding: clamp(3.5rem, 8vw, 6rem) 0;
+  padding: clamp(4rem, 9vw, 7.5rem) 0;
 }
 
 .section--gray {
-  background: var(--gray-soft);
+  background: var(--bg-alt);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+/* Section label + heading (editorial, left-aligned by default) */
+.section__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 1.1rem;
+}
+
+.section__eyebrow::before {
+  content: '';
+  width: 26px;
+  height: 1px;
+  background: var(--green);
 }
 
 .section__header {
-  max-width: 720px;
-  margin: 0 auto 2.8rem;
-  text-align: center;
-}
-
-.section__eyebrow {
-  display: inline-block;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--green);
-  margin-bottom: 0.6rem;
+  max-width: 42rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
 }
 
 .section__header p {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.section__header--center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.section__header--center .section__eyebrow::before {
+  display: none;
 }
 
 /* Buttons */
@@ -124,87 +156,108 @@ img {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  font-family: inherit;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   font-weight: 600;
-  padding: 0.8rem 1.5rem;
-  border-radius: 999px;
-  border: 2px solid transparent;
+  padding: 0.85rem 1.6rem;
+  border: 1px solid transparent;
+  border-radius: 4px;
   cursor: pointer;
   transition: all 0.18s ease;
   text-align: center;
 }
 
 .btn--primary {
-  background: var(--green);
+  background: var(--ink);
   color: #fff;
 }
 
 .btn--primary:hover {
-  background: var(--green-dark);
-  transform: translateY(-1px);
+  background: var(--green);
 }
 
 .btn--secondary {
   background: transparent;
-  color: var(--green);
-  border-color: var(--green);
+  color: var(--ink);
+  border-color: var(--line-strong);
 }
 
 .btn--secondary:hover {
+  border-color: var(--ink);
+}
+
+.btn--gold {
   background: var(--green);
   color: #fff;
 }
 
-.btn--gold {
-  background: var(--gold);
-  color: var(--gray);
-}
-
 .btn--gold:hover {
-  background: var(--gold-dark);
-  transform: translateY(-1px);
+  background: var(--green-dark);
 }
 
-/* Mode badges */
-.badge {
-  display: inline-block;
-  font-size: 0.72rem;
+/* Link with arrow */
+.arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   font-weight: 600;
-  padding: 0.28rem 0.7rem;
-  border-radius: 999px;
-  background: var(--green-soft);
-  color: var(--green-dark);
-  white-space: nowrap;
+  font-size: 0.92rem;
+  color: var(--ink);
 }
 
-.badge--sale {
-  background: #eef7e9;
-  color: #4d7c2f;
+.arrow-link span {
+  transition: transform 0.18s ease;
 }
 
-.badge--rental-long {
-  background: var(--green-soft);
-  color: var(--green-dark);
+.arrow-link:hover {
+  color: var(--green);
 }
 
-.badge--rental-short {
-  background: #fdf4e0;
-  color: #a97d1f;
+.arrow-link:hover span {
+  transform: translateX(4px);
 }
 
-/* Scroll reveal — only hides content once JS marks the page as ready, so
-   content stays visible if JS fails or animations are reduced. */
+/* Mode tags — outline, not filled pill */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.2rem 0;
+  color: var(--muted);
+}
+
+.badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+.badge--sale::before {
+  background: #6a9a3f;
+}
+.badge--rental-long::before {
+  background: var(--green);
+}
+.badge--rental-short::before {
+  background: var(--gold);
+}
+
+/* Scroll reveal (respects reduced motion) */
 @media (prefers-reduced-motion: no-preference) {
   .anim-ready .reveal {
     opacity: 0;
-    transform: translateY(18px);
+    transform: translateY(20px);
   }
 
   .anim-ready .reveal.is-visible {
     opacity: 1;
     transform: none;
-    transition: opacity 0.55s ease, transform 0.55s ease;
+    transition: opacity 0.6s ease, transform 0.6s ease;
   }
 }
 
