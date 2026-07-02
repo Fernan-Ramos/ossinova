@@ -132,12 +132,12 @@ const quoteHref = `mailto:${site.contact.email}?subject=${subject}&body=${body}`
     flex-wrap: wrap;
     gap: 0.5rem;
     font-size: 0.85rem;
-    color: var(--gray-mid);
+    color: var(--muted);
     margin-bottom: 2rem;
   }
 
   .detail__breadcrumb a {
-    color: var(--gray-mid);
+    color: var(--muted);
   }
 
   .detail__breadcrumb a:hover {
@@ -153,8 +153,9 @@ const quoteHref = `mailto:${site.contact.email}?subject=${subject}&body=${body}`
 
   .detail__media {
     aspect-ratio: 1 / 1;
-    background: var(--gray-soft);
-    border-radius: var(--radius);
+    background: var(--bg-alt);
+    border: 1px solid var(--line);
+    border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -229,11 +230,14 @@ const quoteHref = `mailto:${site.contact.email}?subject=${subject}&body=${body}`
 
   .detail__specs {
     display: grid;
-    gap: 0.9rem;
-    margin: 1.6rem 0;
-    padding: 1.3rem 1.4rem;
-    background: var(--gray-soft);
-    border-radius: var(--radius);
+    gap: 0;
+    margin: 1.8rem 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .detail__specs > div {
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--line);
   }
 
   .detail__specs div {
@@ -248,7 +252,7 @@ const quoteHref = `mailto:${site.contact.email}?subject=${subject}&body=${body}`
     text-transform: uppercase;
     letter-spacing: 0.06em;
     font-weight: 700;
-    color: var(--gray-mid);
+    color: var(--muted);
   }
 
   .detail__specs dd {
@@ -280,7 +284,7 @@ const quoteHref = `mailto:${site.contact.email}?subject=${subject}&body=${body}`
     display: inline-block;
     margin-top: 2.5rem;
     font-weight: 600;
-    color: var(--gray-mid);
+    color: var(--muted);
   }
 
   .detail__back:hover {

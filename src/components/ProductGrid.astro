@@ -32,8 +32,8 @@ const { products, emptyText = 'Aún no hay productos publicados en esta sección
 <style>
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: clamp(1.5rem, 3vw, 2.5rem);
   }
 
   .grid__item.is-hidden {
@@ -41,7 +41,6 @@ const { products, emptyText = 'Aún no hay productos publicados en esta sección
   }
 
   .grid__empty {
-    text-align: center;
-    color: var(--gray-mid);
+    color: var(--muted);
   }
 </style>
