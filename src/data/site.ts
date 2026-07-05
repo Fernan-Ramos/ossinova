@@ -59,7 +59,7 @@ export const site = {
       {
         key: 'rental-long',
         title: 'Renting larga duración',
-        text: 'Dispón del material de forma continuada con una cuota periódica, sin una gran inversión inicial. Ideal para clínicas y hospitales con actividad quirúrgica regular.',
+        text: 'Dispón del material de forma continuada con una cuota periódica, sin necesidad de inversión inicial. Ideal para clínicas y hospitales con actividad quirúrgica regular.',
       },
       {
         key: 'rental-short',
