@@ -1,0 +1,24 @@
+{
+  "name": "Guardador de agujas (K-Guard)",
+  "category": "accessories",
+  "material": "Acero inoxidable quirúrgico",
+  "reference": "OKG",
+  "dimensions": "Ø 1 a 2.5 mm",
+  "description": "Protector-guardador para agujas de Kirschner.",
+  "longDescription": "El Ossinova K-Guard protege y organiza las agujas de Kirschner de 1 a 2.5 mm durante la cirugía, aumentando la seguridad y el orden en el campo quirúrgico.",
+  "highlights": [
+    "Protege y organiza las agujas de Kirschner",
+    "Para diámetros de 1 a 2.5 mm",
+    "Acero inoxidable quirúrgico"
+  ],
+  "image": "",
+  "modes": [
+    "sale"
+  ],
+  "tags": [
+    "Agujas Kirschner"
+  ],
+  "featured": false,
+  "order": 25,
+  "priceFrom": 120
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Hojas de sierra para TPLO",
+  "category": "accessories",
+  "material": "Acero inoxidable quirúrgico",
+  "reference": "OTPLO-B",
+  "dimensions": "Radios de 8 a 33 mm",
+  "description": "Hojas de sierra para la técnica TPLO, en distintos radios.",
+  "longDescription": "Las hojas de sierra TPLO Ossinova están disponibles en radios de 8 a 33 mm, para adaptarse al tamaño del paciente en la osteotomía niveladora de la meseta tibial. Compatibles con la sierra Ossinova TPLO.",
+  "highlights": [
+    "Radios de 8 a 33 mm",
+    "Para distintos tamaños de paciente",
+    "Compatibles con la sierra Ossinova TPLO"
+  ],
+  "image": "",
+  "modes": [
+    "sale"
+  ],
+  "tags": [
+    "TPLO",
+    "Instrumental"
+  ],
+  "featured": false,
+  "order": 29,
+  "priceFrom": 20
+}

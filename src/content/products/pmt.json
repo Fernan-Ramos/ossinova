@@ -1,0 +1,27 @@
+{
+  "name": "Placa Moduplate T — Doble T",
+  "category": "implants",
+  "material": "Titanio Ti-6Al-4V ELI (grado 23)",
+  "reference": "PMT",
+  "dimensions": "Ø 1.5 a 3.5 mm",
+  "description": "Placa de bloqueo de reconstrucción en doble T para fracturas metafisarias.",
+  "longDescription": "La Ossinova Moduplate T ofrece una configuración en doble T que aporta estabilidad en fracturas metafisarias y periarticulares. Sistema modular con distintos diámetros y longitudes.",
+  "highlights": [
+    "Configuración en doble T",
+    "Indicada para fracturas metafisarias",
+    "Diámetros de 1.5 a 3.5 mm",
+    "Titanio Ti-6Al-4V ELI (grado 23)"
+  ],
+  "image": "",
+  "modes": [
+    "sale",
+    "rental-long"
+  ],
+  "tags": [
+    "Reconstrucción",
+    "Moduplate"
+  ],
+  "featured": false,
+  "order": 3,
+  "priceFrom": 140
+}

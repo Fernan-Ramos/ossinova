@@ -1,0 +1,26 @@
+{
+  "name": "Placa Rigid LCP — Bloqueada y de compresión",
+  "category": "implants",
+  "material": "Titanio Ti-6Al-4V ELI (grado 23)",
+  "reference": "PR-LCP",
+  "dimensions": "Ø 2 a 3.5 mm · 4–12 orificios",
+  "description": "Placa LCP bloqueada y de compresión para osteosíntesis de huesos largos.",
+  "longDescription": "La Ossinova Rigid LCP combina orificios de bloqueo y de compresión dinámica en una misma placa, permitiendo técnicas de fijación absoluta o relativa. Amplio rango de diámetros y longitudes.",
+  "highlights": [
+    "Orificios combinados: bloqueo + compresión",
+    "Fijación absoluta o relativa",
+    "Diámetros de 2 a 3.5 mm",
+    "Titanio Ti-6Al-4V ELI (grado 23)"
+  ],
+  "image": "",
+  "modes": [
+    "sale",
+    "rental-long"
+  ],
+  "tags": [
+    "LCP"
+  ],
+  "featured": true,
+  "order": 6,
+  "priceFrom": 95
+}

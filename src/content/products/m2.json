@@ -1,0 +1,27 @@
+{
+  "name": "Ossinova TPLO — Sierra",
+  "category": "motors",
+  "material": "Acero inoxidable quirúrgico",
+  "reference": "M2",
+  "dimensions": "Sierra oscilante autoclavable",
+  "description": "Sierra específica para la técnica de TPLO.",
+  "longDescription": "La sierra Ossinova TPLO está diseñada para realizar la osteotomía en la técnica de nivelación de la meseta tibial, con control preciso y compatible con las hojas de sierra TPLO Ossinova.",
+  "highlights": [
+    "Diseñada para la osteotomía TPLO",
+    "Compatible con hojas de sierra Ossinova",
+    "Autoclavable"
+  ],
+  "image": "",
+  "modes": [
+    "rental-long",
+    "rental-short",
+    "sale"
+  ],
+  "tags": [
+    "Motor",
+    "TPLO"
+  ],
+  "featured": true,
+  "order": 18,
+  "priceFrom": 3000
+}

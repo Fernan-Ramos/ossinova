@@ -1,0 +1,26 @@
+{
+  "name": "Placa de artrodesis pancarpal",
+  "category": "implants",
+  "material": "Titanio Ti-6Al-4V ELI (grado 23)",
+  "reference": "PMFC",
+  "dimensions": "Sistemas de 1.5 a 2.7 mm",
+  "description": "Placa para artrodesis pancarpal del carpo con orificios escalonados.",
+  "longDescription": "La placa de artrodesis pancarpal Ossinova está diseñada específicamente para la fusión del carpo, con una distribución de orificios escalonada que se adapta a la transición radio-metacarpiana y admite tornillos de distintos diámetros.",
+  "highlights": [
+    "Diseño específico para artrodesis pancarpal",
+    "Orificios escalonados radio-metacarpianos",
+    "Admite varios diámetros de tornillo",
+    "Titanio Ti-6Al-4V ELI (grado 23)"
+  ],
+  "image": "",
+  "modes": [
+    "sale",
+    "rental-long"
+  ],
+  "tags": [
+    "Artrodesis"
+  ],
+  "featured": false,
+  "order": 9,
+  "priceFrom": 135
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Mango de destornillador (Coupling Handle)",
+  "category": "accessories",
+  "material": "Acero inoxidable quirúrgico",
+  "reference": "OCH",
+  "dimensions": "Acoplamiento universal",
+  "description": "Mango de destornillador con acoplamiento para las puntas Ossinova.",
+  "longDescription": "El mango de destornillador Ossinova (Coupling Handle) admite las puntas intercambiables del sistema, ofreciendo un agarre ergonómico y transmisión de par controlada.",
+  "highlights": [
+    "Compatible con las puntas Ossinova",
+    "Agarre ergonómico",
+    "Acero inoxidable quirúrgico"
+  ],
+  "image": "",
+  "modes": [
+    "sale"
+  ],
+  "tags": [
+    "Destornillador"
+  ],
+  "featured": false,
+  "order": 21,
+  "priceFrom": 150
+}

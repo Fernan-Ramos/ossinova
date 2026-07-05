@@ -1,0 +1,27 @@
+{
+  "name": "Placa de TPLO curva",
+  "category": "implants",
+  "material": "Titanio Ti-6Al-4V ELI (grado 23)",
+  "reference": "P-TPLC",
+  "dimensions": "Ø 2 a 3.5 mm · tamaños 4 a 10",
+  "description": "Placa curva para osteotomía niveladora de la meseta tibial (TPLO).",
+  "longDescription": "La Ossinova TPLO CTWO curva ofrece un contorno anatómico que se adapta a la cara medial de la tibia proximal en la técnica TPLO. Amplio rango de tamaños, en versiones izquierda y derecha.",
+  "highlights": [
+    "Contorno curvo anatómico para la tibia proximal",
+    "Tamaños del 4 al 10",
+    "Versiones izquierda y derecha",
+    "Titanio Ti-6Al-4V ELI (grado 23)"
+  ],
+  "image": "",
+  "modes": [
+    "sale",
+    "rental-long",
+    "rental-short"
+  ],
+  "tags": [
+    "TPLO"
+  ],
+  "featured": true,
+  "order": 13,
+  "priceFrom": 95
+}

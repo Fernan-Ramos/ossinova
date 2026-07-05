@@ -1,0 +1,24 @@
+{
+  "name": "Agujas de Kirschner",
+  "category": "accessories",
+  "material": "Acero inoxidable quirúrgico",
+  "reference": "OKT",
+  "dimensions": "Ø 0.8 a 4.0 mm · 250 mm",
+  "description": "Agujas de Kirschner lisas, roscadas y de doble cabeza.",
+  "longDescription": "Las agujas de Kirschner Ossinova están disponibles en versiones lisas, roscadas y de doble cabeza, en diámetros de 0.8 a 4.0 mm, para fijación temporal, cerclajes y osteosíntesis de pequeños fragmentos.",
+  "highlights": [
+    "Versiones lisa, roscada y doble cabeza",
+    "Diámetros de 0.8 a 4.0 mm",
+    "Longitud 250 mm"
+  ],
+  "image": "",
+  "modes": [
+    "sale"
+  ],
+  "tags": [
+    "Agujas Kirschner"
+  ],
+  "featured": false,
+  "order": 24,
+  "priceFrom": 5
+}

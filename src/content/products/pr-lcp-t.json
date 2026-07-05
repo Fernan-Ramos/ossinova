@@ -1,0 +1,25 @@
+{
+  "name": "Placa Rigid LCP en T",
+  "category": "implants",
+  "material": "Titanio Ti-6Al-4V ELI (grado 23)",
+  "reference": "PR-LCP-T",
+  "dimensions": "Ø 2 a 3.5 mm",
+  "description": "Placa LCP bloqueada en T para fracturas periarticulares.",
+  "longDescription": "La Ossinova Rigid LCP en T aporta soporte transversal en la epífisis, indicada para fracturas periarticulares que requieren fijación en T. Combina bloqueo y compresión.",
+  "highlights": [
+    "Geometría en T para fracturas periarticulares",
+    "Orificios de bloqueo y compresión",
+    "Titanio Ti-6Al-4V ELI (grado 23)"
+  ],
+  "image": "",
+  "modes": [
+    "sale",
+    "rental-long"
+  ],
+  "tags": [
+    "LCP"
+  ],
+  "featured": false,
+  "order": 7,
+  "priceFrom": 97
+}

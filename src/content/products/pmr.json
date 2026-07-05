@@ -1,0 +1,27 @@
+{
+  "name": "Placa Moduplate R — Reconstrucción",
+  "category": "implants",
+  "material": "Titanio Ti-6Al-4V ELI (grado 23)",
+  "reference": "PMR",
+  "dimensions": "Ø 1.5 a 3.5 mm · 18–30 orificios",
+  "description": "Placa de bloqueo modular para reconstrucción de huesos largos en pequeños animales.",
+  "longDescription": "La Ossinova Moduplate R es una placa de bloqueo para reconstrucción, diseñada para adaptarse a la anatomía de huesos largos. Su sistema modular permite escoger el diámetro y la longitud adecuados para cada caso, ofreciendo una fijación estable y de bajo perfil.",
+  "highlights": [
+    "Sistema de bloqueo para fijación de ángulo estable",
+    "Diámetros de 1.5 a 3.5 mm",
+    "De 18 a 30 orificios según modelo",
+    "Titanio Ti-6Al-4V ELI (grado 23)"
+  ],
+  "image": "",
+  "modes": [
+    "sale",
+    "rental-long"
+  ],
+  "tags": [
+    "Reconstrucción",
+    "Moduplate"
+  ],
+  "featured": true,
+  "order": 1,
+  "priceFrom": 100
+}

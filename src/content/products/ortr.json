@@ -1,0 +1,24 @@
+{
+  "name": "Retractor",
+  "category": "accessories",
+  "material": "Acero inoxidable quirúrgico",
+  "reference": "ORTR",
+  "dimensions": "Retractor quirúrgico",
+  "description": "Retractor quirúrgico para exposición del campo.",
+  "longDescription": "El retractor Ossinova facilita la exposición y separación de tejidos durante la intervención, con acabado en acero inoxidable quirúrgico.",
+  "highlights": [
+    "Exposición y separación de tejidos",
+    "Acero inoxidable quirúrgico"
+  ],
+  "image": "",
+  "modes": [
+    "sale",
+    "rental-long"
+  ],
+  "tags": [
+    "Instrumental"
+  ],
+  "featured": false,
+  "order": 30,
+  "priceFrom": 950
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Dobladores de placas (Plate Bender)",
+  "category": "accessories",
+  "material": "Acero inoxidable quirúrgico",
+  "reference": "OPB",
+  "dimensions": "1.1 a 3.5 mm · 140–175 mm",
+  "description": "Dobladores para conformar las placas a la anatomía.",
+  "longDescription": "Los dobladores de placas Ossinova permiten conformar las placas al contorno óseo del paciente, disponibles para los distintos diámetros del sistema.",
+  "highlights": [
+    "Conforman la placa a la anatomía",
+    "Para diámetros de 1.1 a 3.5 mm",
+    "Acero inoxidable quirúrgico"
+  ],
+  "image": "",
+  "modes": [
+    "sale",
+    "rental-long"
+  ],
+  "tags": [
+    "Instrumental"
+  ],
+  "featured": false,
+  "order": 28,
+  "priceFrom": 65
+}

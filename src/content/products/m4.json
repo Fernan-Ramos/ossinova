@@ -1,0 +1,27 @@
+{
+  "name": "Ossinova System Pro",
+  "category": "motors",
+  "material": "Acero inoxidable quirúrgico",
+  "reference": "M4",
+  "dimensions": "Sistema multifuncional con TPLO",
+  "description": "Sistema motor completo multifuncional con capacidad TPLO.",
+  "longDescription": "El Ossinova System Pro es la solución motor más completa: sistema multifuncional que integra las capacidades de traumatología y la sierra de TPLO en un único equipo autoclavable.",
+  "highlights": [
+    "Sistema multifuncional completo",
+    "Integra capacidad TPLO",
+    "Autoclavable"
+  ],
+  "image": "",
+  "modes": [
+    "rental-long",
+    "rental-short",
+    "sale"
+  ],
+  "tags": [
+    "Motor",
+    "TPLO"
+  ],
+  "featured": true,
+  "order": 20,
+  "priceFrom": 8500
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Placa Rigid Lock Bridge",
+  "category": "implants",
+  "material": "Titanio Ti-6Al-4V ELI (grado 23)",
+  "reference": "PR-LB",
+  "dimensions": "Ø 2 a 2.4 mm",
+  "description": "Placa LCP en puente para fracturas conminutas de bajo perfil.",
+  "longDescription": "La Ossinova Rigid Lock Bridge es una placa de bloqueo en puente de perfil bajo, indicada para fracturas conminutas donde se prioriza la estabilidad relativa y la preservación de tejidos.",
+  "highlights": [
+    "Puente de bloqueo de perfil bajo",
+    "Estabilidad relativa para fracturas conminutas",
+    "Titanio Ti-6Al-4V ELI (grado 23)"
+  ],
+  "image": "",
+  "modes": [
+    "sale",
+    "rental-long"
+  ],
+  "tags": [
+    "LCP"
+  ],
+  "featured": false,
+  "order": 8,
+  "priceFrom": 100
+}

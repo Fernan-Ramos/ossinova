@@ -1,0 +1,27 @@
+{
+  "name": "Placa de TPLO recta",
+  "category": "implants",
+  "material": "Titanio Ti-6Al-4V ELI (grado 23)",
+  "reference": "P-TPLR",
+  "dimensions": "Ø 2 a 3.5 mm · 3+3 y 4+4 orificios",
+  "description": "Placa recta para osteotomía niveladora de la meseta tibial (TPLO).",
+  "longDescription": "La Ossinova TPLO CTWO recta estabiliza la osteotomía en la técnica de nivelación de la meseta tibial, indicada en la rotura de ligamento cruzado craneal. Versiones izquierda y derecha, con tornillos de bloqueo.",
+  "highlights": [
+    "Para la técnica TPLO (ligamento cruzado craneal)",
+    "Versiones izquierda y derecha",
+    "Diámetros de 2 a 3.5 mm, 3+3 y 4+4 orificios",
+    "Titanio Ti-6Al-4V ELI (grado 23)"
+  ],
+  "image": "",
+  "modes": [
+    "sale",
+    "rental-long",
+    "rental-short"
+  ],
+  "tags": [
+    "TPLO"
+  ],
+  "featured": true,
+  "order": 12,
+  "priceFrom": 95
+}

@@ -1,0 +1,601 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Ossinova Surgical Group S.L." [ref=e4] [cursor=pointer]:
+        - /url: /#home
+        - img "Ossinova" [ref=e5]
+      - navigation "Navegación principal" [ref=e6]:
+        - link "Quiénes somos" [ref=e7] [cursor=pointer]:
+          - /url: /#about
+        - link "Modalidades" [ref=e8] [cursor=pointer]:
+          - /url: /#modes
+        - link "Catálogo" [ref=e9] [cursor=pointer]:
+          - /url: /catalogo
+        - link "FAQ" [ref=e10] [cursor=pointer]:
+          - /url: /#faq
+        - link "Contacto" [ref=e11] [cursor=pointer]:
+          - /url: /#contact
+  - main [ref=e12]:
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - generic [ref=e15]: Catálogo
+        - heading "Catálogo de productos" [level=1] [ref=e16]
+        - paragraph [ref=e17]: Implantes, tornillos, instrumental y motores en titanio Ti-6Al-4V ELI, disponibles en renting de larga o corta duración y en venta.
+      - generic [ref=e18]:
+        - heading "Secciones" [level=2] [ref=e19]
+        - list [ref=e20]:
+          - listitem [ref=e21]:
+            - link "Implantes 13 Placas de osteosíntesis y sistemas de fijación en titanio." [ref=e22] [cursor=pointer]:
+              - /url: /catalogo/implantes
+              - generic [ref=e23]:
+                - text: Implantes
+                - generic [ref=e24]: "13"
+              - generic [ref=e25]: Placas de osteosíntesis y sistemas de fijación en titanio.
+              - generic [ref=e26]: →
+          - listitem [ref=e27]:
+            - link "Tornillos 2 Tornillos corticales, de bloqueo y esponjosos." [ref=e28] [cursor=pointer]:
+              - /url: /catalogo/tornillos
+              - generic [ref=e29]:
+                - text: Tornillos
+                - generic [ref=e30]: "2"
+              - generic [ref=e31]: Tornillos corticales, de bloqueo y esponjosos.
+              - generic [ref=e32]: →
+          - listitem [ref=e33]:
+            - link "Neurocirugía 1 Instrumental específico para procedimientos de neurocirugía." [ref=e34] [cursor=pointer]:
+              - /url: /catalogo/neurocirugia
+              - generic [ref=e35]:
+                - text: Neurocirugía
+                - generic [ref=e36]: "1"
+              - generic [ref=e37]: Instrumental específico para procedimientos de neurocirugía.
+              - generic [ref=e38]: →
+          - listitem [ref=e39]:
+            - link "Motores 4 Motores quirúrgicos autoclavables de alta precisión." [ref=e40] [cursor=pointer]:
+              - /url: /catalogo/motores
+              - generic [ref=e41]:
+                - text: Motores
+                - generic [ref=e42]: "4"
+              - generic [ref=e43]: Motores quirúrgicos autoclavables de alta precisión.
+              - generic [ref=e44]: →
+          - listitem [ref=e45]:
+            - link "Accesorios 11 Instrumental y accesorios complementarios de quirófano." [ref=e46] [cursor=pointer]:
+              - /url: /catalogo/accesorios
+              - generic [ref=e47]:
+                - text: Accesorios
+                - generic [ref=e48]: "11"
+              - generic [ref=e49]: Instrumental y accesorios complementarios de quirófano.
+              - generic [ref=e50]: →
+      - generic [ref=e51]:
+        - heading "Todos los productos" [level=2] [ref=e52]
+        - group "Filtrar por categoría" [ref=e53]:
+          - button "Todos" [ref=e54] [cursor=pointer]
+          - link "Implantes" [ref=e55] [cursor=pointer]:
+            - /url: /catalogo/implantes
+          - link "Tornillos" [ref=e56] [cursor=pointer]:
+            - /url: /catalogo/tornillos
+          - link "Neurocirugía" [ref=e57] [cursor=pointer]:
+            - /url: /catalogo/neurocirugia
+          - link "Motores" [ref=e58] [cursor=pointer]:
+            - /url: /catalogo/motores
+          - link "Accesorios" [ref=e59] [cursor=pointer]:
+            - /url: /catalogo/accesorios
+        - generic [ref=e61]:
+          - article [ref=e63]:
+            - link "Placa Moduplate R — Reconstrucción" [ref=e64] [cursor=pointer]:
+              - /url: /catalogo/implantes/pmr
+              - img [ref=e65]
+            - generic [ref=e66]:
+              - heading "Placa Moduplate R — Reconstrucción" [level=3] [ref=e67]:
+                - link "Placa Moduplate R — Reconstrucción" [ref=e68] [cursor=pointer]:
+                  - /url: /catalogo/implantes/pmr
+              - generic [ref=e69]: Ref. PMR
+              - paragraph [ref=e70]: Placa de bloqueo modular para reconstrucción de huesos largos en pequeños animales.
+              - generic [ref=e71]:
+                - generic [ref=e72]: Venta
+                - generic [ref=e73]: Renting larga duración
+              - link "Ver ficha" [ref=e74] [cursor=pointer]:
+                - /url: /catalogo/implantes/pmr
+                - text: Ver ficha →
+          - article [ref=e76]:
+            - link "Placa Moduplate L — Doble L" [ref=e77] [cursor=pointer]:
+              - /url: /catalogo/implantes/pml
+              - img [ref=e78]
+            - generic [ref=e79]:
+              - heading "Placa Moduplate L — Doble L" [level=3] [ref=e80]:
+                - link "Placa Moduplate L — Doble L" [ref=e81] [cursor=pointer]:
+                  - /url: /catalogo/implantes/pml
+              - generic [ref=e82]: Ref. PML
+              - paragraph [ref=e83]: Placa de bloqueo de reconstrucción en doble L para osteosíntesis periarticular.
+              - generic [ref=e84]:
+                - generic [ref=e85]: Venta
+                - generic [ref=e86]: Renting larga duración
+              - link "Ver ficha" [ref=e87] [cursor=pointer]:
+                - /url: /catalogo/implantes/pml
+                - text: Ver ficha →
+          - article [ref=e89]:
+            - link "Placa Moduplate T — Doble T" [ref=e90] [cursor=pointer]:
+              - /url: /catalogo/implantes/pmt
+              - img [ref=e91]
+            - generic [ref=e92]:
+              - heading "Placa Moduplate T — Doble T" [level=3] [ref=e93]:
+                - link "Placa Moduplate T — Doble T" [ref=e94] [cursor=pointer]:
+                  - /url: /catalogo/implantes/pmt
+              - generic [ref=e95]: Ref. PMT
+              - paragraph [ref=e96]: Placa de bloqueo de reconstrucción en doble T para fracturas metafisarias.
+              - generic [ref=e97]:
+                - generic [ref=e98]: Venta
+                - generic [ref=e99]: Renting larga duración
+              - link "Ver ficha" [ref=e100] [cursor=pointer]:
+                - /url: /catalogo/implantes/pmt
+                - text: Ver ficha →
+          - article [ref=e102]:
+            - link "Placa Moduplate Bridge — Puente" [ref=e103] [cursor=pointer]:
+              - /url: /catalogo/implantes/pmb
+              - img [ref=e104]
+            - generic [ref=e105]:
+              - heading "Placa Moduplate Bridge — Puente" [level=3] [ref=e106]:
+                - link "Placa Moduplate Bridge — Puente" [ref=e107] [cursor=pointer]:
+                  - /url: /catalogo/implantes/pmb
+              - generic [ref=e108]: Ref. PMB
+              - paragraph [ref=e109]: Placa de bloqueo en puente para reconstrucción de fracturas conminutas.
+              - generic [ref=e110]:
+                - generic [ref=e111]: Venta
+                - generic [ref=e112]: Renting larga duración
+              - link "Ver ficha" [ref=e113] [cursor=pointer]:
+                - /url: /catalogo/implantes/pmb
+                - text: Ver ficha →
+          - article [ref=e115]:
+            - link "Placa Moduplate Distal Femoral" [ref=e116] [cursor=pointer]:
+              - /url: /catalogo/implantes/pmdf
+              - img [ref=e117]
+            - generic [ref=e118]:
+              - heading "Placa Moduplate Distal Femoral" [level=3] [ref=e119]:
+                - link "Placa Moduplate Distal Femoral" [ref=e120] [cursor=pointer]:
+                  - /url: /catalogo/implantes/pmdf
+              - generic [ref=e121]: Ref. PMDF
+              - paragraph [ref=e122]: Placa de osteosíntesis para fracturas supracondíleas de fémur distal.
+              - generic [ref=e123]:
+                - generic [ref=e124]: Venta
+                - generic [ref=e125]: Renting larga duración
+              - link "Ver ficha" [ref=e126] [cursor=pointer]:
+                - /url: /catalogo/implantes/pmdf
+                - text: Ver ficha →
+          - article [ref=e128]:
+            - link "Placa Rigid LCP — Bloqueada y de compresión" [ref=e129] [cursor=pointer]:
+              - /url: /catalogo/implantes/pr-lcp
+              - img [ref=e130]
+            - generic [ref=e131]:
+              - heading "Placa Rigid LCP — Bloqueada y de compresión" [level=3] [ref=e132]:
+                - link "Placa Rigid LCP — Bloqueada y de compresión" [ref=e133] [cursor=pointer]:
+                  - /url: /catalogo/implantes/pr-lcp
+              - generic [ref=e134]: Ref. PR-LCP
+              - paragraph [ref=e135]: Placa LCP bloqueada y de compresión para osteosíntesis de huesos largos.
+              - generic [ref=e136]:
+                - generic [ref=e137]: Venta
+                - generic [ref=e138]: Renting larga duración
+              - link "Ver ficha" [ref=e139] [cursor=pointer]:
+                - /url: /catalogo/implantes/pr-lcp
+                - text: Ver ficha →
+          - article [ref=e141]:
+            - link "Placa Rigid LCP en T" [ref=e142] [cursor=pointer]:
+              - /url: /catalogo/implantes/pr-lcp-t
+              - img [ref=e143]
+            - generic [ref=e144]:
+              - heading "Placa Rigid LCP en T" [level=3] [ref=e145]:
+                - link "Placa Rigid LCP en T" [ref=e146] [cursor=pointer]:
+                  - /url: /catalogo/implantes/pr-lcp-t
+              - generic [ref=e147]: Ref. PR-LCP-T
+              - paragraph [ref=e148]: Placa LCP bloqueada en T para fracturas periarticulares.
+              - generic [ref=e149]:
+                - generic [ref=e150]: Venta
+                - generic [ref=e151]: Renting larga duración
+              - link "Ver ficha" [ref=e152] [cursor=pointer]:
+                - /url: /catalogo/implantes/pr-lcp-t
+                - text: Ver ficha →
+          - article [ref=e154]:
+            - link "Placa Rigid Lock Bridge" [ref=e155] [cursor=pointer]:
+              - /url: /catalogo/implantes/pr-lb
+              - img [ref=e156]
+            - generic [ref=e157]:
+              - heading "Placa Rigid Lock Bridge" [level=3] [ref=e158]:
+                - link "Placa Rigid Lock Bridge" [ref=e159] [cursor=pointer]:
+                  - /url: /catalogo/implantes/pr-lb
+              - generic [ref=e160]: Ref. PR-LB
+              - paragraph [ref=e161]: Placa LCP en puente para fracturas conminutas de bajo perfil.
+              - generic [ref=e162]:
+                - generic [ref=e163]: Venta
+                - generic [ref=e164]: Renting larga duración
+              - link "Ver ficha" [ref=e165] [cursor=pointer]:
+                - /url: /catalogo/implantes/pr-lb
+                - text: Ver ficha →
+          - article [ref=e167]:
+            - link "Placa de artrodesis pancarpal" [ref=e168] [cursor=pointer]:
+              - /url: /catalogo/implantes/pmfc
+              - img [ref=e169]
+            - generic [ref=e170]:
+              - heading "Placa de artrodesis pancarpal" [level=3] [ref=e171]:
+                - link "Placa de artrodesis pancarpal" [ref=e172] [cursor=pointer]:
+                  - /url: /catalogo/implantes/pmfc
+              - generic [ref=e173]: Ref. PMFC
+              - paragraph [ref=e174]: Placa para artrodesis pancarpal del carpo con orificios escalonados.
+              - generic [ref=e175]:
+                - generic [ref=e176]: Venta
+                - generic [ref=e177]: Renting larga duración
+              - link "Ver ficha" [ref=e178] [cursor=pointer]:
+                - /url: /catalogo/implantes/pmfc
+                - text: Ver ficha →
+          - article [ref=e180]:
+            - link "Placa de artrodesis pantarsal" [ref=e181] [cursor=pointer]:
+              - /url: /catalogo/implantes/pr-ft
+              - img [ref=e182]
+            - generic [ref=e183]:
+              - heading "Placa de artrodesis pantarsal" [level=3] [ref=e184]:
+                - link "Placa de artrodesis pantarsal" [ref=e185] [cursor=pointer]:
+                  - /url: /catalogo/implantes/pr-ft
+              - generic [ref=e186]: Ref. PR-FT
+              - paragraph [ref=e187]: Placa para artrodesis pantarsal del tarso.
+              - generic [ref=e188]:
+                - generic [ref=e189]: Venta
+                - generic [ref=e190]: Renting larga duración
+              - link "Ver ficha" [ref=e191] [cursor=pointer]:
+                - /url: /catalogo/implantes/pr-ft
+                - text: Ver ficha →
+          - article [ref=e193]:
+            - link "Placa de pelvis — Arc Lock" [ref=e194] [cursor=pointer]:
+              - /url: /catalogo/implantes/pr-arc
+              - img [ref=e195]
+            - generic [ref=e196]:
+              - heading "Placa de pelvis — Arc Lock" [level=3] [ref=e197]:
+                - link "Placa de pelvis — Arc Lock" [ref=e198] [cursor=pointer]:
+                  - /url: /catalogo/implantes/pr-arc
+              - generic [ref=e199]: Ref. PR-ARC
+              - paragraph [ref=e200]: Placa bloqueada para fracturas acetabulares y pélvicas.
+              - generic [ref=e201]:
+                - generic [ref=e202]: Venta
+                - generic [ref=e203]: Renting larga duración
+              - link "Ver ficha" [ref=e204] [cursor=pointer]:
+                - /url: /catalogo/implantes/pr-arc
+                - text: Ver ficha →
+          - article [ref=e206]:
+            - link "Placa de TPLO recta" [ref=e207] [cursor=pointer]:
+              - /url: /catalogo/implantes/p-tplr
+              - img [ref=e208]
+            - generic [ref=e209]:
+              - heading "Placa de TPLO recta" [level=3] [ref=e210]:
+                - link "Placa de TPLO recta" [ref=e211] [cursor=pointer]:
+                  - /url: /catalogo/implantes/p-tplr
+              - generic [ref=e212]: Ref. P-TPLR
+              - paragraph [ref=e213]: Placa recta para osteotomía niveladora de la meseta tibial (TPLO).
+              - generic [ref=e214]:
+                - generic [ref=e215]: Venta
+                - generic [ref=e216]: Renting larga duración
+                - generic [ref=e217]: Renting corta duración
+              - link "Ver ficha" [ref=e218] [cursor=pointer]:
+                - /url: /catalogo/implantes/p-tplr
+                - text: Ver ficha →
+          - article [ref=e220]:
+            - link "Placa de TPLO curva" [ref=e221] [cursor=pointer]:
+              - /url: /catalogo/implantes/p-tplc
+              - img [ref=e222]
+            - generic [ref=e223]:
+              - heading "Placa de TPLO curva" [level=3] [ref=e224]:
+                - link "Placa de TPLO curva" [ref=e225] [cursor=pointer]:
+                  - /url: /catalogo/implantes/p-tplc
+              - generic [ref=e226]: Ref. P-TPLC
+              - paragraph [ref=e227]: Placa curva para osteotomía niveladora de la meseta tibial (TPLO).
+              - generic [ref=e228]:
+                - generic [ref=e229]: Venta
+                - generic [ref=e230]: Renting larga duración
+                - generic [ref=e231]: Renting corta duración
+              - link "Ver ficha" [ref=e232] [cursor=pointer]:
+                - /url: /catalogo/implantes/p-tplc
+                - text: Ver ficha →
+          - article [ref=e234]:
+            - link "Tornillos corticales" [ref=e235] [cursor=pointer]:
+              - /url: /catalogo/tornillos/tc
+              - img [ref=e236]
+            - generic [ref=e237]:
+              - heading "Tornillos corticales" [level=3] [ref=e238]:
+                - link "Tornillos corticales" [ref=e239] [cursor=pointer]:
+                  - /url: /catalogo/tornillos/tc
+              - generic [ref=e240]: Ref. TC
+              - paragraph [ref=e241]: Tornillos corticales autorroscantes en titanio, compatibles con el sistema Ossinova.
+              - generic [ref=e243]: Venta
+              - link "Ver ficha" [ref=e244] [cursor=pointer]:
+                - /url: /catalogo/tornillos/tc
+                - text: Ver ficha →
+          - article [ref=e246]:
+            - link "Tornillos bloqueados" [ref=e247] [cursor=pointer]:
+              - /url: /catalogo/tornillos/tl
+              - img [ref=e248]
+            - generic [ref=e249]:
+              - heading "Tornillos bloqueados" [level=3] [ref=e250]:
+                - link "Tornillos bloqueados" [ref=e251] [cursor=pointer]:
+                  - /url: /catalogo/tornillos/tl
+              - generic [ref=e252]: Ref. TL
+              - paragraph [ref=e253]: Tornillos de bloqueo con doble rosca para sistemas de placa bloqueada.
+              - generic [ref=e255]: Venta
+              - link "Ver ficha" [ref=e256] [cursor=pointer]:
+                - /url: /catalogo/tornillos/tl
+                - text: Ver ficha →
+          - article [ref=e258]:
+            - link "Tornillos de neurocirugía (Neuroscrews)" [ref=e259] [cursor=pointer]:
+              - /url: /catalogo/neurocirugia/ns
+              - img [ref=e260]
+            - generic [ref=e261]:
+              - heading "Tornillos de neurocirugía (Neuroscrews)" [level=3] [ref=e262]:
+                - link "Tornillos de neurocirugía (Neuroscrews)" [ref=e263] [cursor=pointer]:
+                  - /url: /catalogo/neurocirugia/ns
+              - generic [ref=e264]: Ref. NS
+              - paragraph [ref=e265]: Tornillos específicos para procedimientos de neurocirugía y estabilización vertebral.
+              - generic [ref=e266]:
+                - generic [ref=e267]: Venta
+                - generic [ref=e268]: Renting larga duración
+              - link "Ver ficha" [ref=e269] [cursor=pointer]:
+                - /url: /catalogo/neurocirugia/ns
+                - text: Ver ficha →
+          - article [ref=e271]:
+            - link "Ossinova Mini Drive" [ref=e272] [cursor=pointer]:
+              - /url: /catalogo/motores/m1
+              - img [ref=e273]
+            - generic [ref=e274]:
+              - heading "Ossinova Mini Drive" [level=3] [ref=e275]:
+                - link "Ossinova Mini Drive" [ref=e276] [cursor=pointer]:
+                  - /url: /catalogo/motores/m1
+              - generic [ref=e277]: Ref. M1
+              - paragraph [ref=e278]: Sistema motor multifuncional autoclavable para traumatología.
+              - generic [ref=e279]:
+                - generic [ref=e280]: Renting larga duración
+                - generic [ref=e281]: Renting corta duración
+                - generic [ref=e282]: Venta
+              - link "Ver ficha" [ref=e283] [cursor=pointer]:
+                - /url: /catalogo/motores/m1
+                - text: Ver ficha →
+          - article [ref=e285]:
+            - link "Ossinova TPLO — Sierra" [ref=e286] [cursor=pointer]:
+              - /url: /catalogo/motores/m2
+              - img [ref=e287]
+            - generic [ref=e288]:
+              - heading "Ossinova TPLO — Sierra" [level=3] [ref=e289]:
+                - link "Ossinova TPLO — Sierra" [ref=e290] [cursor=pointer]:
+                  - /url: /catalogo/motores/m2
+              - generic [ref=e291]: Ref. M2
+              - paragraph [ref=e292]: Sierra específica para la técnica de TPLO.
+              - generic [ref=e293]:
+                - generic [ref=e294]: Renting larga duración
+                - generic [ref=e295]: Renting corta duración
+                - generic [ref=e296]: Venta
+              - link "Ver ficha" [ref=e297] [cursor=pointer]:
+                - /url: /catalogo/motores/m2
+                - text: Ver ficha →
+          - article [ref=e299]:
+            - link "Ossinova Spine — Motor de neurocirugía" [ref=e300] [cursor=pointer]:
+              - /url: /catalogo/motores/m3
+              - img [ref=e301]
+            - generic [ref=e302]:
+              - heading "Ossinova Spine — Motor de neurocirugía" [level=3] [ref=e303]:
+                - link "Ossinova Spine — Motor de neurocirugía" [ref=e304] [cursor=pointer]:
+                  - /url: /catalogo/motores/m3
+              - generic [ref=e305]: Ref. M3
+              - paragraph [ref=e306]: Motor de alta precisión para procedimientos de neurocirugía.
+              - generic [ref=e307]:
+                - generic [ref=e308]: Renting larga duración
+                - generic [ref=e309]: Renting corta duración
+                - generic [ref=e310]: Venta
+              - link "Ver ficha" [ref=e311] [cursor=pointer]:
+                - /url: /catalogo/motores/m3
+                - text: Ver ficha →
+          - article [ref=e313]:
+            - link "Ossinova System Pro" [ref=e314] [cursor=pointer]:
+              - /url: /catalogo/motores/m4
+              - img [ref=e315]
+            - generic [ref=e316]:
+              - heading "Ossinova System Pro" [level=3] [ref=e317]:
+                - link "Ossinova System Pro" [ref=e318] [cursor=pointer]:
+                  - /url: /catalogo/motores/m4
+              - generic [ref=e319]: Ref. M4
+              - paragraph [ref=e320]: Sistema motor completo multifuncional con capacidad TPLO.
+              - generic [ref=e321]:
+                - generic [ref=e322]: Renting larga duración
+                - generic [ref=e323]: Renting corta duración
+                - generic [ref=e324]: Venta
+              - link "Ver ficha" [ref=e325] [cursor=pointer]:
+                - /url: /catalogo/motores/m4
+                - text: Ver ficha →
+          - article [ref=e327]:
+            - link "Mango de destornillador (Coupling Handle)" [ref=e328] [cursor=pointer]:
+              - /url: /catalogo/accesorios/och
+              - img [ref=e329]
+            - generic [ref=e330]:
+              - heading "Mango de destornillador (Coupling Handle)" [level=3] [ref=e331]:
+                - link "Mango de destornillador (Coupling Handle)" [ref=e332] [cursor=pointer]:
+                  - /url: /catalogo/accesorios/och
+              - generic [ref=e333]: Ref. OCH
+              - paragraph [ref=e334]: Mango de destornillador con acoplamiento para las puntas Ossinova.
+              - generic [ref=e336]: Venta
+              - link "Ver ficha" [ref=e337] [cursor=pointer]:
+                - /url: /catalogo/accesorios/och
+                - text: Ver ficha →
+          - article [ref=e339]:
+            - link "Puntas de destornillador" [ref=e340] [cursor=pointer]:
+              - /url: /catalogo/accesorios/osd
+              - img [ref=e341]
+            - generic [ref=e342]:
+              - heading "Puntas de destornillador" [level=3] [ref=e343]:
+                - link "Puntas de destornillador" [ref=e344] [cursor=pointer]:
+                  - /url: /catalogo/accesorios/osd
+              - generic [ref=e345]: Ref. OSD
+              - paragraph [ref=e346]: Puntas de destornillador intercambiables (T4, T6, T8, T15).
+              - generic [ref=e348]: Venta
+              - link "Ver ficha" [ref=e349] [cursor=pointer]:
+                - /url: /catalogo/accesorios/osd
+                - text: Ver ficha →
+          - article [ref=e351]:
+            - link "Brocas" [ref=e352] [cursor=pointer]:
+              - /url: /catalogo/accesorios/od
+              - img [ref=e353]
+            - generic [ref=e354]:
+              - heading "Brocas" [level=3] [ref=e355]:
+                - link "Brocas" [ref=e356] [cursor=pointer]:
+                  - /url: /catalogo/accesorios/od
+              - generic [ref=e357]: Ref. OD
+              - paragraph [ref=e358]: Brocas quirúrgicas de distintos diámetros y longitudes.
+              - generic [ref=e360]: Venta
+              - link "Ver ficha" [ref=e361] [cursor=pointer]:
+                - /url: /catalogo/accesorios/od
+                - text: Ver ficha →
+          - article [ref=e363]:
+            - link "Agujas de Kirschner" [ref=e364] [cursor=pointer]:
+              - /url: /catalogo/accesorios/okt
+              - img [ref=e365]
+            - generic [ref=e366]:
+              - heading "Agujas de Kirschner" [level=3] [ref=e367]:
+                - link "Agujas de Kirschner" [ref=e368] [cursor=pointer]:
+                  - /url: /catalogo/accesorios/okt
+              - generic [ref=e369]: Ref. OKT
+              - paragraph [ref=e370]: Agujas de Kirschner lisas, roscadas y de doble cabeza.
+              - generic [ref=e372]: Venta
+              - link "Ver ficha" [ref=e373] [cursor=pointer]:
+                - /url: /catalogo/accesorios/okt
+                - text: Ver ficha →
+          - article [ref=e375]:
+            - link "Guardador de agujas (K-Guard)" [ref=e376] [cursor=pointer]:
+              - /url: /catalogo/accesorios/okg
+              - img [ref=e377]
+            - generic [ref=e378]:
+              - heading "Guardador de agujas (K-Guard)" [level=3] [ref=e379]:
+                - link "Guardador de agujas (K-Guard)" [ref=e380] [cursor=pointer]:
+                  - /url: /catalogo/accesorios/okg
+              - generic [ref=e381]: Ref. OKG
+              - paragraph [ref=e382]: Protector-guardador para agujas de Kirschner.
+              - generic [ref=e384]: Venta
+              - link "Ver ficha" [ref=e385] [cursor=pointer]:
+                - /url: /catalogo/accesorios/okg
+                - text: Ver ficha →
+          - article [ref=e387]:
+            - link "Guías de broca" [ref=e388] [cursor=pointer]:
+              - /url: /catalogo/accesorios/odg
+              - img [ref=e389]
+            - generic [ref=e390]:
+              - heading "Guías de broca" [level=3] [ref=e391]:
+                - link "Guías de broca" [ref=e392] [cursor=pointer]:
+                  - /url: /catalogo/accesorios/odg
+              - generic [ref=e393]: Ref. ODG
+              - paragraph [ref=e394]: Guías de broca para taladrado dirigido.
+              - generic [ref=e396]: Venta
+              - link "Ver ficha" [ref=e397] [cursor=pointer]:
+                - /url: /catalogo/accesorios/odg
+                - text: Ver ficha →
+          - article [ref=e399]:
+            - link "Cerclajes (Suture Wire)" [ref=e400] [cursor=pointer]:
+              - /url: /catalogo/accesorios/osw
+              - img [ref=e401]
+            - generic [ref=e402]:
+              - heading "Cerclajes (Suture Wire)" [level=3] [ref=e403]:
+                - link "Cerclajes (Suture Wire)" [ref=e404] [cursor=pointer]:
+                  - /url: /catalogo/accesorios/osw
+              - generic [ref=e405]: Ref. OSW
+              - paragraph [ref=e406]: Alambre de cerclaje quirúrgico.
+              - generic [ref=e408]: Venta
+              - link "Ver ficha" [ref=e409] [cursor=pointer]:
+                - /url: /catalogo/accesorios/osw
+                - text: Ver ficha →
+          - article [ref=e411]:
+            - link "Dobladores de placas (Plate Bender)" [ref=e412] [cursor=pointer]:
+              - /url: /catalogo/accesorios/opb
+              - img [ref=e413]
+            - generic [ref=e414]:
+              - heading "Dobladores de placas (Plate Bender)" [level=3] [ref=e415]:
+                - link "Dobladores de placas (Plate Bender)" [ref=e416] [cursor=pointer]:
+                  - /url: /catalogo/accesorios/opb
+              - generic [ref=e417]: Ref. OPB
+              - paragraph [ref=e418]: Dobladores para conformar las placas a la anatomía.
+              - generic [ref=e419]:
+                - generic [ref=e420]: Venta
+                - generic [ref=e421]: Renting larga duración
+              - link "Ver ficha" [ref=e422] [cursor=pointer]:
+                - /url: /catalogo/accesorios/opb
+                - text: Ver ficha →
+          - article [ref=e424]:
+            - link "Hojas de sierra para TPLO" [ref=e425] [cursor=pointer]:
+              - /url: /catalogo/accesorios/otplo-b
+              - img [ref=e426]
+            - generic [ref=e427]:
+              - heading "Hojas de sierra para TPLO" [level=3] [ref=e428]:
+                - link "Hojas de sierra para TPLO" [ref=e429] [cursor=pointer]:
+                  - /url: /catalogo/accesorios/otplo-b
+              - generic [ref=e430]: Ref. OTPLO-B
+              - paragraph [ref=e431]: Hojas de sierra para la técnica TPLO, en distintos radios.
+              - generic [ref=e433]: Venta
+              - link "Ver ficha" [ref=e434] [cursor=pointer]:
+                - /url: /catalogo/accesorios/otplo-b
+                - text: Ver ficha →
+          - article [ref=e436]:
+            - link "Retractor" [ref=e437] [cursor=pointer]:
+              - /url: /catalogo/accesorios/ortr
+              - img [ref=e438]
+            - generic [ref=e439]:
+              - heading "Retractor" [level=3] [ref=e440]:
+                - link "Retractor" [ref=e441] [cursor=pointer]:
+                  - /url: /catalogo/accesorios/ortr
+              - generic [ref=e442]: Ref. ORTR
+              - paragraph [ref=e443]: Retractor quirúrgico para exposición del campo.
+              - generic [ref=e444]:
+                - generic [ref=e445]: Venta
+                - generic [ref=e446]: Renting larga duración
+              - link "Ver ficha" [ref=e447] [cursor=pointer]:
+                - /url: /catalogo/accesorios/ortr
+                - text: Ver ficha →
+          - article [ref=e449]:
+            - link "Cizalla" [ref=e450] [cursor=pointer]:
+              - /url: /catalogo/accesorios/cz
+              - img [ref=e451]
+            - generic [ref=e452]:
+              - heading "Cizalla" [level=3] [ref=e453]:
+                - link "Cizalla" [ref=e454] [cursor=pointer]:
+                  - /url: /catalogo/accesorios/cz
+              - generic [ref=e455]: Ref. CZ
+              - paragraph [ref=e456]: Cizalla para corte de agujas y alambre.
+              - generic [ref=e458]: Venta
+              - link "Ver ficha" [ref=e459] [cursor=pointer]:
+                - /url: /catalogo/accesorios/cz
+                - text: Ver ficha →
+  - contentinfo [ref=e460]:
+    - generic [ref=e461]:
+      - generic [ref=e462]:
+        - img "Ossinova" [ref=e463]
+        - paragraph [ref=e464]: Soluciones quirúrgicas para el cirujano veterinario.
+      - generic [ref=e465]:
+        - heading "Navegación" [level=4] [ref=e466]
+        - link "Quiénes somos" [ref=e467] [cursor=pointer]:
+          - /url: /#about
+        - link "Modalidades" [ref=e468] [cursor=pointer]:
+          - /url: /#modes
+        - link "Catálogo" [ref=e469] [cursor=pointer]:
+          - /url: /catalogo
+        - link "FAQ" [ref=e470] [cursor=pointer]:
+          - /url: /#faq
+      - generic [ref=e471]:
+        - heading "Contacto" [level=4] [ref=e472]
+        - link "info@ossinova.com" [ref=e473] [cursor=pointer]:
+          - /url: mailto:info@ossinova.com
+        - link "WhatsApp +34 600 00 00 00" [ref=e474] [cursor=pointer]:
+          - /url: https://wa.me/34600000000
+        - link "Instagram @ossinovasurgical" [ref=e475] [cursor=pointer]:
+          - /url: https://www.instagram.com/ossinovasurgical
+        - generic [ref=e476]: Elche, Alicante (España)
+    - generic [ref=e478]: © 2026 Ossinova Surgical Group S.L.. Todos los derechos reservados.
+  - generic [ref=e481]:
+    - button "Menu" [ref=e482]:
+      - img [ref=e484]
+      - generic: Menu
+    - button "Inspect" [ref=e488]:
+      - img [ref=e490]
+      - generic: Inspect
+    - button "Audit" [ref=e492]:
+      - generic [ref=e493]:
+        - img [ref=e494]
+        - img [ref=e497]
+      - generic: Audit
+    - button "Settings" [ref=e500]:
+      - img [ref=e502]
+      - generic: Settings

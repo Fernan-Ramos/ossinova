@@ -1,0 +1,24 @@
+{
+  "name": "Puntas de destornillador",
+  "category": "accessories",
+  "material": "Acero inoxidable quirúrgico",
+  "reference": "OSD",
+  "dimensions": "T4 · T6 · T8 · T15",
+  "description": "Puntas de destornillador intercambiables (T4, T6, T8, T15).",
+  "longDescription": "Las puntas de destornillador Ossinova están disponibles en los perfiles T4, T6, T8 y T15, compatibles con el mango Coupling Handle para cubrir toda la gama de tornillos.",
+  "highlights": [
+    "Perfiles T4, T6, T8 y T15",
+    "Intercambiables con el mango Ossinova",
+    "Acero inoxidable quirúrgico"
+  ],
+  "image": "",
+  "modes": [
+    "sale"
+  ],
+  "tags": [
+    "Destornillador"
+  ],
+  "featured": false,
+  "order": 22,
+  "priceFrom": 35
+}

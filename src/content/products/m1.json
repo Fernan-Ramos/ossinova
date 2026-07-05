@@ -1,0 +1,26 @@
+{
+  "name": "Ossinova Mini Drive",
+  "category": "motors",
+  "material": "Acero inoxidable quirúrgico",
+  "reference": "M1",
+  "dimensions": "Sistema multifuncional autoclavable",
+  "description": "Sistema motor multifuncional autoclavable para traumatología.",
+  "longDescription": "El Ossinova Mini Drive es un sistema motor multifuncional autoclavable, versátil para las principales aplicaciones de traumatología en pequeños animales. Alta precisión y bajo nivel de vibración.",
+  "highlights": [
+    "Multifuncional para traumatología",
+    "Totalmente autoclavable",
+    "Alta precisión y bajo nivel de vibración"
+  ],
+  "image": "",
+  "modes": [
+    "rental-long",
+    "rental-short",
+    "sale"
+  ],
+  "tags": [
+    "Motor"
+  ],
+  "featured": true,
+  "order": 17,
+  "priceFrom": 4000
+}

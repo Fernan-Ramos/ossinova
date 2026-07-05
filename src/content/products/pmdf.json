@@ -1,0 +1,27 @@
+{
+  "name": "Placa Moduplate Distal Femoral",
+  "category": "implants",
+  "material": "Titanio Ti-6Al-4V ELI (grado 23)",
+  "reference": "PMDF",
+  "dimensions": "Ø 2 a 2.7 mm",
+  "description": "Placa de osteosíntesis para fracturas supracondíleas de fémur distal.",
+  "longDescription": "La Ossinova Moduplate Distal Femoral está anatómicamente diseñada para la fijación de fracturas supracondíleas del fémur distal, adaptándose a la metáfisis distal con tornillos de bloqueo.",
+  "highlights": [
+    "Diseño anatómico para fémur distal",
+    "Indicada en fracturas supracondíleas",
+    "Tornillos de bloqueo de ángulo estable",
+    "Titanio Ti-6Al-4V ELI (grado 23)"
+  ],
+  "image": "",
+  "modes": [
+    "sale",
+    "rental-long"
+  ],
+  "tags": [
+    "Moduplate",
+    "Fémur"
+  ],
+  "featured": false,
+  "order": 5,
+  "priceFrom": 160
+}

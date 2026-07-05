@@ -1,0 +1,24 @@
+{
+  "name": "Brocas",
+  "category": "accessories",
+  "material": "Acero inoxidable quirúrgico",
+  "reference": "OD",
+  "dimensions": "Ø 1.0 a 3.5 mm · 115–200 mm",
+  "description": "Brocas quirúrgicas de distintos diámetros y longitudes.",
+  "longDescription": "Las brocas Ossinova cubren un amplio rango de diámetros (1.0 a 3.5 mm) y longitudes (115 a 200 mm), incluyendo perfiles con conexión AO, para la preparación precisa del lecho del tornillo.",
+  "highlights": [
+    "Diámetros de 1.0 a 3.5 mm",
+    "Longitudes de 115 a 200 mm",
+    "Disponibles con conexión AO"
+  ],
+  "image": "",
+  "modes": [
+    "sale"
+  ],
+  "tags": [
+    "Brocas"
+  ],
+  "featured": false,
+  "order": 23,
+  "priceFrom": 16
+}

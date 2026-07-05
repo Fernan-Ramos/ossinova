@@ -1,0 +1,23 @@
+{
+  "name": "Cerclajes (Suture Wire)",
+  "category": "accessories",
+  "material": "Acero inoxidable quirúrgico",
+  "reference": "OSW",
+  "dimensions": "Ø 0.4 a 1.2 mm",
+  "description": "Alambre de cerclaje quirúrgico.",
+  "longDescription": "El alambre de cerclaje Ossinova está disponible en diámetros de 0.4 a 1.2 mm, para la fijación de fragmentos y refuerzo de osteosíntesis.",
+  "highlights": [
+    "Diámetros de 0.4 a 1.2 mm",
+    "Fijación de fragmentos y refuerzo",
+    "Acero inoxidable quirúrgico"
+  ],
+  "image": "",
+  "modes": [
+    "sale"
+  ],
+  "tags": [
+    "Instrumental"
+  ],
+  "featured": false,
+  "order": 27
+}

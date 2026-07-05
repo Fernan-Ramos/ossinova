@@ -1,0 +1,25 @@
+{
+  "name": "Tornillos corticales",
+  "category": "screws",
+  "material": "Titanio Ti-6Al-4V ELI (grado 23)",
+  "reference": "TC",
+  "dimensions": "Ø 1.5 a 4.0 mm · longitudes 6–40 mm",
+  "description": "Tornillos corticales autorroscantes en titanio, compatibles con el sistema Ossinova.",
+  "longDescription": "Los tornillos corticales Ossinova son autorroscantes y de rosca completa, disponibles en un amplio rango de diámetros (1.5 a 4.0 mm) y longitudes. Compatibles con las placas del sistema.",
+  "highlights": [
+    "Autorroscantes, de rosca completa",
+    "Diámetros de 1.5 a 4.0 mm",
+    "Amplio rango de longitudes",
+    "Titanio Ti-6Al-4V ELI (grado 23)"
+  ],
+  "image": "",
+  "modes": [
+    "sale"
+  ],
+  "tags": [
+    "Corticales"
+  ],
+  "featured": true,
+  "order": 14,
+  "priceFrom": 10
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Placa de pelvis — Arc Lock",
+  "category": "implants",
+  "material": "Titanio Ti-6Al-4V ELI (grado 23)",
+  "reference": "PR-ARC",
+  "dimensions": "Varias medidas",
+  "description": "Placa bloqueada para fracturas acetabulares y pélvicas.",
+  "longDescription": "La Ossinova Pelvis Arc Lock está diseñada para la fijación de fracturas acetabulares y pélvicas, con una curvatura que se adapta al contorno del acetábulo y tornillos de bloqueo.",
+  "highlights": [
+    "Curvatura anatómica para el acetábulo",
+    "Indicada en fracturas acetabulares y pélvicas",
+    "Tornillos de bloqueo",
+    "Titanio Ti-6Al-4V ELI (grado 23)"
+  ],
+  "image": "",
+  "modes": [
+    "sale",
+    "rental-long"
+  ],
+  "tags": [
+    "Pelvis"
+  ],
+  "featured": false,
+  "order": 11,
+  "priceFrom": 100
+}
