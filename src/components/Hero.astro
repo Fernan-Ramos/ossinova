@@ -7,18 +7,25 @@ const { hero } = site;
   <div class="hero__shape" data-wheel aria-hidden="true">
     <svg class="hero__blob" viewBox="0 0 100 100" preserveAspectRatio="none">
       <defs>
-        <linearGradient id="ossHeroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#e9f5fb" />
-          <stop offset="55%" stop-color="#c4e6ea" />
-          <stop offset="100%" stop-color="#9fd6dc" />
+        <radialGradient id="ossHeroMesh" cx="72%" cy="14%" r="95%">
+          <stop offset="0%" stop-color="#f2fafc" />
+          <stop offset="42%" stop-color="#cfe9ed" />
+          <stop offset="100%" stop-color="#7ec5cc" />
+          <animate attributeName="cx" values="72%;54%;68%;72%" dur="16s" repeatCount="indefinite" />
+          <animate attributeName="cy" values="14%;30%;10%;14%" dur="20s" repeatCount="indefinite" />
+        </radialGradient>
+        <linearGradient id="ossHeroDepth" x1="40%" y1="0%" x2="70%" y2="100%">
+          <stop offset="0%" stop-color="#01737d" stop-opacity="0" />
+          <stop offset="100%" stop-color="#01737d" stop-opacity="0.28" />
         </linearGradient>
       </defs>
-      <path
-        d="M72 0 C60 18 40 36 40 60 C40 82 58 92 63 100 L100 100 L100 0 Z"
-        fill="url(#ossHeroGrad)"
-      />
+      <path d="M72 0 C60 18 40 36 40 60 C40 82 58 92 63 100 L100 100 L100 0 Z" fill="url(#ossHeroMesh)" />
+      <path d="M72 0 C60 18 40 36 40 60 C40 82 58 92 63 100 L100 100 L100 0 Z" fill="url(#ossHeroDepth)" />
     </svg>
-    <img src="/images/logo-icon.png" alt="" class="hero__logo" />
+
+    <span class="hero__logo-wrap" data-parallax="0.5">
+      <img src="/images/logo-icon.png" alt="" class="hero__logo" />
+    </span>
   </div>
 
   <div class="container">
@@ -149,8 +156,8 @@ const { hero } = site;
     z-index: 1;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding-right: clamp(2rem, 6vw, 5rem);
+    justify-content: center;
+    padding-left: 12%;
   }
 
   /* Organic S-curved shape (bleeds to top/right/bottom). */
@@ -162,10 +169,18 @@ const { hero } = site;
     z-index: 0;
   }
 
-  .hero__logo {
+  .hero__logo-wrap {
     position: relative;
     z-index: 1;
+    display: block;
     width: min(240px, 40%);
+    will-change: transform;
+    transition: transform 0.25s ease-out;
+  }
+
+  .hero__logo {
+    display: block;
+    width: 100%;
     height: auto;
   }
 
@@ -180,7 +195,7 @@ const { hero } = site;
   @media (prefers-reduced-motion: no-preference) {
     .hero__logo,
     .hero__copy-logo {
-      animation: hero-spin 9s linear infinite;
+      animation: hero-spin 12s linear infinite;
     }
   }
 
@@ -253,3 +268,34 @@ const { hero } = site;
     }
   }
 </style>
+
+<script>
+  // Mouse parallax: layers move at different depths for a subtle 3D feel.
+  function initHeroParallax() {
+    const hero = document.querySelector<HTMLElement>('.hero');
+    const shape = hero?.querySelector<HTMLElement>('.hero__shape');
+    const logo = hero?.querySelector<HTMLElement>('.hero__logo-wrap');
+    if (!hero || !shape || !logo) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+
+    let raf = 0;
+    const onMove = (e: MouseEvent) => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = 0;
+        const r = hero.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width - 0.5; // -0.5 .. 0.5
+        const py = (e.clientY - r.top) / r.height - 0.5;
+        logo.style.transform = `translate(${px * 30}px, ${py * 30}px)`;
+      });
+    };
+    const reset = () => {
+      logo.style.transform = '';
+    };
+    hero.addEventListener('mousemove', onMove);
+    hero.addEventListener('mouseleave', reset);
+  }
+
+  document.addEventListener('astro:page-load', initHeroParallax);
+</script>

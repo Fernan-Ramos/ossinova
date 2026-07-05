@@ -1,0 +1,251 @@
+- generic [active] [ref=f23e1]:
+  - banner [ref=f23e2]:
+    - generic [ref=f23e3]:
+      - link "Ossinova Surgical Group S.L." [ref=f23e4] [cursor=pointer]:
+        - /url: /#home
+        - img "Ossinova" [ref=f23e5]
+      - button "Abrir menú" [ref=f23e6] [cursor=pointer]
+  - main [ref=f23e10]:
+    - generic [ref=f23e12]:
+      - img [ref=f23e13]
+      - generic [ref=f23e14]: Ossinova Surgical Group
+      - heading "Soluciones quirúrgicas para el cirujano veterinario" [level=1] [ref=f23e15]
+      - paragraph [ref=f23e16]: Implantes, tornillos, instrumental y motores en titanio Ti-6Al-4V ELI, diseñados desde el quirófano para traumatología y neurocirugía de pequeños animales.
+      - generic [ref=f23e17]:
+        - link "Ver catálogo" [ref=f23e18] [cursor=pointer]:
+          - /url: /catalogo
+          - generic [ref=f23e19]: →
+          - generic [ref=f23e20]: Ver catálogo
+        - link "Solicitar información" [ref=f23e21] [cursor=pointer]:
+          - /url: "#contact"
+      - list [ref=f23e22]:
+        - listitem [ref=f23e23]: Titanio Ti-6Al-4V ELI
+        - listitem [ref=f23e24]: Diseñado en quirófano
+        - listitem [ref=f23e25]: Renting o venta
+    - region "Por qué Ossinova" [ref=f23e26]:
+      - generic [ref=f23e27]:
+        - generic [ref=f23e28]:
+          - generic [ref=f23e29]: "01"
+          - generic [ref=f23e30]:
+            - heading "Titanio Ti-6Al-4V ELI" [level=3] [ref=f23e31]
+            - paragraph [ref=f23e32]: "Implantes y tornillos en titanio grado 23: resistencia, ligereza y biocompatibilidad."
+        - generic [ref=f23e33]:
+          - generic [ref=f23e34]: "02"
+          - generic [ref=f23e35]:
+            - heading "Diseñado desde el quirófano" [level=3] [ref=f23e36]
+            - paragraph [ref=f23e37]: Producto pensado por cirujanos veterinarios en activo, con criterio clínico real.
+        - generic [ref=f23e38]:
+          - generic [ref=f23e39]: "03"
+          - generic [ref=f23e40]:
+            - heading "Renting flexible o venta" [level=3] [ref=f23e41]
+            - paragraph [ref=f23e42]: "Larga duración, corta duración o compra: la opción que encaje con tu actividad."
+    - generic [ref=f23e44]:
+      - generic [ref=f23e45]:
+        - generic [ref=f23e46]: Quiénes somos
+        - heading "¿Quiénes somos?" [level=2] [ref=f23e47]
+      - generic [ref=f23e48]:
+        - generic [ref=f23e49]:
+          - paragraph [ref=f23e50]: Ossinova Surgical Group es una empresa fundada en Elche (Alicante) por Jesús Agulló y Raquel Fernández, veterinarios clínicos en activo, dedicados a la medicina interna, cirugía, traumatología y neurocirugía de pequeños animales en un hospital veterinario.
+          - paragraph [ref=f23e51]: Ossinova nace directamente del quirófano, de la experiencia diaria, con el objetivo de desarrollar y ofrecer soluciones que respondan a las necesidades prácticas del cirujano veterinario. Cada producto que ofrecemos está pensado desde la perspectiva clínica, priorizando la funcionalidad, la fiabilidad y la facilidad de uso en el trabajo diario.
+          - paragraph [ref=f23e52]: Ofrecemos una gama completa de implantes y tornillos fabricados en titanio Ti-6Al-4V ELI (grado 23), desarrollados para proporcionar resistencia, ligereza y biocompatibilidad. Nuestro catálogo incluye todo tipo de instrumental quirúrgico y motores autoclavables tanto para traumatología como para neurocirugía.
+        - complementary [ref=f23e53]:
+          - heading "Nuestro objetivo" [level=3] [ref=f23e54]
+          - paragraph [ref=f23e55]: Cubrir las necesidades de los veterinarios con diferentes opciones, orientado a todo tipo de cirujanos veterinarios de clínica, hospital o ambulantes, independientemente de su volumen de actividad.
+          - list [ref=f23e56]:
+            - listitem [ref=f23e57]:
+              - generic [ref=f23e58]: "01"
+              - text: Renting de larga duración
+            - listitem [ref=f23e59]:
+              - generic [ref=f23e60]: "02"
+              - text: Renting de corta duración
+            - listitem [ref=f23e61]:
+              - generic [ref=f23e62]: "03"
+              - text: Venta del material
+    - generic [ref=f23e64]:
+      - generic [ref=f23e65]:
+        - generic [ref=f23e66]: Modalidades
+        - heading "Modalidades" [level=2] [ref=f23e67]
+        - paragraph [ref=f23e68]: Elige cómo quieres acceder al material según tu volumen de actividad.
+      - generic [ref=f23e69]:
+        - article [ref=f23e70]:
+          - generic [ref=f23e71]: "01"
+          - heading "Renting larga duración" [level=3] [ref=f23e72]
+          - paragraph [ref=f23e73]: Dispón del material de forma continuada con una cuota periódica, sin una gran inversión inicial. Ideal para clínicas y hospitales con actividad quirúrgica regular.
+          - link "Solicitar información" [ref=f23e74] [cursor=pointer]:
+            - /url: "#contact"
+            - text: Solicitar información
+            - generic [ref=f23e75]: →
+        - article [ref=f23e76]:
+          - generic [ref=f23e77]: "02"
+          - heading "Renting corta duración" [level=3] [ref=f23e78]
+          - paragraph [ref=f23e79]: Alquila el instrumental o los motores solo para una cirugía o un periodo concreto. Perfecto para cirujanos ambulantes o intervenciones puntuales.
+          - link "Solicitar información" [ref=f23e80] [cursor=pointer]:
+            - /url: "#contact"
+            - text: Solicitar información
+            - generic [ref=f23e81]: →
+        - article [ref=f23e82]:
+          - generic [ref=f23e83]: "03"
+          - heading "Venta del material" [level=3] [ref=f23e84]
+          - paragraph [ref=f23e85]: Compra directa de implantes, tornillos e instrumental para incorporarlos a tu propio stock quirúrgico.
+          - link "Solicitar información" [ref=f23e86] [cursor=pointer]:
+            - /url: "#contact"
+            - text: Solicitar información
+            - generic [ref=f23e87]: →
+    - generic [ref=f23e89]:
+      - generic [ref=f23e90]:
+        - generic [ref=f23e91]: Catálogo
+        - heading "Nuestro catálogo" [level=2] [ref=f23e92]
+        - paragraph [ref=f23e93]: Implantes, tornillos, instrumental y motores en titanio Ti-6Al-4V ELI. Explora las secciones o consulta el catálogo completo.
+      - list [ref=f23e94]:
+        - listitem [ref=f23e95]:
+          - link "Implantes 13 Placas de osteosíntesis y sistemas de fijación en titanio." [ref=f23e96] [cursor=pointer]:
+            - /url: /catalogo/implantes
+            - generic [ref=f23e97]:
+              - text: Implantes
+              - generic [ref=f23e98]: "13"
+            - generic [ref=f23e99]: Placas de osteosíntesis y sistemas de fijación en titanio.
+            - generic [ref=f23e100]: →
+        - listitem [ref=f23e101]:
+          - link "Tornillos 2 Tornillos corticales, de bloqueo y esponjosos." [ref=f23e102] [cursor=pointer]:
+            - /url: /catalogo/tornillos
+            - generic [ref=f23e103]:
+              - text: Tornillos
+              - generic [ref=f23e104]: "2"
+            - generic [ref=f23e105]: Tornillos corticales, de bloqueo y esponjosos.
+            - generic [ref=f23e106]: →
+        - listitem [ref=f23e107]:
+          - link "Neurocirugía 1 Instrumental específico para procedimientos de neurocirugía." [ref=f23e108] [cursor=pointer]:
+            - /url: /catalogo/neurocirugia
+            - generic [ref=f23e109]:
+              - text: Neurocirugía
+              - generic [ref=f23e110]: "1"
+            - generic [ref=f23e111]: Instrumental específico para procedimientos de neurocirugía.
+            - generic [ref=f23e112]: →
+        - listitem [ref=f23e113]:
+          - link "Motores 4 Motores quirúrgicos autoclavables de alta precisión." [ref=f23e114] [cursor=pointer]:
+            - /url: /catalogo/motores
+            - generic [ref=f23e115]:
+              - text: Motores
+              - generic [ref=f23e116]: "4"
+            - generic [ref=f23e117]: Motores quirúrgicos autoclavables de alta precisión.
+            - generic [ref=f23e118]: →
+        - listitem [ref=f23e119]:
+          - link "Accesorios 11 Instrumental y accesorios complementarios de quirófano." [ref=f23e120] [cursor=pointer]:
+            - /url: /catalogo/accesorios
+            - generic [ref=f23e121]:
+              - text: Accesorios
+              - generic [ref=f23e122]: "11"
+            - generic [ref=f23e123]: Instrumental y accesorios complementarios de quirófano.
+            - generic [ref=f23e124]: →
+      - link "Ver catálogo completo" [ref=f23e126] [cursor=pointer]:
+        - /url: /catalogo
+    - generic [ref=f23e128]:
+      - generic [ref=f23e129]:
+        - generic [ref=f23e130]: FAQ
+        - heading "Preguntas frecuentes" [level=2] [ref=f23e131]
+        - paragraph [ref=f23e132]: Resolvemos las dudas más habituales sobre renting, venta y material.
+      - generic [ref=f23e133]:
+        - group [ref=f23e134]:
+          - generic "¿Cómo funciona el renting de material quirúrgico?" [ref=f23e135] [cursor=pointer]:
+            - generic [ref=f23e136]: ¿Cómo funciona el renting de material quirúrgico?
+        - group [ref=f23e138]:
+          - generic "¿Qué diferencia hay entre renting de larga y de corta duración?" [ref=f23e139] [cursor=pointer]:
+            - generic [ref=f23e140]: ¿Qué diferencia hay entre renting de larga y de corta duración?
+        - group [ref=f23e142]:
+          - generic "¿Puedo comprar el material en lugar de alquilarlo?" [ref=f23e143] [cursor=pointer]:
+            - generic [ref=f23e144]: ¿Puedo comprar el material en lugar de alquilarlo?
+        - group [ref=f23e146]:
+          - generic "¿De qué material están fabricados los implantes y tornillos?" [ref=f23e147] [cursor=pointer]:
+            - generic [ref=f23e148]: ¿De qué material están fabricados los implantes y tornillos?
+        - group [ref=f23e150]:
+          - generic "¿A qué tipo de clientes os dirigís?" [ref=f23e151] [cursor=pointer]:
+            - generic [ref=f23e152]: ¿A qué tipo de clientes os dirigís?
+    - generic [ref=f23e155]:
+      - generic [ref=f23e156]:
+        - generic [ref=f23e157]: Contacto
+        - heading "Contacto" [level=2] [ref=f23e158]
+        - paragraph [ref=f23e159]: Cuéntanos qué necesitas y te preparamos una propuesta a medida (renting o venta).
+      - generic [ref=f23e160]:
+        - generic [ref=f23e161]:
+          - paragraph [ref=f23e162]: Formulario pendiente de configurar.
+          - generic [ref=f23e163]:
+            - generic [ref=f23e164]:
+              - generic [ref=f23e165]: Nombre *
+              - textbox "Nombre *" [ref=f23e166]
+            - generic [ref=f23e167]:
+              - generic [ref=f23e168]: Clínica / centro
+              - textbox "Clínica / centro" [ref=f23e169]
+          - generic [ref=f23e170]:
+            - generic [ref=f23e171]:
+              - generic [ref=f23e172]: Email *
+              - textbox "Email *" [ref=f23e173]
+            - generic [ref=f23e174]:
+              - generic [ref=f23e175]: Teléfono
+              - textbox "Teléfono" [ref=f23e176]
+          - generic [ref=f23e177]:
+            - generic [ref=f23e178]: Modalidad de interés
+            - combobox "Modalidad de interés" [ref=f23e179]:
+              - option "Sin especificar" [selected]
+              - option "Renting larga duración"
+              - option "Renting corta duración"
+              - option "Venta"
+          - generic [ref=f23e180]:
+            - generic [ref=f23e181]: Mensaje *
+            - textbox "Mensaje *" [ref=f23e182]:
+              - /placeholder: Cuéntanos qué material necesitas, cantidades, plazos...
+          - button "Enviar consulta" [disabled] [ref=f23e183]:
+            - generic [ref=f23e184]: Enviar consulta
+        - complementary [ref=f23e185]:
+          - link "Email info@ossinova.com" [ref=f23e186] [cursor=pointer]:
+            - /url: mailto:info@ossinova.com
+            - generic [ref=f23e187]: Email
+            - generic [ref=f23e188]: info@ossinova.com
+          - link "WhatsApp +34 600 00 00 00" [ref=f23e189] [cursor=pointer]:
+            - /url: https://wa.me/34600000000
+            - generic [ref=f23e190]: WhatsApp
+            - generic [ref=f23e191]: +34 600 00 00 00
+          - link "Instagram @ossinovasurgical" [ref=f23e192] [cursor=pointer]:
+            - /url: https://www.instagram.com/ossinovasurgical
+            - generic [ref=f23e193]: Instagram
+            - generic [ref=f23e194]: "@ossinovasurgical"
+          - generic [ref=f23e195]:
+            - generic [ref=f23e196]: Ubicación
+            - generic [ref=f23e197]: Elche, Alicante (España)
+  - contentinfo [ref=f23e198]:
+    - generic [ref=f23e199]:
+      - generic [ref=f23e200]:
+        - img "Ossinova" [ref=f23e201]
+        - paragraph [ref=f23e202]: Soluciones quirúrgicas para el cirujano veterinario.
+      - generic [ref=f23e203]:
+        - heading "Navegación" [level=4] [ref=f23e204]
+        - link "Quiénes somos" [ref=f23e205] [cursor=pointer]:
+          - /url: /#about
+        - link "Modalidades" [ref=f23e206] [cursor=pointer]:
+          - /url: /#modes
+        - link "Catálogo" [ref=f23e207] [cursor=pointer]:
+          - /url: /catalogo
+        - link "FAQ" [ref=f23e208] [cursor=pointer]:
+          - /url: /#faq
+      - generic [ref=f23e209]:
+        - heading "Contacto" [level=4] [ref=f23e210]
+        - link "info@ossinova.com" [ref=f23e211] [cursor=pointer]:
+          - /url: mailto:info@ossinova.com
+        - link "WhatsApp +34 600 00 00 00" [ref=f23e212] [cursor=pointer]:
+          - /url: https://wa.me/34600000000
+        - link "Instagram @ossinovasurgical" [ref=f23e213] [cursor=pointer]:
+          - /url: https://www.instagram.com/ossinovasurgical
+        - generic [ref=f23e214]: Elche, Alicante (España)
+    - generic [ref=f23e216]: © 2026 Ossinova Surgical Group S.L.. Todos los derechos reservados.
+  - generic [ref=f23e219]:
+    - button "Menu" [ref=f23e220]:
+      - img [ref=f23e222]
+      - generic: Menu
+    - button "Inspect" [ref=f23e226]:
+      - img [ref=f23e228]
+      - generic: Inspect
+    - button "Audit" [ref=f23e230]:
+      - img [ref=f23e232]
+      - generic: Audit
+    - button "Settings" [ref=f23e235]:
+      - img [ref=f23e237]
+      - generic: Settings
