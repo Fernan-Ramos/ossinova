@@ -1,0 +1,20 @@
+{
+  "name": "Pinza Kerrison",
+  "category": "neurosurgery",
+  "material": "Acero inoxidable quirúrgico",
+  "reference": "NEU-KERR",
+  "dimensions": "Varias angulaciones y anchuras de boca",
+  "description": "Pinza Kerrison (rongeur) para descompresión en neurocirugía y cirugía de columna.",
+  "longDescription": "La pinza Kerrison Ossinova es un rongeur de precisión para la resección ósea controlada en procedimientos de descompresión vertebral y neurocirugía. Disponible en distintas angulaciones y anchuras de boca, con mecanismo de corte limpio y ergonómico.",
+  "highlights": [
+    "Corte óseo preciso y controlado",
+    "Varias angulaciones y anchuras de boca",
+    "Para descompresión vertebral y neurocirugía",
+    "Acero inoxidable quirúrgico"
+  ],
+  "image": "pinza-kerrison.jpg",
+  "modes": ["sale", "rental-long"],
+  "tags": ["Neurocirugía"],
+  "featured": false,
+  "order": 2
+}

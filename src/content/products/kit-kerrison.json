@@ -1,0 +1,20 @@
+{
+  "name": "Kit Kerrison",
+  "category": "kits",
+  "material": "Acero inoxidable quirúrgico",
+  "reference": "KIT-KERR",
+  "dimensions": "Maletín completo esterilizable",
+  "description": "Kit completo de pinzas Kerrison para neurocirugía y cirugía de columna, en maletín organizado y autoclavable.",
+  "longDescription": "El Kit Kerrison Ossinova reúne el conjunto de pinzas Kerrison (rongeurs) necesarias para procedimientos de neurocirugía y descompresión vertebral, en distintas angulaciones y anchuras de boca. Se presenta en un maletín organizado, esterilizable en autoclave, listo para quirófano.",
+  "highlights": [
+    "Pinzas Kerrison en varias angulaciones y anchuras",
+    "Indicado para neurocirugía y cirugía de columna",
+    "Maletín organizado y autoclavable",
+    "Disponible en renting o venta"
+  ],
+  "image": "kit-kerrison.jpg",
+  "modes": ["rental-long", "rental-short", "sale"],
+  "tags": ["Neurocirugía"],
+  "featured": true,
+  "order": 1
+}

@@ -14,6 +14,7 @@ export const CATEGORIES = [
   'screws',
   'neurosurgery',
   'motors',
+  'kits',
   'accessories',
 ] as const;
 

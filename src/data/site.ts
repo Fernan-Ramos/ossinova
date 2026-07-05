@@ -132,6 +132,7 @@ export const CATEGORY_LABEL: Record<string, string> = {
   screws: 'Tornillos',
   neurosurgery: 'Neurocirugía',
   motors: 'Motores',
+  kits: 'Kits',
   accessories: 'Accesorios',
 };
 
@@ -141,6 +142,7 @@ export const CATEGORY_DESC: Record<string, string> = {
   screws: 'Tornillos corticales, de bloqueo y esponjosos.',
   neurosurgery: 'Instrumental específico para procedimientos de neurocirugía.',
   motors: 'Motores quirúrgicos autoclavables de alta precisión.',
+  kits: 'Kits completos listos para quirófano: tornillos, instrumental y neurocirugía.',
   accessories: 'Instrumental y accesorios complementarios de quirófano.',
 };
 
@@ -150,6 +152,7 @@ export const CATEGORY_SLUG: Record<string, string> = {
   screws: 'tornillos',
   neurosurgery: 'neurocirugia',
   motors: 'motores',
+  kits: 'kits',
   accessories: 'accesorios',
 };
 
@@ -164,5 +167,6 @@ export const CATEGORY_ORDER = [
   'screws',
   'neurosurgery',
   'motors',
+  'kits',
   'accessories',
 ] as const;

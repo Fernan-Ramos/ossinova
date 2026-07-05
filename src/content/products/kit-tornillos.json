@@ -1,0 +1,20 @@
+{
+  "name": "Kit de Tornillos",
+  "category": "kits",
+  "material": "Titanio Ti-6Al-4V ELI (grado 23)",
+  "reference": "KIT-TOR",
+  "dimensions": "Diámetros 1.5 · 2.0 · 2.4 · 2.7 · 3.5 mm",
+  "description": "Kit completo de tornillos en titanio, organizado por diámetros, en caja Ossinova esterilizable.",
+  "longDescription": "El Kit de Tornillos Ossinova incluye una dotación completa de tornillos corticales y de bloqueo en los diámetros 1.5, 2.0, 2.4, 2.7 y 3.5 mm, organizados y codificados por color en una caja Ossinova esterilizable. Pensado para tener siempre disponible la referencia adecuada en quirófano.",
+  "highlights": [
+    "Diámetros 1.5, 2.0, 2.4, 2.7 y 3.5 mm",
+    "Organizado y codificado por color",
+    "Caja Ossinova esterilizable",
+    "Disponible en renting o venta"
+  ],
+  "image": "kit-tornillos.jpg",
+  "modes": ["rental-long", "rental-short", "sale"],
+  "tags": ["Tornillos"],
+  "featured": true,
+  "order": 2
+}
