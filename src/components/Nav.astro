@@ -5,7 +5,8 @@ import { site } from '../data/site.ts';
 <header class="nav">
   <div class="container nav__inner">
     <a href="/#home" class="nav__brand" aria-label={site.company}>
-      <img src="/images/logo-full.png" alt={site.brand} class="nav__logo" />
+      <img src="/images/logo-full.png" alt={site.brand} class="nav__logo nav__logo--full" />
+      <img src="/images/logo-icon.png" alt={site.brand} class="nav__logo nav__logo--icon" />
     </a>
 
     <nav class="nav__links" aria-label="Navegación principal">
@@ -50,6 +51,11 @@ import { site } from '../data/site.ts';
   .nav__logo {
     height: 38px;
     width: auto;
+  }
+
+  .nav__logo--icon {
+    display: none;
+    height: 40px;
   }
 
   .nav__links {
@@ -139,6 +145,13 @@ import { site } from '../data/site.ts';
     }
     .nav__mobile[data-open='true'] {
       display: flex;
+    }
+    /* On mobile show the compact icon mark instead of the wordmark */
+    .nav__logo--full {
+      display: none;
+    }
+    .nav__logo--icon {
+      display: block;
     }
   }
 </style>

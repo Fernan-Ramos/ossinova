@@ -15,8 +15,8 @@
   --text: #505050; /* body */
   --muted: #8a9092; /* secondary */
   --bg: #ffffff;
-  --bg-alt: #fafbfb; /* barely-there alternate */
-  --line: #e7eaec; /* hairlines */
+  --bg-alt: #eef6f6; /* soft brand tint for alternating sections */
+  --line: #e2e8e9; /* hairlines */
   --line-strong: #d3d8db;
 
   /* Type */
