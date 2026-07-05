@@ -13,7 +13,9 @@ export const site = {
   brand: 'Ossinova',
 
   hero: {
-    title: 'Soluciones quirúrgicas para el cirujano veterinario',
+    // The title is split so the last word can be accented in brand color.
+    title: 'Soluciones quirúrgicas para el cirujano',
+    titleAccent: 'veterinario',
     subtitle:
       'Implantes, tornillos, instrumental y motores en titanio Ti-6Al-4V ELI, diseñados desde el quirófano para traumatología y neurocirugía de pequeños animales.',
     primaryCta: { label: 'Ver catálogo', anchor: '/catalogo' },

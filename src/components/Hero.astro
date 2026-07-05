@@ -25,7 +25,9 @@ const { hero } = site;
     <div class="hero__copy">
       <img src="/images/logo-icon.png" alt="" class="hero__copy-logo" aria-hidden="true" />
       <span class="hero__eyebrow">Ossinova Surgical Group</span>
-      <h1 class="hero__title">{hero.title}</h1>
+      <h1 class="hero__title">
+        {hero.title} <span class="hero__title-accent">{hero.titleAccent}</span>
+      </h1>
       <p class="hero__subtitle">{hero.subtitle}</p>
       <div class="hero__actions">
         <a href={hero.primaryCta.anchor} class="hero-cta">
@@ -34,6 +36,12 @@ const { hero } = site;
         </a>
         <a href={hero.secondaryCta.anchor} class="arrow-link">{hero.secondaryCta.label}</a>
       </div>
+
+      <ul class="hero__signals">
+        <li>Titanio Ti-6Al-4V ELI</li>
+        <li>Diseñado en quirófano</li>
+        <li>Renting o venta</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -78,8 +86,12 @@ const { hero } = site;
   }
 
   .hero__title {
-    margin-bottom: 1.4rem;
-    max-width: 14ch;
+    margin-bottom: 1.3rem;
+    max-width: 15ch;
+  }
+
+  .hero__title-accent {
+    color: var(--green);
   }
 
   .hero__subtitle {
@@ -87,7 +99,7 @@ const { hero } = site;
     line-height: 1.65;
     color: var(--muted);
     max-width: 44ch;
-    margin-bottom: 2.4rem;
+    margin-bottom: 2rem;
   }
 
   .hero__actions {
@@ -95,6 +107,36 @@ const { hero } = site;
     flex-wrap: wrap;
     align-items: center;
     gap: 1.8rem;
+  }
+
+  /* Mini trust signals under the CTAs */
+  .hero__signals {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.7rem 1.5rem;
+    list-style: none;
+    margin: 2.6rem 0 0;
+    padding: 1.6rem 0 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .hero__signals li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .hero__signals li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--green);
+    flex-shrink: 0;
   }
 
   /* Organic colored shape, bleeding to the right edge */
