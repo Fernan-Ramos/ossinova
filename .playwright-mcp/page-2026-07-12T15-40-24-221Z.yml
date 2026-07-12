@@ -1,0 +1,312 @@
+- generic [active] [ref=f52e1]:
+  - banner [ref=f52e2]:
+    - generic [ref=f52e3]:
+      - link "Ossinova Surgical Group S.L." [ref=f52e4] [cursor=pointer]:
+        - /url: /#home
+        - img "Ossinova" [ref=f52e5]
+      - navigation "Navegación principal" [ref=f52e6]:
+        - link "Quiénes somos" [ref=f52e7] [cursor=pointer]:
+          - /url: /#about
+        - link "Modalidades" [ref=f52e8] [cursor=pointer]:
+          - /url: /#modes
+        - link "Catálogo" [ref=f52e9] [cursor=pointer]:
+          - /url: /catalogo
+        - link "FAQ" [ref=f52e10] [cursor=pointer]:
+          - /url: /#faq
+        - link "Contacto" [ref=f52e11] [cursor=pointer]:
+          - /url: /#contact
+  - main [ref=f52e12]:
+    - generic [ref=f52e13]:
+      - navigation "Miga de pan" [ref=f52e14]:
+        - link "Catálogo" [ref=f52e15] [cursor=pointer]:
+          - /url: /catalogo
+        - generic [ref=f52e16]: /
+        - generic [ref=f52e17]: Implantes
+      - generic [ref=f52e18]:
+        - generic [ref=f52e19]: Catálogo
+        - heading "Implantes" [level=1] [ref=f52e20]
+        - paragraph [ref=f52e21]: Placas de osteosíntesis y sistemas de fijación en titanio.
+      - navigation "Secciones del catálogo" [ref=f52e22]:
+        - link "Implantes" [ref=f52e23] [cursor=pointer]:
+          - /url: /catalogo/implantes
+        - link "Tornillos" [ref=f52e24] [cursor=pointer]:
+          - /url: /catalogo/tornillos
+        - link "Neurocirugía" [ref=f52e25] [cursor=pointer]:
+          - /url: /catalogo/neurocirugia
+        - link "Motores" [ref=f52e26] [cursor=pointer]:
+          - /url: /catalogo/motores
+        - link "Kits" [ref=f52e27] [cursor=pointer]:
+          - /url: /catalogo/kits
+        - link "Accesorios" [ref=f52e28] [cursor=pointer]:
+          - /url: /catalogo/accesorios
+      - generic [ref=f52e29]:
+        - generic [ref=f52e30]:
+          - generic [ref=f52e31]: Modalidad
+          - generic [ref=f52e32]:
+            - button "Renting larga duración" [ref=f52e33] [cursor=pointer]
+            - button "Renting corta duración" [ref=f52e34] [cursor=pointer]
+            - button "Venta" [ref=f52e35] [cursor=pointer]
+        - generic [ref=f52e36]:
+          - generic [ref=f52e37]: Tipo
+          - generic [ref=f52e38]:
+            - button "Artrodesis" [ref=f52e39] [cursor=pointer]
+            - button "Fémur" [ref=f52e40] [cursor=pointer]
+            - button "LCP" [ref=f52e41] [cursor=pointer]
+            - button "Moduplate" [ref=f52e42] [cursor=pointer]
+            - button "Pelvis" [ref=f52e43] [cursor=pointer]
+            - button "Reconstrucción" [ref=f52e44] [cursor=pointer]
+            - button "TPLO" [ref=f52e45] [cursor=pointer]
+        - generic [ref=f52e47]: 13 productos
+      - generic [ref=f52e49]:
+        - article [ref=f52e51]:
+          - link "Placa Moduplate R — Reconstrucción" [ref=f52e52] [cursor=pointer]:
+            - /url: /catalogo/implantes/pmr
+            - img "Placa Moduplate R — Reconstrucción" [ref=f52e53]
+          - generic [ref=f52e54]:
+            - heading "Placa Moduplate R — Reconstrucción" [level=3] [ref=f52e55]:
+              - link "Placa Moduplate R — Reconstrucción" [ref=f52e56] [cursor=pointer]:
+                - /url: /catalogo/implantes/pmr
+            - generic [ref=f52e57]: Ref. PMR
+            - paragraph [ref=f52e58]: Placa de bloqueo modular para reconstrucción de huesos largos en pequeños animales.
+            - generic [ref=f52e59]:
+              - generic [ref=f52e60]: Venta
+              - generic [ref=f52e61]: Renting larga duración
+            - link "Ver ficha" [ref=f52e62] [cursor=pointer]:
+              - /url: /catalogo/implantes/pmr
+              - text: Ver ficha →
+        - article [ref=f52e64]:
+          - link "Placa Moduplate L — Doble L" [ref=f52e65] [cursor=pointer]:
+            - /url: /catalogo/implantes/pml
+            - img "Placa Moduplate L — Doble L" [ref=f52e66]
+          - generic [ref=f52e67]:
+            - heading "Placa Moduplate L — Doble L" [level=3] [ref=f52e68]:
+              - link "Placa Moduplate L — Doble L" [ref=f52e69] [cursor=pointer]:
+                - /url: /catalogo/implantes/pml
+            - generic [ref=f52e70]: Ref. PML
+            - paragraph [ref=f52e71]: Placa de bloqueo de reconstrucción en doble L para osteosíntesis periarticular.
+            - generic [ref=f52e72]:
+              - generic [ref=f52e73]: Venta
+              - generic [ref=f52e74]: Renting larga duración
+            - link "Ver ficha" [ref=f52e75] [cursor=pointer]:
+              - /url: /catalogo/implantes/pml
+              - text: Ver ficha →
+        - article [ref=f52e77]:
+          - link "Placa Moduplate T — Doble T" [ref=f52e78] [cursor=pointer]:
+            - /url: /catalogo/implantes/pmt
+            - img "Placa Moduplate T — Doble T" [ref=f52e79]
+          - generic [ref=f52e80]:
+            - heading "Placa Moduplate T — Doble T" [level=3] [ref=f52e81]:
+              - link "Placa Moduplate T — Doble T" [ref=f52e82] [cursor=pointer]:
+                - /url: /catalogo/implantes/pmt
+            - generic [ref=f52e83]: Ref. PMT
+            - paragraph [ref=f52e84]: Placa de bloqueo de reconstrucción en doble T para fracturas metafisarias.
+            - generic [ref=f52e85]:
+              - generic [ref=f52e86]: Venta
+              - generic [ref=f52e87]: Renting larga duración
+            - link "Ver ficha" [ref=f52e88] [cursor=pointer]:
+              - /url: /catalogo/implantes/pmt
+              - text: Ver ficha →
+        - article [ref=f52e90]:
+          - link "Placa Moduplate Bridge — Puente" [ref=f52e91] [cursor=pointer]:
+            - /url: /catalogo/implantes/pmb
+            - img "Placa Moduplate Bridge — Puente" [ref=f52e92]
+          - generic [ref=f52e93]:
+            - heading "Placa Moduplate Bridge — Puente" [level=3] [ref=f52e94]:
+              - link "Placa Moduplate Bridge — Puente" [ref=f52e95] [cursor=pointer]:
+                - /url: /catalogo/implantes/pmb
+            - generic [ref=f52e96]: Ref. PMB
+            - paragraph [ref=f52e97]: Placa de bloqueo en puente para reconstrucción de fracturas conminutas.
+            - generic [ref=f52e98]:
+              - generic [ref=f52e99]: Venta
+              - generic [ref=f52e100]: Renting larga duración
+            - link "Ver ficha" [ref=f52e101] [cursor=pointer]:
+              - /url: /catalogo/implantes/pmb
+              - text: Ver ficha →
+        - article [ref=f52e103]:
+          - link "Placa Moduplate Distal Femoral" [ref=f52e104] [cursor=pointer]:
+            - /url: /catalogo/implantes/pmdf
+            - img "Placa Moduplate Distal Femoral" [ref=f52e105]
+          - generic [ref=f52e106]:
+            - heading "Placa Moduplate Distal Femoral" [level=3] [ref=f52e107]:
+              - link "Placa Moduplate Distal Femoral" [ref=f52e108] [cursor=pointer]:
+                - /url: /catalogo/implantes/pmdf
+            - generic [ref=f52e109]: Ref. PMDF
+            - paragraph [ref=f52e110]: Placa de osteosíntesis para fracturas supracondíleas de fémur distal.
+            - generic [ref=f52e111]:
+              - generic [ref=f52e112]: Venta
+              - generic [ref=f52e113]: Renting larga duración
+            - link "Ver ficha" [ref=f52e114] [cursor=pointer]:
+              - /url: /catalogo/implantes/pmdf
+              - text: Ver ficha →
+        - article [ref=f52e116]:
+          - link "Placa Rigid LCP — Bloqueada y de compresión" [ref=f52e117] [cursor=pointer]:
+            - /url: /catalogo/implantes/pr-lcp
+            - img "Placa Rigid LCP — Bloqueada y de compresión" [ref=f52e118]
+          - generic [ref=f52e119]:
+            - heading "Placa Rigid LCP — Bloqueada y de compresión" [level=3] [ref=f52e120]:
+              - link "Placa Rigid LCP — Bloqueada y de compresión" [ref=f52e121] [cursor=pointer]:
+                - /url: /catalogo/implantes/pr-lcp
+            - generic [ref=f52e122]: Ref. PR-LCP
+            - paragraph [ref=f52e123]: Placa LCP bloqueada y de compresión para osteosíntesis de huesos largos.
+            - generic [ref=f52e124]:
+              - generic [ref=f52e125]: Venta
+              - generic [ref=f52e126]: Renting larga duración
+            - link "Ver ficha" [ref=f52e127] [cursor=pointer]:
+              - /url: /catalogo/implantes/pr-lcp
+              - text: Ver ficha →
+        - article [ref=f52e129]:
+          - link "Placa Rigid LCP en T" [ref=f52e130] [cursor=pointer]:
+            - /url: /catalogo/implantes/pr-lcp-t
+            - img "Placa Rigid LCP en T" [ref=f52e131]
+          - generic [ref=f52e132]:
+            - heading "Placa Rigid LCP en T" [level=3] [ref=f52e133]:
+              - link "Placa Rigid LCP en T" [ref=f52e134] [cursor=pointer]:
+                - /url: /catalogo/implantes/pr-lcp-t
+            - generic [ref=f52e135]: Ref. PR-LCP-T
+            - paragraph [ref=f52e136]: Placa LCP bloqueada en T para fracturas periarticulares.
+            - generic [ref=f52e137]:
+              - generic [ref=f52e138]: Venta
+              - generic [ref=f52e139]: Renting larga duración
+            - link "Ver ficha" [ref=f52e140] [cursor=pointer]:
+              - /url: /catalogo/implantes/pr-lcp-t
+              - text: Ver ficha →
+        - article [ref=f52e142]:
+          - link "Placa Rigid Lock Bridge" [ref=f52e143] [cursor=pointer]:
+            - /url: /catalogo/implantes/pr-lb
+            - img "Placa Rigid Lock Bridge" [ref=f52e144]
+          - generic [ref=f52e145]:
+            - heading "Placa Rigid Lock Bridge" [level=3] [ref=f52e146]:
+              - link "Placa Rigid Lock Bridge" [ref=f52e147] [cursor=pointer]:
+                - /url: /catalogo/implantes/pr-lb
+            - generic [ref=f52e148]: Ref. PR-LB
+            - paragraph [ref=f52e149]: Placa LCP en puente para fracturas conminutas de bajo perfil.
+            - generic [ref=f52e150]:
+              - generic [ref=f52e151]: Venta
+              - generic [ref=f52e152]: Renting larga duración
+            - link "Ver ficha" [ref=f52e153] [cursor=pointer]:
+              - /url: /catalogo/implantes/pr-lb
+              - text: Ver ficha →
+        - article [ref=f52e155]:
+          - link "Placa de artrodesis pancarpal" [ref=f52e156] [cursor=pointer]:
+            - /url: /catalogo/implantes/pmfc
+            - img "Placa de artrodesis pancarpal" [ref=f52e157]
+          - generic [ref=f52e158]:
+            - heading "Placa de artrodesis pancarpal" [level=3] [ref=f52e159]:
+              - link "Placa de artrodesis pancarpal" [ref=f52e160] [cursor=pointer]:
+                - /url: /catalogo/implantes/pmfc
+            - generic [ref=f52e161]: Ref. PMFC
+            - paragraph [ref=f52e162]: Placa para artrodesis pancarpal del carpo con orificios escalonados.
+            - generic [ref=f52e163]:
+              - generic [ref=f52e164]: Venta
+              - generic [ref=f52e165]: Renting larga duración
+            - link "Ver ficha" [ref=f52e166] [cursor=pointer]:
+              - /url: /catalogo/implantes/pmfc
+              - text: Ver ficha →
+        - article [ref=f52e168]:
+          - link "Placa de artrodesis pantarsal" [ref=f52e169] [cursor=pointer]:
+            - /url: /catalogo/implantes/pr-ft
+            - img "Placa de artrodesis pantarsal" [ref=f52e170]
+          - generic [ref=f52e171]:
+            - heading "Placa de artrodesis pantarsal" [level=3] [ref=f52e172]:
+              - link "Placa de artrodesis pantarsal" [ref=f52e173] [cursor=pointer]:
+                - /url: /catalogo/implantes/pr-ft
+            - generic [ref=f52e174]: Ref. PR-FT
+            - paragraph [ref=f52e175]: Placa para artrodesis pantarsal del tarso.
+            - generic [ref=f52e176]:
+              - generic [ref=f52e177]: Venta
+              - generic [ref=f52e178]: Renting larga duración
+            - link "Ver ficha" [ref=f52e179] [cursor=pointer]:
+              - /url: /catalogo/implantes/pr-ft
+              - text: Ver ficha →
+        - article [ref=f52e181]:
+          - link "Placa de pelvis — Arc Lock" [ref=f52e182] [cursor=pointer]:
+            - /url: /catalogo/implantes/pr-arc
+            - img "Placa de pelvis — Arc Lock" [ref=f52e183]
+          - generic [ref=f52e184]:
+            - heading "Placa de pelvis — Arc Lock" [level=3] [ref=f52e185]:
+              - link "Placa de pelvis — Arc Lock" [ref=f52e186] [cursor=pointer]:
+                - /url: /catalogo/implantes/pr-arc
+            - generic [ref=f52e187]: Ref. PR-ARC
+            - paragraph [ref=f52e188]: Placa bloqueada para fracturas acetabulares y pélvicas.
+            - generic [ref=f52e189]:
+              - generic [ref=f52e190]: Venta
+              - generic [ref=f52e191]: Renting larga duración
+            - link "Ver ficha" [ref=f52e192] [cursor=pointer]:
+              - /url: /catalogo/implantes/pr-arc
+              - text: Ver ficha →
+        - article [ref=f52e194]:
+          - link "Placa de TPLO recta" [ref=f52e195] [cursor=pointer]:
+            - /url: /catalogo/implantes/p-tplr
+            - img "Placa de TPLO recta" [ref=f52e196]
+          - generic [ref=f52e197]:
+            - heading "Placa de TPLO recta" [level=3] [ref=f52e198]:
+              - link "Placa de TPLO recta" [ref=f52e199] [cursor=pointer]:
+                - /url: /catalogo/implantes/p-tplr
+            - generic [ref=f52e200]: Ref. P-TPLR
+            - paragraph [ref=f52e201]: Placa recta para osteotomía niveladora de la meseta tibial (TPLO).
+            - generic [ref=f52e202]:
+              - generic [ref=f52e203]: Venta
+              - generic [ref=f52e204]: Renting larga duración
+              - generic [ref=f52e205]: Renting corta duración
+            - link "Ver ficha" [ref=f52e206] [cursor=pointer]:
+              - /url: /catalogo/implantes/p-tplr
+              - text: Ver ficha →
+        - article [ref=f52e208]:
+          - link "Placa de TPLO curva" [ref=f52e209] [cursor=pointer]:
+            - /url: /catalogo/implantes/p-tplc
+            - img "Placa de TPLO curva" [ref=f52e210]
+          - generic [ref=f52e211]:
+            - heading "Placa de TPLO curva" [level=3] [ref=f52e212]:
+              - link "Placa de TPLO curva" [ref=f52e213] [cursor=pointer]:
+                - /url: /catalogo/implantes/p-tplc
+            - generic [ref=f52e214]: Ref. P-TPLC
+            - paragraph [ref=f52e215]: Placa curva para osteotomía niveladora de la meseta tibial (TPLO).
+            - generic [ref=f52e216]:
+              - generic [ref=f52e217]: Venta
+              - generic [ref=f52e218]: Renting larga duración
+              - generic [ref=f52e219]: Renting corta duración
+            - link "Ver ficha" [ref=f52e220] [cursor=pointer]:
+              - /url: /catalogo/implantes/p-tplc
+              - text: Ver ficha →
+      - link "← Volver al catálogo" [ref=f52e221] [cursor=pointer]:
+        - /url: /catalogo
+  - contentinfo [ref=f52e222]:
+    - generic [ref=f52e223]:
+      - generic [ref=f52e224]:
+        - img "Ossinova" [ref=f52e225]
+        - paragraph [ref=f52e226]: Soluciones quirúrgicas para el cirujano veterinario.
+      - generic [ref=f52e227]:
+        - heading "Navegación" [level=4] [ref=f52e228]
+        - link "Quiénes somos" [ref=f52e229] [cursor=pointer]:
+          - /url: /#about
+        - link "Modalidades" [ref=f52e230] [cursor=pointer]:
+          - /url: /#modes
+        - link "Catálogo" [ref=f52e231] [cursor=pointer]:
+          - /url: /catalogo
+        - link "FAQ" [ref=f52e232] [cursor=pointer]:
+          - /url: /#faq
+      - generic [ref=f52e233]:
+        - heading "Contacto" [level=4] [ref=f52e234]
+        - link "info@ossinova.com" [ref=f52e235] [cursor=pointer]:
+          - /url: mailto:info@ossinova.com
+        - link "WhatsApp +34 600 00 00 00" [ref=f52e236] [cursor=pointer]:
+          - /url: https://wa.me/34600000000
+        - link "Instagram @ossinovasurgical" [ref=f52e237] [cursor=pointer]:
+          - /url: https://www.instagram.com/ossinovasurgical
+        - generic [ref=f52e238]: Elche, Alicante (España)
+    - generic [ref=f52e240]: © 2026 Ossinova Surgical Group S.L.. Todos los derechos reservados.
+  - generic [ref=f52e243]:
+    - button "Menu" [ref=f52e244]:
+      - img [ref=f52e246]
+      - generic: Menu
+    - button "Inspect" [ref=f52e250]:
+      - img [ref=f52e252]
+      - generic: Inspect
+    - button "Audit" [ref=f52e254]:
+      - generic [ref=f52e255]:
+        - img [ref=f52e256]
+        - img [ref=f52e259]
+      - generic: Audit
+    - button "Settings" [ref=f52e262]:
+      - img [ref=f52e264]
+      - generic: Settings
