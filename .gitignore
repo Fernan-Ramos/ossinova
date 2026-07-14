@@ -19,3 +19,6 @@ node_modules/
 
 # logs
 npm-debug.log*
+
+# playwright screenshots
+.playwright-mcp/
