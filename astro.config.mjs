@@ -1,13 +1,11 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-// Config base del sitio. Cuando enlaces el repo y despliegues en Vercel,
-// cambia "site" por la URL final (p. ej. https://ossinova.com).
+// Config base del sitio, desplegado en Vercel bajo el dominio final.
 //
 // El panel de edicion (Keystatic) se anade en la fase 2: en ese momento
 // aqui se agregan las integraciones react() y keystatic(), el output
 // "hybrid" y el adapter de Vercel. Ver README.
 export default defineConfig({
-  // Cambia a tu dominio final cuando lo tengas (p. ej. https://ossinova.com).
-  site: 'https://ossinova.vercel.app',
+  site: 'https://ossinovasurgical.com',
 });
