@@ -5,7 +5,7 @@ ilimitado), sin salir del diseño de la web. Pasos:
 
 1. Crea una hoja de cálculo nueva en [Google Sheets](https://sheets.google.com).
 2. Ve a **Extensiones → Apps Script**.
-3. Borra el contenido y pega el archivo [`Codigo.gs`](./Codigo.gs).
+3. Borra el contenido y pega el archivo [`code.gs`](./code.gs).
 4. Pulsa **Implementar → Nueva implementación**.
    - Tipo: **Aplicación web**.
    - Ejecutar como: **Yo**.
