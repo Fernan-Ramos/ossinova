@@ -115,7 +115,8 @@ export const site = {
     // Google Apps Script URL (ends in /exec) that stores form submissions in
     // a Google Sheet. While empty, the form shows a notice and is disabled.
     // See google-apps-script/README.md for the setup steps.
-    formUrl: '',
+    formUrl:
+      'https://script.google.com/macros/s/AKfycbx3tuzGnc-T4tJ3Y2Yu4h3hxwOiNj0xXo4ZypDsCpqhlxzc76oSweLqyLbchyfEZQFj/exec',
   },
 } as const;
 
