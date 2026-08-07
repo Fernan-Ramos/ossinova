@@ -105,10 +105,10 @@ export const site = {
   contact: {
     title: 'Contacto',
     text: 'Cuéntanos qué necesitas y te preparamos una propuesta a medida (renting o venta).',
-    email: 'info@ossinova.com',
+    email: 'ossinovasurgical@gmail.com',
     // International format, no symbols, for the WhatsApp link.
-    whatsapp: '34600000000',
-    phone: '+34 600 00 00 00',
+    whatsapp: '34614665571',
+    phone: '+34 614 66 55 71',
     city: 'Elche, Alicante (España)',
     instagram: 'https://www.instagram.com/ossinovasurgical',
     instagramHandle: '@ossinovasurgical',
