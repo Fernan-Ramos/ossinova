@@ -11,7 +11,7 @@ const { product, slug } = Astro.props;
 const href = `/catalogo/${CATEGORY_SLUG[product.category]}/${slug}`;
 
 // Resolve the image path: absolute/URL as-is, otherwise from the products folder.
-function imageSrc(image?: string): string | null {
+function imageSrc(image?: string | null): string | null {
   if (!image) return null;
   if (image.startsWith('http') || image.startsWith('/')) return image;
   return `/images/products/${image}`;

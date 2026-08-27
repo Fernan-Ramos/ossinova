@@ -35,12 +35,13 @@ const products = defineCollection({
     // Key selling points shown as a bullet list on the detail page.
     highlights: z.array(z.string()).default([]),
     // Path or file name of the image (in /public/images/products/).
-    image: z.string().optional(),
+    // Nullable because Keystatic writes null when the field is empty.
+    image: z.string().nullable().optional(),
     // Optional datasheet/PDF path (in /public/), for future downloads.
     datasheet: z.string().optional(),
     // Reference "from" price (EUR, no VAT). Stored but NOT shown publicly;
     // kept so it can be surfaced later if the owners decide to.
-    priceFrom: z.number().optional(),
+    priceFrom: z.number().nullable().optional(),
     modes: z.array(z.enum(MODES)).default(['sale']),
     // Free-form tags used to filter within a category (e.g. "Corticales",
     // "Bloqueados", "TPLO"). Owners can define their own.
