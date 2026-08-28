@@ -24,6 +24,9 @@ export default config({
     products: collection({
       label: 'Productos',
       slugField: 'name',
+      // Columnas del listado; clicando la cabecera se ordena (p. ej. por
+      // categoría, para ver los productos agrupados).
+      columns: ['name', 'category', 'order'],
       path: 'src/content/products/*',
       format: { data: 'json' },
       schema: {
