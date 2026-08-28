@@ -12,9 +12,15 @@
     "Maletín organizado y autoclavable",
     "Disponible en renting o venta"
   ],
-  "image": "kit-kerrison.jpg",
-  "modes": ["rental-long", "rental-short", "sale"],
-  "tags": ["Neurocirugía"],
+  "image": "/images/products/kit-kerrison/kit-kerrison.jpg",
+  "modes": [
+    "rental-long",
+    "rental-short",
+    "sale"
+  ],
+  "tags": [
+    "Neurocirugía"
+  ],
   "featured": true,
   "order": 1
 }

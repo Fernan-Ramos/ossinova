@@ -11,6 +11,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.16.18"
+    "@astrojs/react": "^6.0.4",
+    "@astrojs/vercel": "^11.0.8",
+    "@keystatic/astro": "^6.0.0",
+    "@keystatic/core": "^0.6.9",
+    "astro": "^7.2.9",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
   }
 }

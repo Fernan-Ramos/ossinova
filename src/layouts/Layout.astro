@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 import { site } from '../data/site.ts';
 
 interface Props {
@@ -38,7 +38,7 @@ const {
     />
 
     <!-- Smooth cross-page transitions (respects prefers-reduced-motion). -->
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body>
     <slot />

@@ -36,18 +36,26 @@ google-apps-script/        ← backend del formulario de contacto (Google Sheets
   campos están definidos en `src/content/config.ts` (nombre, categoría,
   material, medidas, descripción, imagen, modalidades, etc.). Las fichas de
   detalle en `/catalogo/<slug>` se generan solas.
-  - En la **fase 2** se conecta [Keystatic](https://keystatic.com) como panel de
-    edición en `/keystatic` para que los dueños añadan/editen/borren productos
-    sin tocar código (modo GitHub, gratis).
+- **Panel de edición ([Keystatic](https://keystatic.com)):** en `/keystatic`
+  (con `npm run dev`, abre http://localhost:4321/keystatic). Permite
+  añadir/editar/borrar productos con formularios, sin tocar código. El esquema
+  del panel vive en `keystatic.config.ts` y replica el de
+  `src/content/config.ts`: si cambias un campo en uno, cámbialo en el otro.
+  - Ahora funciona en modo `local` (edita los ficheros del disco durante
+    `npm run dev`). Para que los dueños lo usen en producción hay que pasarlo a
+    modo GitHub (gratis): ver el comentario en `keystatic.config.ts`.
 - **Textos del sitio:** en `src/data/site.ts` (secciones, modalidades, FAQ,
   datos de contacto). Todo el código está en inglés; los textos visibles, en
   español.
 
 ### Imágenes de producto
 
-Coloca las fotos en `public/images/products/` y pon el nombre del fichero en el
-campo `image` del producto (p. ej. `"image": "placa-lcdcp.jpg"`). Si se deja
-vacío, se muestra el icono de marca como marcador.
+Cada producto guarda su foto en una subcarpeta con su propio slug:
+`public/images/products/<slug>/<archivo>.jpg`, y el campo `image` lleva la ruta
+completa (p. ej. `"image": "/images/products/opb/opb.jpg"`). Es la convención
+que usa Keystatic al subir imágenes desde el panel, así que al añadir una foto
+desde `/keystatic` esto sale solo. Si `image` queda vacío (`null`), se muestra
+el icono de marca como marcador.
 
 ## Formulario de contacto
 

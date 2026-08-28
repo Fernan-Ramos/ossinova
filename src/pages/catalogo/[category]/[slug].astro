@@ -20,7 +20,7 @@ interface Props {
 const { product } = Astro.props;
 const categorySlug = CATEGORY_SLUG[product.category];
 
-function imageSrc(image?: string): string | null {
+function imageSrc(image?: string | null): string | null {
   if (!image) return null;
   if (image.startsWith('http') || image.startsWith('/')) return image;
   return `/images/products/${image}`;
