@@ -1,5 +1,5 @@
 {
-  "name": "Cizalla",
+  "name": "Cizallas",
   "category": "accessories",
   "material": "Acero inoxidable quirúrgico",
   "reference": "CZ",
@@ -11,7 +11,8 @@
     "530 mm de longitud",
     "Acero inoxidable quirúrgico"
   ],
-  "image": "/images/products/cz/cz.jpg",
+  "image": "/images/products/cz/image.jpg",
+  "priceFrom": 240,
   "modes": [
     "sale"
   ],
@@ -19,6 +20,5 @@
     "Instrumental"
   ],
   "featured": false,
-  "order": 31,
-  "priceFrom": 240
+  "order": 31
 }
