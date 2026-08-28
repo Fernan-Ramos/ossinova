@@ -1,0 +1,16 @@
+{
+  "name": "PAÑOS IODADOS",
+  "category": "accessories",
+  "material": "Paños adhesivos con povidona yodada",
+  "reference": "OISD",
+  "dimensions": "35x45 cm",
+  "description": "Paños adhesivos con povidona yodada de uso exclusivo veterinario",
+  "highlights": [],
+  "image": "/images/products/panos-iodados/image.png",
+  "modes": [
+    "sale"
+  ],
+  "tags": [],
+  "featured": false,
+  "order": 0
+}
