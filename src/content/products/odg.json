@@ -11,7 +11,8 @@
     "Diámetros de 1.5 a 3.5 mm",
     "Acero inoxidable quirúrgico"
   ],
-  "image": null,
+  "image": "/images/products/odg/image.PNG",
+  "priceFrom": 35,
   "modes": [
     "sale"
   ],
@@ -19,6 +20,5 @@
     "Instrumental"
   ],
   "featured": false,
-  "order": 26,
-  "priceFrom": 35
+  "order": 26
 }
