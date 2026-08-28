@@ -12,16 +12,17 @@
     "De 18 a 30 orificios según modelo",
     "Titanio Ti-6Al-4V ELI (grado 23)"
   ],
-  "image": "/images/products/pmr/pmr.jpg",
+  "image": "/images/products/pmr/image.png",
+  "priceFrom": 100,
   "modes": [
     "sale",
-    "rental-long"
+    "rental-long",
+    "rental-short"
   ],
   "tags": [
     "Reconstrucción",
     "Moduplate"
   ],
   "featured": true,
-  "order": 1,
-  "priceFrom": 100
+  "order": 1
 }
