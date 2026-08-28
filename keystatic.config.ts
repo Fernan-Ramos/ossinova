@@ -5,16 +5,20 @@
 //  src/content/config.ts: si cambias un campo aquí, cámbialo
 //  también allí.
 //
-//  storage 'local': edita los ficheros en el disco (solo sirve
-//  en `npm run dev`). Para producción se cambia a modo GitHub:
-//    storage: { kind: 'github', repo: 'Fernan-Ramos/ossinova' }
-//  y se instala la GitHub App de Keystatic en el repo (el propio
-//  panel guía el proceso la primera vez).
+//  storage 'github': los editores entran con una cuenta de GitHub
+//  con acceso de escritura al repo, y cada "Save" es un commit.
+//  Necesita la GitHub App de Keystatic instalada en el repo y sus
+//  variables de entorno (KEYSTATIC_GITHUB_CLIENT_ID,
+//  KEYSTATIC_GITHUB_CLIENT_SECRET, KEYSTATIC_SECRET) en .env en
+//  local y en Vercel en producción. La primera vez, el propio
+//  panel guía la creación de la app desde `npm run dev`.
+//  (Para editar en local sin pasar por GitHub, cambiar
+//  temporalmente a `storage: { kind: 'local' }`.)
 // ─────────────────────────────────────────────────────────────
 import { config, collection, fields } from '@keystatic/core';
 
 export default config({
-  storage: { kind: 'local' },
+  storage: { kind: 'github', repo: 'Fernan-Ramos/ossinova' },
 
   ui: {
     brand: { name: 'Ossinova' },
