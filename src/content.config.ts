@@ -1,4 +1,5 @@
 import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
 
 // ─────────────────────────────────────────────────────────────
 //  PRODUCT CATALOG SCHEMA
@@ -22,7 +23,8 @@ export const CATEGORIES = [
 export const MODES = ['rental-long', 'rental-short', 'sale'] as const;
 
 const products = defineCollection({
-  type: 'data',
+  // Each entry's id is the file name without extension (e.g. "opb").
+  loader: glob({ pattern: '*.json', base: './src/content/products' }),
   schema: z.object({
     name: z.string(),
     category: z.enum(CATEGORIES),
