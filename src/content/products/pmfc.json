@@ -12,7 +12,8 @@
     "Admite varios diámetros de tornillo",
     "Titanio Ti-6Al-4V ELI (grado 23)"
   ],
-  "image": "/images/products/pmfc/pmfc.jpg",
+  "image": "/images/products/pmfc/image.png",
+  "priceFrom": 135,
   "modes": [
     "sale",
     "rental-long"
@@ -21,6 +22,5 @@
     "Artrodesis"
   ],
   "featured": false,
-  "order": 9,
-  "priceFrom": 135
+  "order": 9
 }
