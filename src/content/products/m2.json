@@ -11,7 +11,7 @@
     "Compatible con hojas de sierra Ossinova",
     "Autoclavable"
   ],
-  "image": "/images/products/m2/m2.jpg",
+  "priceFrom": 3000,
   "modes": [
     "rental-long",
     "rental-short",
@@ -22,6 +22,5 @@
     "TPLO"
   ],
   "featured": true,
-  "order": 18,
-  "priceFrom": 3000
+  "order": 18
 }
