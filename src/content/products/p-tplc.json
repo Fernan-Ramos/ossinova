@@ -12,7 +12,8 @@
     "Versiones izquierda y derecha",
     "Titanio Ti-6Al-4V ELI (grado 23)"
   ],
-  "image": "/images/products/p-tplc/p-tplc.jpg",
+  "image": "/images/products/p-tplc/image.png",
+  "priceFrom": 95,
   "modes": [
     "sale",
     "rental-long",
@@ -22,6 +23,5 @@
     "TPLO"
   ],
   "featured": true,
-  "order": 13,
-  "priceFrom": 95
+  "order": 13
 }

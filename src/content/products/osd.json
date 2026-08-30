@@ -11,7 +11,8 @@
     "Intercambiables con el mango Ossinova",
     "Acero inoxidable quirúrgico"
   ],
-  "image": null,
+  "image": "/images/products/osd/image.png",
+  "priceFrom": 35,
   "modes": [
     "sale"
   ],
@@ -19,6 +20,5 @@
     "Destornillador"
   ],
   "featured": false,
-  "order": 22,
-  "priceFrom": 35
+  "order": 22
 }

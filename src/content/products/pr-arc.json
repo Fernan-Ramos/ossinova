@@ -12,7 +12,8 @@
     "Tornillos de bloqueo",
     "Titanio Ti-6Al-4V ELI (grado 23)"
   ],
-  "image": "/images/products/pr-arc/pr-arc.jpg",
+  "image": "/images/products/pr-arc/image.png",
+  "priceFrom": 100,
   "modes": [
     "sale",
     "rental-long"
@@ -21,6 +22,5 @@
     "Pelvis"
   ],
   "featured": false,
-  "order": 11,
-  "priceFrom": 100
+  "order": 11
 }
