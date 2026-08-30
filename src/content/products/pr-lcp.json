@@ -12,7 +12,8 @@
     "Diámetros de 2 a 3.5 mm",
     "Titanio Ti-6Al-4V ELI (grado 23)"
   ],
-  "image": "/images/products/pr-lcp/pr-lcp.jpg",
+  "image": "/images/products/pr-lcp/image.png",
+  "priceFrom": 95,
   "modes": [
     "sale",
     "rental-long"
@@ -21,6 +22,5 @@
     "LCP"
   ],
   "featured": true,
-  "order": 6,
-  "priceFrom": 95
+  "order": 6
 }
