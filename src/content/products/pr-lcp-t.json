@@ -11,7 +11,8 @@
     "Orificios de bloqueo y compresión",
     "Titanio Ti-6Al-4V ELI (grado 23)"
   ],
-  "image": "/images/products/pr-lcp-t/pr-lcp-t.jpg",
+  "image": "/images/products/pr-lcp-t/image.png",
+  "priceFrom": 97,
   "modes": [
     "sale",
     "rental-long"
@@ -20,6 +21,5 @@
     "LCP"
   ],
   "featured": false,
-  "order": 7,
-  "priceFrom": 97
+  "order": 7
 }
