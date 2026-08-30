@@ -11,7 +11,7 @@
     "Integra capacidad TPLO",
     "Autoclavable"
   ],
-  "image": "/images/products/m4/m4.jpg",
+  "priceFrom": 8500,
   "modes": [
     "rental-long",
     "rental-short",
@@ -22,6 +22,5 @@
     "TPLO"
   ],
   "featured": true,
-  "order": 20,
-  "priceFrom": 8500
+  "order": 20
 }
