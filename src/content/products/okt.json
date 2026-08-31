@@ -11,7 +11,8 @@
     "Diámetros de 0.8 a 4.0 mm",
     "Longitud 250 mm"
   ],
-  "image": null,
+  "image": "/images/products/okt/image.png",
+  "priceFrom": 5,
   "modes": [
     "sale"
   ],
@@ -19,6 +20,5 @@
     "Agujas Kirschner"
   ],
   "featured": false,
-  "order": 24,
-  "priceFrom": 5
+  "order": 24
 }
