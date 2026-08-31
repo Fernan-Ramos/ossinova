@@ -1,0 +1,18 @@
+{
+  "name": "OSSINOVA MODUPLATE FUSION CARPUS",
+  "category": "implants",
+  "material": "Titanio Ti-6Al-4V ELI (grado 23)",
+  "reference": "PMFC",
+  "dimensions": "1,1_2,4_1,5 · 1,5_2,4_2,0",
+  "description": "Placa diseñada para la fusión de la articulación carpiana, proporcionando una estabilización rígida que permite mantener la alineación y favorecer la consolidación ósea.",
+  "highlights": [],
+  "image": "/images/products/ossinova-moduplate-fusion-carpus/image.png",
+  "modes": [
+    "sale",
+    "rental-long",
+    "rental-short"
+  ],
+  "tags": [],
+  "featured": false,
+  "order": 0
+}
