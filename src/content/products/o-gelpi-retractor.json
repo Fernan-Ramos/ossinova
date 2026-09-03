@@ -1,0 +1,17 @@
+{
+  "name": "O - Gelpi retractor",
+  "category": "implants",
+  "material": "Acero",
+  "reference": "GR-001/GR-002/GR-003",
+  "dimensions": "100/140/160",
+  "description": "Separador Gelpi diseñado para mantener los bordes de una incisión y facilitar la exposición del campo quirúrgico permitiendo trabajar con mayor visibilidad y libertad de movimientos con apertura regulable.",
+  "longDescription": "Dispone de brazos curvos terminados en puntas tipo gancho, que proporcionan una sujeción eficaz de los tejidos. ",
+  "highlights": [],
+  "image": "/images/products/o-gelpi-retractor/image.png",
+  "modes": [
+    "sale"
+  ],
+  "tags": [],
+  "featured": false,
+  "order": 0
+}
