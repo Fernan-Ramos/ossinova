@@ -12,7 +12,8 @@
     "Amplio rango de longitudes",
     "Titanio Ti-6Al-4V ELI (grado 23)"
   ],
-  "image": "/images/products/tc/tc.jpg",
+  "image": "/images/products/tc/image.png",
+  "priceFrom": 10,
   "modes": [
     "sale"
   ],
@@ -20,6 +21,5 @@
     "Corticales"
   ],
   "featured": true,
-  "order": 14,
-  "priceFrom": 10
+  "order": 14
 }
