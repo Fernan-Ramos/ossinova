@@ -12,6 +12,10 @@
     "Acero inoxidable quirúrgico"
   ],
   "image": "/images/products/cz/image.jpg",
+  "gallery": [
+    "/images/products/cz/gallery/0.png",
+    "/images/products/cz/gallery/1.png"
+  ],
   "priceFrom": 240,
   "modes": [
     "sale"
