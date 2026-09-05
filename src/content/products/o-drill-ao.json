@@ -1,12 +1,13 @@
 {
   "name": "O - Drill - AO",
-  "category": "implants",
+  "category": "accessories",
   "material": "Acero",
   "reference": "OD-AO",
   "dimensions": "1,1; 1,5; 1,8; 2,0; 2,5; 2,8 ",
   "description": "Broca quirúrgica de diferentes tamaños diseñada para perforación ósea",
   "highlights": [],
   "image": "/images/products/o-drill-ao/image.png",
+  "gallery": [],
   "modes": [
     "sale"
   ],
