@@ -12,10 +12,12 @@
     "Maletín organizado y autoclavable",
     "Disponible en renting o venta"
   ],
-  "image": "/images/products/kit-kerrison/kit-kerrison.jpg",
+  "image": "/images/products/kit-kerrison/image.jpg",
+  "gallery": [
+    "/images/products/kit-kerrison/gallery/0.png",
+    "/images/products/kit-kerrison/gallery/1.png"
+  ],
   "modes": [
-    "rental-long",
-    "rental-short",
     "sale"
   ],
   "tags": [
