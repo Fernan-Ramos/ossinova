@@ -160,6 +160,7 @@ const quoteHref = `mailto:${site.contact.email}?subject=${subject}&body=${body}`
 </Layout>
 <script>
   const mainImage = document.querySelector<HTMLImageElement>('#product-main-image');
+  const media = document.querySelector<HTMLElement>('.detail__media');
   const thumbnails = document.querySelectorAll<HTMLButtonElement>('.detail__thumbnail');
 
   thumbnails.forEach((thumbnail) => {
@@ -169,11 +170,27 @@ const quoteHref = `mailto:${site.contact.email}?subject=${subject}&body=${body}`
       if (!mainImage || !image) return;
 
       mainImage.src = image;
+      mainImage.style.transformOrigin = 'center center';
 
       thumbnails.forEach((item) => item.classList.remove('is-active'));
       thumbnail.classList.add('is-active');
     });
   });
+
+  if (media && mainImage) {
+    media.addEventListener('mousemove', (event) => {
+      const rect = media.getBoundingClientRect();
+
+      const x = ((event.clientX - rect.left) / rect.width) * 100;
+      const y = ((event.clientY - rect.top) / rect.height) * 100;
+
+      mainImage.style.transformOrigin = `${x}% ${y}%`;
+    });
+
+    media.addEventListener('mouseleave', () => {
+      mainImage.style.transformOrigin = 'center center';
+    });
+  }
 </script>
 <style>
   .detail {
@@ -255,7 +272,7 @@ const quoteHref = `mailto:${site.contact.email}?subject=${subject}&body=${body}`
   height: 100%;
   object-fit: contain;
   padding: 2rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.12s ease;
   cursor: zoom-in;
 }
 
