@@ -92,6 +92,18 @@ export default config({
           directory: 'public/images/products',
           publicPath: '/images/products/',
         }),
+        gallery: fields.array(
+  fields.image({
+    label: 'Foto adicional',
+    directory: 'public/images/products',
+    publicPath: '/images/products/',
+  }),
+  {
+    label: 'Galería de fotos',
+    description: 'Añade aquí fotografías adicionales del producto.',
+    itemLabel: () => 'Foto adicional',
+  }
+),
         priceFrom: fields.number({
           label: 'Precio desde (€, sin IVA)',
           description: 'Solo informativo: NO se muestra en la web.',
