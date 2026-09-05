@@ -57,24 +57,48 @@ const quoteHref = `mailto:${site.contact.email}?subject=${subject}&body=${body}`
 
       <div class="detail__grid">
        <div class="detail__gallery">
-  <div class="detail__media">
-    {
-      allImages.length > 0 ? (
+ <div class="detail__media">
+  {
+    allImages.length > 0 ? (
+      <>
         <img
           id="product-main-image"
           src={allImages[0]}
           alt={product.name}
         />
-      ) : (
-        <img
-          src="/images/logo-icon.png"
-          alt=""
-          class="detail__placeholder"
-          aria-hidden="true"
-        />
-      )
-    }
-  </div>
+
+        {allImages.length > 1 && (
+          <>
+            <button
+              type="button"
+              class="detail__arrow detail__arrow--prev"
+              id="gallery-prev"
+              aria-label="Imagen anterior"
+            >
+              ‹
+            </button>
+
+            <button
+              type="button"
+              class="detail__arrow detail__arrow--next"
+              id="gallery-next"
+              aria-label="Imagen siguiente"
+            >
+              ›
+            </button>
+          </>
+        )}
+      </>
+    ) : (
+      <img
+        src="/images/logo-icon.png"
+        alt=""
+        class="detail__placeholder"
+        aria-hidden="true"
+      />
+    )
+  }
+</div>
 
   {
     allImages.length > 1 && (
@@ -162,19 +186,40 @@ const quoteHref = `mailto:${site.contact.email}?subject=${subject}&body=${body}`
   const mainImage = document.querySelector<HTMLImageElement>('#product-main-image');
   const media = document.querySelector<HTMLElement>('.detail__media');
   const thumbnails = document.querySelectorAll<HTMLButtonElement>('.detail__thumbnail');
+  const prevButton = document.querySelector<HTMLButtonElement>('#gallery-prev');
+  const nextButton = document.querySelector<HTMLButtonElement>('#gallery-next');
 
-  thumbnails.forEach((thumbnail) => {
-    thumbnail.addEventListener('click', () => {
-      const image = thumbnail.dataset.galleryImage;
+  let currentIndex = 0;
 
-      if (!mainImage || !image) return;
+  const galleryImages = Array.from(thumbnails)
+    .map((thumbnail) => thumbnail.dataset.galleryImage)
+    .filter((image): image is string => Boolean(image));
 
-      mainImage.src = image;
-      mainImage.style.transformOrigin = 'center center';
+  function showImage(index: number) {
+    if (!mainImage || galleryImages.length === 0) return;
 
-      thumbnails.forEach((item) => item.classList.remove('is-active'));
-      thumbnail.classList.add('is-active');
+    currentIndex = (index + galleryImages.length) % galleryImages.length;
+
+    mainImage.src = galleryImages[currentIndex];
+    mainImage.style.transformOrigin = 'center center';
+
+    thumbnails.forEach((thumbnail, index) => {
+      thumbnail.classList.toggle('is-active', index === currentIndex);
     });
+  }
+
+  thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener('click', () => {
+      showImage(index);
+    });
+  });
+
+  prevButton?.addEventListener('click', () => {
+    showImage(currentIndex - 1);
+  });
+
+  nextButton?.addEventListener('click', () => {
+    showImage(currentIndex + 1);
   });
 
   if (media && mainImage) {
@@ -257,6 +302,7 @@ const quoteHref = `mailto:${site.contact.email}?subject=${subject}&body=${body}`
   object-fit: contain;
 }
   .detail__media {
+    position: relative;
     aspect-ratio: 1 / 1;
     background: #fff;
     border: 1px solid var(--line);
@@ -266,7 +312,43 @@ const quoteHref = `mailto:${site.contact.email}?subject=${subject}&body=${body}`
     justify-content: center;
     overflow: hidden;
   }
+.detail__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
 
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--text);
+
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+.detail__arrow:hover {
+  background: #fff;
+  color: var(--green);
+}
+
+.detail__arrow--prev {
+  left: 14px;
+}
+
+.detail__arrow--next {
+  right: 14px;
+}
  .detail__media img {
   width: 100%;
   height: 100%;
