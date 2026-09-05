@@ -27,6 +27,11 @@ function imageSrc(image?: string | null): string | null {
 }
 
 const src = imageSrc(product.image);
+const gallerySrcs = (product.gallery ?? [])
+  .map((image) => imageSrc(image))
+  .filter((image): image is string => Boolean(image));
+
+const allImages = src ? [src, ...gallerySrcs] : gallerySrcs;
 
 // Prefilled quote request via email.
 const subject = encodeURIComponent(`Solicitud de presupuesto — ${product.name}`);
@@ -51,15 +56,47 @@ const quoteHref = `mailto:${site.contact.email}?subject=${subject}&body=${body}`
       </nav>
 
       <div class="detail__grid">
-        <div class="detail__media">
-          {
-            src ? (
-              <img src={src} alt={product.name} />
-            ) : (
-              <img src="/images/logo-icon.png" alt="" class="detail__placeholder" aria-hidden="true" />
-            )
-          }
-        </div>
+       <div class="detail__gallery">
+  <div class="detail__media">
+    {
+      allImages.length > 0 ? (
+        <img
+          id="product-main-image"
+          src={allImages[0]}
+          alt={product.name}
+        />
+      ) : (
+        <img
+          src="/images/logo-icon.png"
+          alt=""
+          class="detail__placeholder"
+          aria-hidden="true"
+        />
+      )
+    }
+  </div>
+
+  {
+    allImages.length > 1 && (
+      <div class="detail__thumbnails" aria-label="Galería de imágenes">
+        {allImages.map((image, index) => (
+          <button
+            type="button"
+            class={`detail__thumbnail ${index === 0 ? 'is-active' : ''}`}
+            data-gallery-image={image}
+            aria-label={`Ver imagen ${index + 1} de ${product.name}`}
+          >
+            <img
+              src={image}
+              alt=""
+              aria-hidden="true"
+            />
+          </button>
+        ))}
+      </div>
+    )
+  }
+</div>
 
         <div class="detail__info">
           <a class="detail__category" href={`/catalogo/${categorySlug}`}>
@@ -121,7 +158,23 @@ const quoteHref = `mailto:${site.contact.email}?subject=${subject}&body=${body}`
   </main>
   <Footer />
 </Layout>
+<script>
+  const mainImage = document.querySelector<HTMLImageElement>('#product-main-image');
+  const thumbnails = document.querySelectorAll<HTMLButtonElement>('.detail__thumbnail');
 
+  thumbnails.forEach((thumbnail) => {
+    thumbnail.addEventListener('click', () => {
+      const image = thumbnail.dataset.galleryImage;
+
+      if (!mainImage || !image) return;
+
+      mainImage.src = image;
+
+      thumbnails.forEach((item) => item.classList.remove('is-active'));
+      thumbnail.classList.add('is-active');
+    });
+  });
+</script>
 <style>
   .detail {
     padding: clamp(1.5rem, 4vw, 2.5rem) 0 clamp(3rem, 7vw, 5rem);
@@ -150,7 +203,42 @@ const quoteHref = `mailto:${site.contact.email}?subject=${subject}&body=${body}`
     gap: 2.5rem;
     align-items: start;
   }
+.detail__gallery {
+  min-width: 0;
+}
 
+.detail__thumbnails {
+  display: flex;
+  gap: 0.65rem;
+  margin-top: 0.8rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+}
+
+.detail__thumbnail {
+  width: 78px;
+  height: 78px;
+  flex: 0 0 78px;
+  padding: 4px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.detail__thumbnail:hover {
+  border-color: var(--green);
+}
+
+.detail__thumbnail.is-active {
+  border: 2px solid var(--green);
+}
+
+.detail__thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
   .detail__media {
     aspect-ratio: 1 / 1;
     background: #fff;
