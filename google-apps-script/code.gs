@@ -35,7 +35,18 @@ function doPost(e) {
       row.push(p[FIELDS[i]] || '');
     }
     sheet.appendRow(row);
-
+MailApp.sendEmail({
+  to: 'OSSINOVASURGICAL@GMAIL.COM',
+  subject: 'Nueva consulta web — Ossinova',
+  htmlBody:
+    '<h2>Nueva consulta desde la web de Ossinova</h2>' +
+    '<p><strong>Nombre:</strong> ' + (p.name || '') + '</p>' +
+    '<p><strong>Clínica:</strong> ' + (p.clinic || '') + '</p>' +
+    '<p><strong>Email:</strong> ' + (p.email || '') + '</p>' +
+    '<p><strong>Teléfono:</strong> ' + (p.phone || '') + '</p>' +
+    '<p><strong>Modalidad:</strong> ' + (p.mode || '') + '</p>' +
+    '<p><strong>Mensaje:</strong><br>' + (p.message || '') + '</p>'
+});
     return json({ result: 'success' });
   } catch (err) {
     return json({ result: 'error', error: String(err) });
