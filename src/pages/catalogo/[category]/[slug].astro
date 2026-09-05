@@ -41,6 +41,13 @@ const body = encodeURIComponent(
     `.\n\nModalidad de interés: \nCantidad: \n\nGracias.`,
 );
 const quoteHref = `mailto:${site.contact.email}?subject=${subject}&body=${body}`;
+const whatsappText = encodeURIComponent(
+  `Hola, estoy interesado en el producto "${product.name}"` +
+    (product.reference ? ` (ref. ${product.reference})` : '') +
+    `. ¿Podéis darme más información?`
+);
+
+const whatsappHref = `https://wa.me/${site.contact.whatsapp}?text=${whatsappText}`;
 ---
 
 <Layout title={`${product.name} — ${site.brand}`} description={product.description}>
@@ -162,10 +169,18 @@ const quoteHref = `mailto:${site.contact.email}?subject=${subject}&body=${body}`
             </div>
           </dl>
 
-          <div class="detail__actions">
-            <a href={quoteHref} class="btn btn--gold">Solicitar presupuesto</a>
-            <a href="/#contact" class="btn btn--secondary">Contactar</a>
-          </div>
+         <div class="detail__actions">
+  <a href={quoteHref} class="btn btn--gold">Solicitar presupuesto</a>
+
+  <a
+    href={whatsappHref}
+    class="btn btn--secondary"
+    target="_blank"
+    rel="noopener"
+  >
+    WhatsApp
+  </a>
+</div>
 
           {
             product.datasheet && (
