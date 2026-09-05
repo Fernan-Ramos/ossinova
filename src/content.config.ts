@@ -39,6 +39,8 @@ const products = defineCollection({
     // Path or file name of the image (in /public/images/products/).
     // Nullable because Keystatic writes null when the field is empty.
     image: z.string().nullable().optional(),
+    // Additional product images for the gallery.
+gallery: z.array(z.string().nullable()).default([]),
     // Optional datasheet/PDF path (in /public/), for future downloads.
     datasheet: z.string().optional(),
     // Reference "from" price (EUR, no VAT). Stored but NOT shown publicly;
