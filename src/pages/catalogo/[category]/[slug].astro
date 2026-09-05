@@ -169,24 +169,13 @@ const whatsappHref = `https://wa.me/${site.contact.whatsapp}?text=${whatsappText
             </div>
           </dl>
 
-         <div class="detail__actions">
-  <a href={quoteHref} class="btn btn--gold">
-    Solicitar presupuesto
-  </a>
-
-  <a
-    href={whatsappHref}
-    class="btn btn--secondary"
-    target="_blank"
-    rel="noopener"
-  >
-    WhatsApp
-  </a>
-
-  <a href="/#contact" class="btn btn--secondary">
-    Contactar
-  </a>
-</div>
+          <div class="detail__actions">
+            <a href={quoteHref} class="btn btn--gold">Solicitar presupuesto</a>
+            <a href={whatsappHref} class="btn btn--secondary" target="_blank" rel="noopener">
+              WhatsApp
+            </a>
+            <a href="/#contact" class="btn btn--secondary">Contactar</a>
+          </div>
 
           {
             product.datasheet && (
@@ -222,7 +211,6 @@ const whatsappHref = `https://wa.me/${site.contact.whatsapp}?text=${whatsappText
     currentIndex = (index + galleryImages.length) % galleryImages.length;
 
     mainImage.src = galleryImages[currentIndex];
-    mainImage.style.transformOrigin = 'center center';
 
     thumbnails.forEach((thumbnail, index) => {
       thumbnail.classList.toggle('is-active', index === currentIndex);
@@ -243,18 +231,53 @@ const whatsappHref = `https://wa.me/${site.contact.whatsapp}?text=${whatsappText
     showImage(currentIndex + 1);
   });
 
-  if (media && mainImage) {
+  // Zoom tipo lupa solo con ratón (en táctil el hover se queda pegado).
+  const ZOOM = 2.5;
+  // Fracción del recuadro que actúa como margen: al llegar al 12% del borde
+  // ya se ve el extremo de la imagen, sin tener que pegarse al límite.
+  const EDGE = 0.12;
+  const canHoverZoom = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  function clamp01(value: number) {
+    return Math.min(1, Math.max(0, value));
+  }
+
+  if (media && mainImage && canHoverZoom) {
     media.addEventListener('mousemove', (event) => {
+      if (!mainImage.naturalWidth || !mainImage.naturalHeight) return;
+
       const rect = media.getBoundingClientRect();
 
-      const x = ((event.clientX - rect.left) / rect.width) * 100;
-      const y = ((event.clientY - rect.top) / rect.height) * 100;
+      const fx = clamp01(((event.clientX - rect.left) / rect.width - EDGE) / (1 - 2 * EDGE));
+      const fy = clamp01(((event.clientY - rect.top) / rect.height - EDGE) / (1 - 2 * EDGE));
 
-      mainImage.style.transformOrigin = `${x}% ${y}%`;
+      // Con object-fit: contain la foto no llena la caja del <img> si no es
+      // cuadrada. Calculamos el área real que ocupa para recorrer solo eso.
+      const boxW = mainImage.offsetWidth;
+      const boxH = mainImage.offsetHeight;
+      const fit = Math.min(boxW / mainImage.naturalWidth, boxH / mainImage.naturalHeight);
+      const contentW = mainImage.naturalWidth * fit;
+      const contentH = mainImage.naturalHeight * fit;
+      // Posición del borde de la foto ya ampliada (el hueco interno también se escala).
+      const contentLeft = mainImage.offsetLeft + ((boxW - contentW) / 2) * ZOOM;
+      const contentTop = mainImage.offsetTop + ((boxH - contentH) / 2) * ZOOM;
+
+      // Cuánto sobresale la foto ampliada respecto al recuadro. Si no llega
+      // a llenarlo en algún eje, se centra en ese eje.
+      const overflowX = contentW * ZOOM - rect.width;
+      const overflowY = contentH * ZOOM - rect.height;
+
+      // fx=0 alinea el borde izquierdo de la foto con el del recuadro; fx=1 el derecho.
+      const tx = -contentLeft - (overflowX > 0 ? fx * overflowX : overflowX / 2);
+      const ty = -contentTop - (overflowY > 0 ? fy * overflowY : overflowY / 2);
+
+      mainImage.classList.add('is-zoomed');
+      mainImage.style.transform = `translate(${tx}px, ${ty}px) scale(${ZOOM})`;
     });
 
     media.addEventListener('mouseleave', () => {
-      mainImage.style.transformOrigin = 'center center';
+      mainImage.classList.remove('is-zoomed');
+      mainImage.style.transform = '';
     });
   }
 </script>
@@ -332,8 +355,10 @@ const whatsappHref = `https://wa.me/${site.contact.whatsapp}?text=${whatsappText
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    padding: 2rem;
   }
-.detail__arrow {
+
+  .detail__arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -370,18 +395,34 @@ const whatsappHref = `https://wa.me/${site.contact.whatsapp}?text=${whatsappText
 .detail__arrow--next {
   right: 14px;
 }
- .detail__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  padding: 2rem;
-  transition: transform 0.12s ease;
-  cursor: zoom-in;
-}
+  .detail__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 
-.detail__media:hover #product-main-image {
-  transform: scale(2);
-}
+  /* Zoom tipo lupa: el JS solo lo activa con ratón. */
+  @media (hover: hover) and (pointer: fine) {
+    .detail__media {
+      cursor: crosshair;
+    }
+  }
+
+  #product-main-image {
+    transform-origin: 0 0;
+    transition: transform 0.15s ease-out;
+    will-change: transform;
+  }
+
+  #product-main-image.is-zoomed {
+    transition: transform 0.05s linear;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #product-main-image {
+      transition: none;
+    }
+  }
 
   .detail__placeholder {
     width: 45%;
