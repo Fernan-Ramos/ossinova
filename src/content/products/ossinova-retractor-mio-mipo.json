@@ -1,5 +1,5 @@
 {
-  "name": "OSSINOVA RETRACTOR MIO/MIPO",
+  "name": "O - Retractor MIO/MIPO",
   "category": "kits",
   "material": "Acero quirúrgico autoclavable",
   "reference": "ORTR",
@@ -12,6 +12,7 @@
     "Autoclavable"
   ],
   "image": "/images/products/ossinova-retractor-mio-mipo/image.jpeg",
+  "gallery": [],
   "modes": [
     "sale"
   ],
