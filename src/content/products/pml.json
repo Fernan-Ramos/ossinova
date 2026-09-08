@@ -12,11 +12,14 @@
     "Titanio Ti-6Al-4V ELI (grado 23)"
   ],
   "image": "/images/products/pml/image.png",
-  "gallery": [],
+  "gallery": [
+    "/images/products/pml/gallery/0.png"
+  ],
   "priceFrom": 150,
   "modes": [
     "sale",
-    "rental-long"
+    "rental-long",
+    "rental-short"
   ],
   "tags": [
     "Reconstrucción",
