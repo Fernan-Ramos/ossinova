@@ -12,15 +12,17 @@
     "Diámetros de 2.0 a 3.5 mm",
     "Titanio Ti-6Al-4V ELI (grado 23)"
   ],
-  "image": null,
+  "image": "/images/products/ns/image.png",
+  "gallery": [],
+  "priceFrom": 90,
   "modes": [
     "sale",
-    "rental-long"
+    "rental-long",
+    "rental-short"
   ],
   "tags": [
     "Neurocirugía"
   ],
   "featured": true,
-  "order": 16,
-  "priceFrom": 90
+  "order": 16
 }
