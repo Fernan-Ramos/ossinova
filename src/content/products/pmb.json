@@ -12,7 +12,9 @@
     "Diámetros de 2 a 3.5 mm",
     "Titanio Ti-6Al-4V ELI (grado 23)"
   ],
-  "image": "/images/products/pmb/pmb.jpg",
+  "image": "/images/products/pmb/image.png",
+  "gallery": [],
+  "priceFrom": 150,
   "modes": [
     "sale",
     "rental-long"
@@ -22,6 +24,5 @@
     "Moduplate"
   ],
   "featured": false,
-  "order": 4,
-  "priceFrom": 150
+  "order": 4
 }
