@@ -193,93 +193,99 @@ const whatsappHref = `https://wa.me/${site.contact.whatsapp}?text=${whatsappText
   <Footer />
 </Layout>
 <script>
-  const mainImage = document.querySelector<HTMLImageElement>('#product-main-image');
-  const media = document.querySelector<HTMLElement>('.detail__media');
-  const thumbnails = document.querySelectorAll<HTMLButtonElement>('.detail__thumbnail');
-  const prevButton = document.querySelector<HTMLButtonElement>('#gallery-prev');
-  const nextButton = document.querySelector<HTMLButtonElement>('#gallery-next');
+  // Con ClientRouter (View Transitions) el script solo se ejecuta una vez,
+  // así que la galería se inicializa en cada navegación via astro:page-load.
+  function initProductGallery() {
+    const mainImage = document.querySelector<HTMLImageElement>('#product-main-image');
+    const media = document.querySelector<HTMLElement>('.detail__media');
+    const thumbnails = document.querySelectorAll<HTMLButtonElement>('.detail__thumbnail');
+    const prevButton = document.querySelector<HTMLButtonElement>('#gallery-prev');
+    const nextButton = document.querySelector<HTMLButtonElement>('#gallery-next');
 
-  let currentIndex = 0;
+    let currentIndex = 0;
 
-  const galleryImages = Array.from(thumbnails)
-    .map((thumbnail) => thumbnail.dataset.galleryImage)
-    .filter((image): image is string => Boolean(image));
+    const galleryImages = Array.from(thumbnails)
+      .map((thumbnail) => thumbnail.dataset.galleryImage)
+      .filter((image): image is string => Boolean(image));
 
-  function showImage(index: number) {
-    if (!mainImage || galleryImages.length === 0) return;
+    function showImage(index: number) {
+      if (!mainImage || galleryImages.length === 0) return;
 
-    currentIndex = (index + galleryImages.length) % galleryImages.length;
+      currentIndex = (index + galleryImages.length) % galleryImages.length;
 
-    mainImage.src = galleryImages[currentIndex];
+      mainImage.src = galleryImages[currentIndex];
+
+      thumbnails.forEach((thumbnail, index) => {
+        thumbnail.classList.toggle('is-active', index === currentIndex);
+      });
+    }
 
     thumbnails.forEach((thumbnail, index) => {
-      thumbnail.classList.toggle('is-active', index === currentIndex);
+      thumbnail.addEventListener('click', () => {
+        showImage(index);
+      });
     });
+
+    prevButton?.addEventListener('click', () => {
+      showImage(currentIndex - 1);
+    });
+
+    nextButton?.addEventListener('click', () => {
+      showImage(currentIndex + 1);
+    });
+
+    // Zoom tipo lupa solo con ratón (en táctil el hover se queda pegado).
+    const ZOOM = 2.5;
+    // Fracción del recuadro que actúa como margen: al llegar al 12% del borde
+    // ya se ve el extremo de la imagen, sin tener que pegarse al límite.
+    const EDGE = 0.12;
+    const canHoverZoom = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+    function clamp01(value: number) {
+      return Math.min(1, Math.max(0, value));
+    }
+
+    if (media && mainImage && canHoverZoom) {
+      media.addEventListener('mousemove', (event) => {
+        if (!mainImage.naturalWidth || !mainImage.naturalHeight) return;
+
+        const rect = media.getBoundingClientRect();
+
+        const fx = clamp01(((event.clientX - rect.left) / rect.width - EDGE) / (1 - 2 * EDGE));
+        const fy = clamp01(((event.clientY - rect.top) / rect.height - EDGE) / (1 - 2 * EDGE));
+
+        // Con object-fit: contain la foto no llena la caja del <img> si no es
+        // cuadrada. Calculamos el área real que ocupa para recorrer solo eso.
+        const boxW = mainImage.offsetWidth;
+        const boxH = mainImage.offsetHeight;
+        const fit = Math.min(boxW / mainImage.naturalWidth, boxH / mainImage.naturalHeight);
+        const contentW = mainImage.naturalWidth * fit;
+        const contentH = mainImage.naturalHeight * fit;
+        // Posición del borde de la foto ya ampliada (el hueco interno también se escala).
+        const contentLeft = mainImage.offsetLeft + ((boxW - contentW) / 2) * ZOOM;
+        const contentTop = mainImage.offsetTop + ((boxH - contentH) / 2) * ZOOM;
+
+        // Cuánto sobresale la foto ampliada respecto al recuadro. Si no llega
+        // a llenarlo en algún eje, se centra en ese eje.
+        const overflowX = contentW * ZOOM - rect.width;
+        const overflowY = contentH * ZOOM - rect.height;
+
+        // fx=0 alinea el borde izquierdo de la foto con el del recuadro; fx=1 el derecho.
+        const tx = -contentLeft - (overflowX > 0 ? fx * overflowX : overflowX / 2);
+        const ty = -contentTop - (overflowY > 0 ? fy * overflowY : overflowY / 2);
+
+        mainImage.classList.add('is-zoomed');
+        mainImage.style.transform = `translate(${tx}px, ${ty}px) scale(${ZOOM})`;
+      });
+
+      media.addEventListener('mouseleave', () => {
+        mainImage.classList.remove('is-zoomed');
+        mainImage.style.transform = '';
+      });
+    }
   }
 
-  thumbnails.forEach((thumbnail, index) => {
-    thumbnail.addEventListener('click', () => {
-      showImage(index);
-    });
-  });
-
-  prevButton?.addEventListener('click', () => {
-    showImage(currentIndex - 1);
-  });
-
-  nextButton?.addEventListener('click', () => {
-    showImage(currentIndex + 1);
-  });
-
-  // Zoom tipo lupa solo con ratón (en táctil el hover se queda pegado).
-  const ZOOM = 2.5;
-  // Fracción del recuadro que actúa como margen: al llegar al 12% del borde
-  // ya se ve el extremo de la imagen, sin tener que pegarse al límite.
-  const EDGE = 0.12;
-  const canHoverZoom = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-
-  function clamp01(value: number) {
-    return Math.min(1, Math.max(0, value));
-  }
-
-  if (media && mainImage && canHoverZoom) {
-    media.addEventListener('mousemove', (event) => {
-      if (!mainImage.naturalWidth || !mainImage.naturalHeight) return;
-
-      const rect = media.getBoundingClientRect();
-
-      const fx = clamp01(((event.clientX - rect.left) / rect.width - EDGE) / (1 - 2 * EDGE));
-      const fy = clamp01(((event.clientY - rect.top) / rect.height - EDGE) / (1 - 2 * EDGE));
-
-      // Con object-fit: contain la foto no llena la caja del <img> si no es
-      // cuadrada. Calculamos el área real que ocupa para recorrer solo eso.
-      const boxW = mainImage.offsetWidth;
-      const boxH = mainImage.offsetHeight;
-      const fit = Math.min(boxW / mainImage.naturalWidth, boxH / mainImage.naturalHeight);
-      const contentW = mainImage.naturalWidth * fit;
-      const contentH = mainImage.naturalHeight * fit;
-      // Posición del borde de la foto ya ampliada (el hueco interno también se escala).
-      const contentLeft = mainImage.offsetLeft + ((boxW - contentW) / 2) * ZOOM;
-      const contentTop = mainImage.offsetTop + ((boxH - contentH) / 2) * ZOOM;
-
-      // Cuánto sobresale la foto ampliada respecto al recuadro. Si no llega
-      // a llenarlo en algún eje, se centra en ese eje.
-      const overflowX = contentW * ZOOM - rect.width;
-      const overflowY = contentH * ZOOM - rect.height;
-
-      // fx=0 alinea el borde izquierdo de la foto con el del recuadro; fx=1 el derecho.
-      const tx = -contentLeft - (overflowX > 0 ? fx * overflowX : overflowX / 2);
-      const ty = -contentTop - (overflowY > 0 ? fy * overflowY : overflowY / 2);
-
-      mainImage.classList.add('is-zoomed');
-      mainImage.style.transform = `translate(${tx}px, ${ty}px) scale(${ZOOM})`;
-    });
-
-    media.addEventListener('mouseleave', () => {
-      mainImage.classList.remove('is-zoomed');
-      mainImage.style.transform = '';
-    });
-  }
+  document.addEventListener('astro:page-load', initProductGallery);
 </script>
 <style>
   .detail {
