@@ -12,7 +12,10 @@
     "Caja Ossinova esterilizable",
     "Disponible en renting o venta"
   ],
-  "image": "/images/products/kit-tornillos/kit-tornillos.jpg",
+  "image": "/images/products/kit-tornillos/image.jpg",
+  "gallery": [
+    "/images/products/kit-tornillos/gallery/0.png"
+  ],
   "modes": [
     "rental-long",
     "rental-short",
