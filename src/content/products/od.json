@@ -11,7 +11,9 @@
     "Longitudes de 115 a 200 mm",
     "Disponibles con conexión AO"
   ],
-  "image": null,
+  "image": "/images/products/od/image.png",
+  "gallery": [],
+  "priceFrom": 16,
   "modes": [
     "sale"
   ],
@@ -19,6 +21,5 @@
     "Brocas"
   ],
   "featured": false,
-  "order": 23,
-  "priceFrom": 16
+  "order": 23
 }
