@@ -246,6 +246,56 @@ const whatsappHref = `https://wa.me/${site.contact.whatsapp}?text=${whatsappText
     }
 
     if (media && mainImage && canHoverZoom) {
+      // Estado objetivo (donde debería estar la imagen) y estado actual (donde
+      // está dibujada). Cada frame el actual se acerca al objetivo, así el zoom
+      // y el desplazamiento quedan fluidos aunque el ratón se mueva a saltos.
+      const target = { scale: 1, x: 0, y: 0 };
+      const current = { scale: 1, x: 0, y: 0 };
+      // Con movimiento reducido, sin interpolación: la imagen va directa al objetivo.
+      const EASE = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 1 : 0.18;
+      let frame = 0;
+
+      function render() {
+        current.scale += (target.scale - current.scale) * EASE;
+        current.x += (target.x - current.x) * EASE;
+        current.y += (target.y - current.y) * EASE;
+
+        // El desplazamiento se aplica en proporción al zoom alcanzado, para
+        // que a escala 1 la imagen esté centrada.
+        const progress = (current.scale - 1) / (ZOOM - 1);
+        const tx = current.x * progress;
+        const ty = current.y * progress;
+
+        const settled =
+          Math.abs(target.scale - current.scale) < 0.002 &&
+          Math.abs(target.x - current.x) < 0.5 &&
+          Math.abs(target.y - current.y) < 0.5;
+
+        if (settled) {
+          // Al llegar al objetivo se fija exacto y se para el bucle; el próximo
+          // mousemove o mouseleave lo vuelve a arrancar.
+          current.scale = target.scale;
+          current.x = target.x;
+          current.y = target.y;
+          frame = 0;
+
+          if (target.scale === 1) {
+            mainImage!.style.transform = '';
+            mainImage!.classList.remove('is-zoomed');
+          } else {
+            mainImage!.style.transform = `translate(${target.x}px, ${target.y}px) scale(${target.scale})`;
+          }
+          return;
+        }
+
+        mainImage!.style.transform = `translate(${tx}px, ${ty}px) scale(${current.scale})`;
+        frame = requestAnimationFrame(render);
+      }
+
+      function scheduleRender() {
+        if (!frame) frame = requestAnimationFrame(render);
+      }
+
       media.addEventListener('mousemove', (event) => {
         if (!mainImage.naturalWidth || !mainImage.naturalHeight) return;
 
@@ -271,16 +321,17 @@ const whatsappHref = `https://wa.me/${site.contact.whatsapp}?text=${whatsappText
         const overflowY = contentH * ZOOM - rect.height;
 
         // fx=0 alinea el borde izquierdo de la foto con el del recuadro; fx=1 el derecho.
-        const tx = -contentLeft - (overflowX > 0 ? fx * overflowX : overflowX / 2);
-        const ty = -contentTop - (overflowY > 0 ? fy * overflowY : overflowY / 2);
+        target.x = -contentLeft - (overflowX > 0 ? fx * overflowX : overflowX / 2);
+        target.y = -contentTop - (overflowY > 0 ? fy * overflowY : overflowY / 2);
+        target.scale = ZOOM;
 
         mainImage.classList.add('is-zoomed');
-        mainImage.style.transform = `translate(${tx}px, ${ty}px) scale(${ZOOM})`;
+        scheduleRender();
       });
 
       media.addEventListener('mouseleave', () => {
-        mainImage.classList.remove('is-zoomed');
-        mainImage.style.transform = '';
+        target.scale = 1;
+        scheduleRender();
       });
     }
   }
@@ -416,18 +467,9 @@ const whatsappHref = `https://wa.me/${site.contact.whatsapp}?text=${whatsappText
 
   #product-main-image {
     transform-origin: 0 0;
-    transition: transform 0.15s ease-out;
     will-change: transform;
   }
 
-  #product-main-image.is-zoomed {
-    transition: transform 0.05s linear;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    #product-main-image {
-      transition: none;
-    }
   }
 
   .detail__placeholder {
