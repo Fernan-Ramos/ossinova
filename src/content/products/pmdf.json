@@ -19,7 +19,8 @@
   "priceFrom": 160,
   "modes": [
     "sale",
-    "rental-long"
+    "rental-long",
+    "rental-short"
   ],
   "tags": [
     "Moduplate",
