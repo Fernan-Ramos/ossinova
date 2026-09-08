@@ -1,5 +1,5 @@
 {
-  "name": "Placa Moduplate T — Doble T",
+  "name": "O - Moduplate T — Doble T",
   "category": "implants",
   "material": "Titanio Ti-6Al-4V ELI (grado 23)",
   "reference": "PMT",
@@ -12,7 +12,9 @@
     "Diámetros de 1.5 a 3.5 mm",
     "Titanio Ti-6Al-4V ELI (grado 23)"
   ],
-  "image": "/images/products/pmt/pmt.jpg",
+  "image": "/images/products/pmt/image.png",
+  "gallery": [],
+  "priceFrom": 140,
   "modes": [
     "sale",
     "rental-long"
@@ -22,6 +24,5 @@
     "Moduplate"
   ],
   "featured": false,
-  "order": 3,
-  "priceFrom": 140
+  "order": 3
 }
