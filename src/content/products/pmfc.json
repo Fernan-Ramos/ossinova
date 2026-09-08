@@ -1,5 +1,5 @@
 {
-  "name": "Placa de artrodesis pancarpal",
+  "name": "O - Fusion Carpus",
   "category": "implants",
   "material": "Titanio Ti-6Al-4V ELI (grado 23)",
   "reference": "PMFC",
@@ -13,6 +13,7 @@
     "Titanio Ti-6Al-4V ELI (grado 23)"
   ],
   "image": "/images/products/pmfc/image.png",
+  "gallery": [],
   "priceFrom": 135,
   "modes": [
     "sale",
