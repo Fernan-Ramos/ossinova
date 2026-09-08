@@ -15,7 +15,8 @@
   ],
   "image": "/images/products/pmr/image.png",
   "gallery": [
-    "/images/products/pmr/gallery/0.png"
+    "/images/products/pmr/gallery/0.png",
+    "/images/products/pmr/gallery/1.png"
   ],
   "priceFrom": 100,
   "modes": [
