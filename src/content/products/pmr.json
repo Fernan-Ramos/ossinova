@@ -14,7 +14,9 @@
     "3 tamaños diferentes por medida"
   ],
   "image": "/images/products/pmr/image.png",
-  "gallery": [],
+  "gallery": [
+    "/images/products/pmr/gallery/0.png"
+  ],
   "priceFrom": 100,
   "modes": [
     "sale",
