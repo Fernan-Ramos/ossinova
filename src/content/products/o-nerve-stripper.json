@@ -1,17 +1,15 @@
 {
-  "name": "O - Nerve Stripper",
+  "name": "O - Nerve Stripper with ball",
   "category": "neurosurgery",
   "material": "Acero quirúrgico",
-  "reference": "ONSB - ONSWB",
+  "reference": "ONSB ",
   "dimensions": "15 cm",
   "description": "Palpador de neurocirugía con bola y sin bola",
   "highlights": [],
   "image": "/images/products/o-nerve-stripper/image.png",
   "gallery": [
     "/images/products/o-nerve-stripper/gallery/0.png",
-    "/images/products/o-nerve-stripper/gallery/1.png",
-    "/images/products/o-nerve-stripper/gallery/2.png",
-    "/images/products/o-nerve-stripper/gallery/3.png"
+    "/images/products/o-nerve-stripper/gallery/1.png"
   ],
   "modes": [
     "sale"
