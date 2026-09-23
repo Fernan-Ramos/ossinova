@@ -7,7 +7,9 @@
   "description": "Palpador de neurocirugía con bola y sin bola",
   "highlights": [],
   "image": "/images/products/o-nerve-stripper/image.png",
-  "gallery": [],
+  "gallery": [
+    "/images/products/o-nerve-stripper/gallery/0.png"
+  ],
   "modes": [
     "sale"
   ],
