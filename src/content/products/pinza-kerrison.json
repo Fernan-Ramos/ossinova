@@ -13,7 +13,10 @@
     "Acero inoxidable quirúrgico"
   ],
   "image": "/images/products/pinza-kerrison/image.png",
-  "gallery": [],
+  "gallery": [
+    "/images/products/pinza-kerrison/gallery/0.png",
+    "/images/products/pinza-kerrison/gallery/1.png"
+  ],
   "modes": [
     "sale",
     "rental-long"
