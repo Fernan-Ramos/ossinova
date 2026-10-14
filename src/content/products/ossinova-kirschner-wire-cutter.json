@@ -1,0 +1,20 @@
+{
+  "name": "Ossinova Kirschner Wire Cutter",
+  "category": "implants",
+  "material": "Titanio Ti-6Al-4V ELI (grado 23)",
+  "reference": "OKWC",
+  "description": "Cortador de agujas Kirschner hasta 2,5 mm",
+  "highlights": [],
+  "image": "/images/products/ossinova-kirschner-wire-cutter/image.png",
+  "gallery": [
+    "/images/products/ossinova-kirschner-wire-cutter/gallery/0.png",
+    "/images/products/ossinova-kirschner-wire-cutter/gallery/1.png",
+    "/images/products/ossinova-kirschner-wire-cutter/gallery/2.png"
+  ],
+  "modes": [
+    "sale"
+  ],
+  "tags": [],
+  "featured": false,
+  "order": 0
+}
