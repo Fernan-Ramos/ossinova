@@ -13,7 +13,9 @@
     "Titanio Ti-6Al-4V ELI (grado 23)"
   ],
   "image": "/images/products/p-tplc/image.png",
-  "gallery": [],
+  "gallery": [
+    "/images/products/p-tplc/gallery/0.png"
+  ],
   "modes": [
     "sale",
     "rental-long",
