@@ -9,7 +9,9 @@
   "image": "/images/products/tplo-widen-xl/image.png",
   "gallery": [],
   "modes": [
-    "sale"
+    "sale",
+    "rental-short",
+    "rental-long"
   ],
   "tags": [],
   "featured": false,
