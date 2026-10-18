@@ -1,0 +1,17 @@
+{
+  "name": "TPLO STEP EVA II",
+  "category": "implants",
+  "material": "Titanio Ti-6Al-4V ELI (grado 23)",
+  "reference": "P-TPLC",
+  "dimensions": "2.0, 2.4, 3.5",
+  "description": "Placa de osteosíntesis diseñada para la combinación de rotura de ligamento cruzado y luxación de rotula. \nSu diseño anatómico curvado incorpora un escalón (STEP) que permite adaptar la fijación a estos procedimientos.",
+  "highlights": [],
+  "image": "/images/products/tplo-step-eva-ii/image.png",
+  "gallery": [],
+  "modes": [
+    "sale"
+  ],
+  "tags": [],
+  "featured": false,
+  "order": 0
+}
