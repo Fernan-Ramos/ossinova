@@ -7,7 +7,9 @@
   "description": "Placa de osteosíntesis diseñada para la combinación de rotura de ligamento cruzado y luxación de rotula. \nSu diseño anatómico curvado incorpora un escalón (STEP) que permite adaptar la fijación a estos procedimientos.",
   "highlights": [],
   "image": "/images/products/tplo-step-eva-ii/image.png",
-  "gallery": [],
+  "gallery": [
+    "/images/products/tplo-step-eva-ii/gallery/0.png"
+  ],
   "modes": [
     "sale"
   ],
