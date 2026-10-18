@@ -15,9 +15,10 @@
   "image": "/images/products/p-tplc/image.png",
   "gallery": [
     "/images/products/p-tplc/gallery/0.png",
-    "/images/products/p-tplc/gallery/1.png"
+    "/images/products/p-tplc/gallery/1.png",
+    "/images/products/p-tplc/gallery/2.png"
   ],
-  "priceFrom": 95,
+  "priceFrom": null,
   "modes": [
     "sale",
     "rental-long",
