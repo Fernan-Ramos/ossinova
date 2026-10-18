@@ -7,7 +7,9 @@
   "description": "Placa de osteotomía de nivelación de la meseta tibial (TPLO) con diseño ensanchado (Widen) para animales de gran tamaño/peso.",
   "highlights": [],
   "image": "/images/products/tplo-widen-xl/image.png",
-  "gallery": [],
+  "gallery": [
+    "/images/products/tplo-widen-xl/gallery/0.png"
+  ],
   "modes": [
     "sale",
     "rental-short",
