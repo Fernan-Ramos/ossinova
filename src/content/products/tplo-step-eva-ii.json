@@ -9,10 +9,13 @@
   "image": "/images/products/tplo-step-eva-ii/image.png",
   "gallery": [
     "/images/products/tplo-step-eva-ii/gallery/0.png",
-    "/images/products/tplo-step-eva-ii/gallery/1.png"
+    "/images/products/tplo-step-eva-ii/gallery/1.png",
+    "/images/products/tplo-step-eva-ii/gallery/2.png"
   ],
   "modes": [
-    "sale"
+    "sale",
+    "rental-short",
+    "rental-long"
   ],
   "tags": [],
   "featured": false,
