@@ -1,16 +1,18 @@
 {
-  "name": "Ossinova TPLO — Sierra",
+  "name": "O - TPLO — Sierra",
   "category": "motors",
   "material": "Acero inoxidable quirúrgico",
   "reference": "M2",
   "dimensions": "Sierra oscilante autoclavable",
   "description": "Sierra específica para la técnica de TPLO.",
-  "longDescription": "La sierra Ossinova TPLO está diseñada para realizar la osteotomía en la técnica de nivelación de la meseta tibial, con control preciso y compatible con las hojas de sierra TPLO Ossinova.",
+  "longDescription": "Motor ossinova TPLO diseñado para realizar la técnica TPLO (Tibial Plateau Leveling Osteotomy) utilizada para tratar de manera quirúrgica la rotura o lesión del ligamento cruzado anterior (LCA). \nMotor con diseño recto, ergonómico que permite una posición natural para una mayor precisión. Garantiza cortes rápidos y precisos, especialmente diseñado para realizar cortes semicirculares o radiales en la cabeza tibial. \nIncluye caja autoclavable para un correcto orden y esterilización",
   "highlights": [
-    "Diseñada para la osteotomía TPLO",
-    "Compatible con hojas de sierra Ossinova",
+    "Motor diseñado para técnica TPLO",
+    "Rotura LCA",
+    "Motor ergonómico/recto",
     "Autoclavable"
   ],
+  "gallery": [],
   "priceFrom": 3000,
   "modes": [
     "rental-long",
