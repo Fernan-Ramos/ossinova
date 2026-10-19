@@ -13,11 +13,11 @@
     "Autoclavable"
   ],
   "image": "/images/products/m2/image.png",
-  "gallery": [],
+  "gallery": [
+    "/images/products/m2/gallery/0.png"
+  ],
   "priceFrom": 3000,
   "modes": [
-    "rental-long",
-    "rental-short",
     "sale"
   ],
   "tags": [
