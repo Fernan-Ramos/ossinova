@@ -1,21 +1,15 @@
 {
-  "name": "O - Motor de neurocirugía",
+  "name": "O - Spine Drive",
   "category": "motors",
-  "material": "Acero inoxidable quirúrgico",
+  "material": "Motor para neurocirugía",
   "reference": "M3",
   "dimensions": "Motor de alta precisión autoclavable",
-  "description": "Motor de alta precisión para procedimientos de neurocirugía.",
-  "longDescription": "El Ossinova Spine es un motor de alta precisión concebido para neurocirugía y cirugía de columna, con control fino y bajo nivel de vibración para trabajar con seguridad sobre estructuras delicadas.",
-  "highlights": [
-    "Concebido para neurocirugía y columna",
-    "Control fino y bajo nivel de vibración",
-    "Autoclavable"
-  ],
+  "description": "Motor para neurocirugía autoclavable con un potente motor y alta precisión",
+  "longDescription": "Motor para neurocirugía con un potente motor que alcanza hasta 40.000 rpm para un correcto fresado. \nPermite ajustar los parámetros según las necesidades (potencia, dirección de giro y posibilidad de usar sin pedal).\nDispone de dos cabezales intercambiables y opciones de angulación.\nCaja autoclavable para un correcto almacenamiento y esterilización.",
+  "highlights": [],
   "gallery": [],
   "priceFrom": 3500,
   "modes": [
-    "rental-long",
-    "rental-short",
     "sale"
   ],
   "tags": [
