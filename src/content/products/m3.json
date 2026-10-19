@@ -1,5 +1,5 @@
 {
-  "name": "Ossinova Spine — Motor de neurocirugía",
+  "name": "O - Motor de neurocirugía",
   "category": "motors",
   "material": "Acero inoxidable quirúrgico",
   "reference": "M3",
@@ -11,7 +11,8 @@
     "Control fino y bajo nivel de vibración",
     "Autoclavable"
   ],
-  "image": null,
+  "gallery": [],
+  "priceFrom": 3500,
   "modes": [
     "rental-long",
     "rental-short",
@@ -22,6 +23,5 @@
     "Neurocirugía"
   ],
   "featured": false,
-  "order": 19,
-  "priceFrom": 3500
+  "order": 19
 }
