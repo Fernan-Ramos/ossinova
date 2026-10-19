@@ -4,12 +4,14 @@
   "material": "Acero inoxidable quirúrgico",
   "reference": "CZ",
   "dimensions": "Corte máx. 6 mm · 530 mm",
-  "description": "Cizalla para corte de agujas y alambre.",
-  "longDescription": "La cizalla Ossinova permite el corte limpio de agujas de Kirschner y alambre de cerclaje hasta 6 mm, con 530 mm de longitud para un apalancamiento cómodo.",
+  "description": "Cizalla para cortar placas recortables permitiendo el corte de toda la gama moduplate y clavos.",
+  "longDescription": "La cizalla Ossinova XL permite el corte de todas las placas recortables de la gamma moduplate de 1.5, 2.0, 2.4, 2.7 y 3.5 mm y clavos con un máximo de apertura de 6 mm y una longitud de 530 mm. Permite desmontar los mangos para un mejor almacenaje y esterilización.\n´\n",
   "highlights": [
     "Corte hasta 6 mm de diámetro",
     "530 mm de longitud",
-    "Acero inoxidable quirúrgico"
+    "Acero inoxidable quirúrgico",
+    "Desmontable para un mejor almacenaje/esterilización",
+    "Permite el corte tanto de placas recortables como de clavos"
   ],
   "image": "/images/products/cz/image.jpg",
   "gallery": [
