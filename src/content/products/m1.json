@@ -5,22 +5,22 @@
   "reference": "M1",
   "dimensions": "Sistema multifuncional autoclavable",
   "description": "Sistema motor multifuncional autoclavable",
-  "longDescription": "El Ossinova Mini Drive es un sistema motor multifuncional autoclavable, con diseño compacto y ligero de fácil manejo, extremadamente cómodo para cualquier procedimiento.",
+  "longDescription": "El Ossinova Mini Drive es un sistema motor multifuncional autoclavable, con diseño compacto y ligero de fácil manejo, extremadamente cómodo para cualquier procedimiento.\nOfrece máxima potencia para trabajar de manera rápida y efectiva sin necesidad de aplicar fuerza. \nIncorpora una caja autoclavable que permite una buena organización y protección así como su esterilización.\nPresenta 4 cabezales intercambiables que permiten alternan procedimientos sin necesidad de cambiar el motor.",
   "highlights": [
-    "Multifuncional para traumatología",
-    "Totalmente autoclavable",
-    "Alta precisión y bajo nivel de vibración"
+    "Sistema multifuncional",
+    "Autoclavable",
+    "Máxima potencia",
+    "4 cabezales intercambiables ",
+    "Diseño compacto y ligero"
   ],
   "gallery": [],
   "priceFrom": 4000,
   "modes": [
-    "rental-long",
-    "rental-short",
     "sale"
   ],
   "tags": [
     "Motor"
   ],
   "featured": true,
-  "order": 17
+  "order": 0
 }
