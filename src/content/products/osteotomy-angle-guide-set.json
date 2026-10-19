@@ -1,13 +1,16 @@
 {
   "name": "Osteotomy Angle Guide Set",
-  "category": "implants",
+  "category": "accessories",
   "material": "Acero quirúrgico",
   "reference": "OAGS",
   "dimensions": "12º-14º-16º-18º-20º-22º-24º-26º-28º-30º-32º-34º-36º",
   "description": "Ángulos para osteotomías correctivas del tipo CTWO",
   "highlights": [],
   "image": "/images/products/osteotomy-angle-guide-set/image.png",
-  "gallery": [],
+  "gallery": [
+    "/images/products/osteotomy-angle-guide-set/gallery/0.png",
+    "/images/products/osteotomy-angle-guide-set/gallery/1.png"
+  ],
   "modes": [
     "sale"
   ],
