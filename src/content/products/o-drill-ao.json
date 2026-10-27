@@ -4,10 +4,17 @@
   "material": "Acero",
   "reference": "OD-AO",
   "dimensions": "1,1; 1,5; 1,8; 2,0; 2,5; 2,8 ",
-  "description": "Broca quirúrgica de diferentes tamaños diseñada para perforación ósea",
-  "highlights": [],
+  "description": "Broca quirúrgica de diferentes tamaños diseñada para perforación ósea de fácil acople.\nAcople tipo AO",
+  "highlights": [
+    "Acoplamiento tipo AO",
+    "Perforación precisa",
+    "Diferentes diámetros",
+    "Diseño profesional"
+  ],
   "image": "/images/products/o-drill-ao/image.png",
-  "gallery": [],
+  "gallery": [
+    "/images/products/o-drill-ao/gallery/0.png"
+  ],
   "modes": [
     "sale"
   ],
