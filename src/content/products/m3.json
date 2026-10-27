@@ -7,6 +7,7 @@
   "description": "Motor para neurocirugía autoclavable con un potente motor y alta precisión",
   "longDescription": "Motor para neurocirugía con un potente motor que alcanza hasta 40.000 rpm para un correcto fresado. \nPermite ajustar los parámetros según las necesidades (potencia, dirección de giro y posibilidad de usar sin pedal).\nDispone de dos cabezales intercambiables y opciones de angulación.\nCaja autoclavable para un correcto almacenamiento y esterilización.",
   "highlights": [],
+  "image": "/images/products/m3/image.png",
   "gallery": [],
   "priceFrom": 3500,
   "modes": [
