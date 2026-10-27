@@ -5,7 +5,7 @@
   "reference": "NS",
   "dimensions": "Ø 2.0 a 3.5 mm",
   "description": "Tornillos específicos para procedimientos de neurocirugía y estabilización vertebral.",
-  "longDescription": "Los Neuroscrews Ossinova están diseñados para procedimientos de neurocirugía, incluyendo la estabilización vertebral. Fabricados en titanio para máxima biocompatibilidad y compatibilidad con imagen.",
+  "longDescription": "Los Neuroscrews Ossinova están diseñados para procedimientos de neurocirugía, incluyendo la estabilización vertebral. Fabricados en titanio para máxima biocompatibilidad",
   "highlights": [
     "Diseñados para neurocirugía y columna",
     "Alta biocompatibilidad",
@@ -13,7 +13,13 @@
     "Titanio Ti-6Al-4V ELI (grado 23)"
   ],
   "image": "/images/products/ns/image.png",
-  "gallery": [],
+  "gallery": [
+    "/images/products/ns/gallery/0.png",
+    "/images/products/ns/gallery/1.png",
+    "/images/products/ns/gallery/2.png",
+    "/images/products/ns/gallery/3.png",
+    "/images/products/ns/gallery/4.png"
+  ],
   "priceFrom": 90,
   "modes": [
     "sale",
