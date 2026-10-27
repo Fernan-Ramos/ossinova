@@ -5,16 +5,16 @@
   "reference": "M4",
   "dimensions": "Sistema multifuncional con TPLO",
   "description": "Sistema motor completo multifuncional con capacidad TPLO.",
-  "longDescription": "El Ossinova System Pro es la solución motor más completa: sistema multifuncional que integra las capacidades de traumatología y la sierra de TPLO en un único equipo autoclavable.",
+  "longDescription": "El Ossinova System Pro es la solución motor más completa: sistema multifuncional que integra con sus diferentes accesorios diferentes alternativas quirúrgicas incluyendo TPLO.\nEl motor presenta una elevada potencia con 5 cabezales fácilmente intercambiables para los diferentes procedimientos:\n   - Sierra oscilante\n   - Aguja K de cambio rápido\n   - Broca de anclaje rápido\n   - Acople clásico para agujas y brocas (Jacobs)\n   - Acople para TPLO\nPermite incluso acoples especiales para prótesis de cadera.",
   "highlights": [
     "Sistema multifuncional completo",
-    "Integra capacidad TPLO",
+    "Acople para TPLO",
+    "Permite acoples especiales para prótesis de cadera",
     "Autoclavable"
   ],
+  "gallery": [],
   "priceFrom": 8500,
   "modes": [
-    "rental-long",
-    "rental-short",
     "sale"
   ],
   "tags": [
