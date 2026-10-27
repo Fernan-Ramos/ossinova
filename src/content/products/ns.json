@@ -29,7 +29,6 @@
   "priceFrom": 90,
   "modes": [
     "sale",
-    "rental-long",
     "rental-short"
   ],
   "tags": [
