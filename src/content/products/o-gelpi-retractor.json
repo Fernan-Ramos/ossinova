@@ -5,9 +5,20 @@
   "reference": "GR-001/GR-002/GR-003",
   "dimensions": "100/140/160",
   "description": "Separador Gelpi diseñado para mantener los bordes de una incisión y facilitar la exposición del campo quirúrgico permitiendo trabajar con mayor visibilidad y libertad de movimientos con apertura regulable.",
-  "longDescription": "Dispone de brazos curvos terminados en puntas tipo gancho, que proporcionan una sujeción eficaz de los tejidos. ",
-  "highlights": [],
+  "longDescription": "Instrumentos quirúrgicos autorretenedores diseñados para mantener una separación estable de los tejidos blandos proporcionando una exposición adecuada.\nDispone de brazos curvos terminados en puntas tipo gancho, que permiten la retracción de los tejidos y facilitan el acceso a estructuras anatómicas profundas. \nSistema de bloqueo mediante cremallera que permite ajustar y mantener la apertura deseada sin necesidad de una sujeción manual constante. ",
+  "highlights": [
+    "Apertura regulable",
+    "Punta tipo gancho, punta curva y afilada.",
+    "Sujeción eficaz",
+    "Sistema de bloqueo",
+    "Mangos ergonómicos con anillas",
+    "Retracción sostenida de tejidos"
+  ],
   "image": "/images/products/o-gelpi-retractor/image.png",
+  "gallery": [
+    "/images/products/o-gelpi-retractor/gallery/0.png",
+    "/images/products/o-gelpi-retractor/gallery/1.png"
+  ],
   "modes": [
     "sale"
   ],
