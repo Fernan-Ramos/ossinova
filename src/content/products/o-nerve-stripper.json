@@ -4,12 +4,19 @@
   "material": "Acero quirúrgico",
   "reference": "ONSB ",
   "dimensions": "15 cm",
-  "description": "Palpador de neurocirugía con bola y sin bola",
-  "highlights": [],
+  "description": "Palpador de neurocirugía con bola ",
+  "longDescription": "Instrumento de precisión diseñado para exploración, palpación y manipulación delicada de estructuras anatómicas en procedimientos de neurocirugía principalmente intervenciones de columna vertebral.\nSu diseño incorpora una punta esférica atraumática con angulación 90º que permite una exploración cuidadosa.\nMango cilíndrico con superficie estriada que proporciona un agarre firme para un control preciso.",
+  "highlights": [
+    "Punta esférica y roma",
+    "Punta con bola",
+    "Extremo distal angulado 90º",
+    "Mango cilíndrico con superficie estriada para un mejor agarre",
+    "Acero quirúrgico inoxidable",
+    "Autoclavable"
+  ],
   "image": "/images/products/o-nerve-stripper/image.png",
   "gallery": [
-    "/images/products/o-nerve-stripper/gallery/0.png",
-    "/images/products/o-nerve-stripper/gallery/1.png"
+    "/images/products/o-nerve-stripper/gallery/0.png"
   ],
   "modes": [
     "sale"
