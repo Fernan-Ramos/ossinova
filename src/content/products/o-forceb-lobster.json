@@ -6,8 +6,16 @@
   "dimensions": "Lenght 150 mm",
   "description": "Pinza diseñada para la sujeción, manipulación y reducción de fragmentos óseos.",
   "longDescription": "Indicada para reducción y estabilización temporal de fracturas con superficie interna dentada para mejorar el agarre con un sistema de bloqueo para mantener la reducción facilitando así la manipulación y alineación de los fragmentos.",
-  "highlights": [],
+  "highlights": [
+    "Reducción y estabilización de fracturas",
+    "Superficie interna dentada para un correcto agarre",
+    "Sistema de bloqueo",
+    "Correcta alineación de fragmentos",
+    "Acero inoxidable",
+    "Autoclavable"
+  ],
   "image": "/images/products/o-forceb-lobster/image.png",
+  "gallery": [],
   "modes": [
     "sale"
   ],
