@@ -4,8 +4,8 @@
   "material": "Acero",
   "reference": "OFL150",
   "dimensions": "Lenght 150 mm",
-  "description": "Pinza diseñada para la sujeción, manipulación y reducción de fragmentos óseos.",
-  "longDescription": "Indicada para reducción y estabilización temporal de fracturas con superficie interna dentada para mejorar el agarre con un sistema de bloqueo para mantener la reducción facilitando así la manipulación y alineación de los fragmentos.",
+  "description": "Pinza diseñada para la sujeción, manipulación y reducción de fragmentos óseos.\n",
+  "longDescription": "Indicada para reducción y estabilización temporal de fracturas con superficie interna dentada para mejorar el agarre con un sistema de bloqueo para mantener la reducción facilitando así la manipulación y alineación de los fragmentos.\nFacilitan el mantenimiento de la reducción durante la colocación del implante. El mecanismo de bloqueo mediante cremallera permite mantener la presión de sujeción sin necesidad de ejercer fuerza continua, favoreciendo la precisión y el control durante la intervención",
   "highlights": [
     "Reducción y estabilización de fracturas",
     "Superficie interna dentada para un correcto agarre",
@@ -15,7 +15,10 @@
     "Autoclavable"
   ],
   "image": "/images/products/o-forceb-lobster/image.png",
-  "gallery": [],
+  "gallery": [
+    "/images/products/o-forceb-lobster/gallery/0.png",
+    "/images/products/o-forceb-lobster/gallery/1.png"
+  ],
   "modes": [
     "sale"
   ],
