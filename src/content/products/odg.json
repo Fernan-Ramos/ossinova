@@ -3,15 +3,17 @@
   "category": "accessories",
   "material": "Acero inoxidable quirúrgico",
   "reference": "ODG",
-  "dimensions": "Ø 1.5 a 3.5 mm",
+  "dimensions": "Ø 1.1, 1.5, 2.0, 2.4, 2.7, 3.5 mm",
   "description": "Guías de broca para taladrado dirigido.",
-  "longDescription": "Las guías de broca Ossinova aseguran un taladrado dirigido y centrado en los orificios de la placa, disponibles para los diámetros de 1.5 a 3.5 mm del sistema.",
+  "longDescription": "Las guías de broca están diseñadas para facilitar la perforación precisa y controlada del hueso durante procedimientos de traumatología.\nDiseño tubular que permite orientar y estabilizar la broca durante la perforación, favoreciendo una correcta trayectoria evitando desviaciones para la correcta colocación de tornillos de osteosíntesis. \n",
   "highlights": [
     "Taladrado dirigido y centrado",
-    "Diámetros de 1.5 a 3.5 mm",
+    "Diámetros de 1.1 a 3.5 mm",
+    "Extremo superior estriado para facilitar la manipulación",
     "Acero inoxidable quirúrgico"
   ],
   "image": "/images/products/odg/image.PNG",
+  "gallery": [],
   "priceFrom": 35,
   "modes": [
     "sale"
