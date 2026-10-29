@@ -15,7 +15,9 @@
     "Autoclavable"
   ],
   "image": "/images/products/ossinova-k-wire-racks/image.png",
-  "gallery": [],
+  "gallery": [
+    "/images/products/ossinova-k-wire-racks/gallery/0.webp"
+  ],
   "modes": [
     "sale"
   ],
