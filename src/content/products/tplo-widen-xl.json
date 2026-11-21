@@ -1,5 +1,5 @@
 {
-  "name": "TPLO WIDEN XL",
+  "name": "TPLO RAZAS GRANDES",
   "category": "implants",
   "material": "Titanio Ti-6Al-4V ELI (grado 23)",
   "reference": "P-TPLC",
@@ -7,10 +7,7 @@
   "description": "Placa de osteotomía de nivelación de la meseta tibial (TPLO) con diseño ensanchado (Widen) para animales de gran tamaño/peso.",
   "highlights": [],
   "image": "/images/products/tplo-widen-xl/image.png",
-  "gallery": [
-    "/images/products/tplo-widen-xl/gallery/0.png",
-    "/images/products/tplo-widen-xl/gallery/1.png"
-  ],
+  "gallery": [],
   "modes": [
     "sale",
     "rental-short",
